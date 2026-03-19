@@ -1,11 +1,160 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Accueil">
+  <Header />
+
+
+<!-- ================= HERO ================= -->
+<main>
+  <section class="hero"></section>
+</main>
+
+<!-- ================= HERO ================= -->
+
+
+<!-- ================= Parroise ================= -->
+<section class="section">
+  <div class="container section-grid">
+    <div class="text">
+      <span class="eyebrow">LA PAROISSE</span>
+      <h2>Une communauté catholique francophone à Madrid</h2>
+      <p>
+        La paroisse Saint Louis des Français accueille les fidèles francophones
+        à Madrid. Elle propose des célébrations, des activités pastorales et un
+        lieu de rencontre pour vivre la foi ensemble.
+      </p>
+    </div>
+<div class="image reveal">
+  <img src="/parroquia.jpg" alt="Paroisse" />
+</div>
+   
+  </div>
+</section>
+
+<!-- ================= Parroise ================= -->
+
+<section class="section alt">
+  <div class="container section-grid reverse">
+  <div class="image reveal">
+  <img src="/comunidad.jpg" alt="Paroisse" />
+</div>
+   
+
+    <div class="text">
+      <span class="eyebrow">LA COMMUNAUTÉ</span>
+      <h2>Un lieu de foi, de rencontre et de partage</h2>
+      <p>
+        La paroisse accompagne la vie spirituelle des francophones à Madrid
+        à travers la liturgie, les sacrements, la prière et des moments de
+        convivialité.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <Footer />
+</BaseLayout>
+<style>
+  .hero {
+    min-height: 40vh;
+    background-image: url("/images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .container {
+  width: min(var(--container), 92%);
+  margin: 0 auto;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text h2 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.text p {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #b08a5a;
+}
+
+.image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+
+.section {
+  background: #ffffff;
+}
+
+.section.alt {
+  background: #f5f1ea;
+}
+
+.section + .section {
+  border-top: 1px solid #e8e2d9;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* opcional: pequeño zoom */
+.reveal img {
+  transform: scale(1.05);
+  transition: transform 1.2s ease;
+}
+
+.reveal.active img {
+  transform: scale(1);
+}
+</style>
+
+<script>
+  const elements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>

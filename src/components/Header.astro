@@ -1,0 +1,124 @@
+<header>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <a href="/contact">Contact</a>
+    <a href="#">FR</a>
+    <span>|</span>
+    <a href="#">ES</a>
+    <a href="#">Instagram</a>
+    <a href="https://www.youtube.com/watch?v=BpgVML6todQ" target="_blank" rel="noopener noreferrer">
+  Youtube
+</a>
+  </div>
+</div>
+
+  <div class="site-header">
+    <div class="container header-inner">
+     <div class="logo">
+  <img src="/logo.jpg" alt="logo" />
+  <span>Saint Louis des Français</span>
+</div>
+      <nav class="nav">
+        <a href="/">Accueil</a>
+        <a href="/paroisse">Paroisse</a>
+        <a href="/activites">Activités</a>
+        <a href="/liturgie">Liturgie</a>
+        <a href="/sacrements">Sacrements</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    background: #efeae2;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.7rem;
+  }
+
+  .topbar a,
+.topbar span {
+  font-size: 0.8rem;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  min-height: 54px;
+}
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .topbar-link,
+  .lang,
+  .social {
+    color: var(--color-muted);
+  }
+
+  .topbar-link:hover,
+  .lang:hover,
+  .social:hover {
+    color: var(--color-primary);
+  }
+
+  .separator {
+    color: var(--color-muted);
+  }
+
+  .site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .container {
+    width: min(var(--container), 92%);
+    margin: 0 auto;
+  }
+
+.header-inner {
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.nav a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+  .nav a:hover {
+    color: var(--color-primary);
+  }
+ .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo img {
+  height: 52px;          
+  transform: scale(1.2);
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+</style>
