@@ -3,7 +3,6 @@ const current = Astro.url.pathname;
 ---
 
 <header>
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-inner">
       <a href="/contact">Contact</a>
@@ -17,20 +16,17 @@ const current = Astro.url.pathname;
     </div>
   </div>
 
-  <!-- HEADER -->
   <div class="site-header">
     <div class="container header-inner">
-
-      <!-- LOGO -->
       <div class="logo">
         <img src="/logo.jpg" alt="logo" />
         <span>Saint Louis des Français</span>
       </div>
 
-      <!-- BOTÓN MÓVIL -->
-      <div class="menu-toggle">☰</div>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        ☰
+      </button>
 
-      <!-- NAV -->
       <nav class="nav">
         <a href="/" class={current === "/" ? "active" : ""}>Accueil</a>
         <a href="/paroisse" class={current === "/paroisse" ? "active" : ""}>Paroisse</a>
@@ -39,21 +35,21 @@ const current = Astro.url.pathname;
         <a href="/sacrements" class={current === "/sacrements" ? "active" : ""}>Sacrements</a>
         <a href="/contact" class={current === "/contact" ? "active" : ""}>Contact</a>
       </nav>
-
     </div>
   </div>
 </header>
 
-<!-- JS MENÚ -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".nav");
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-      });
-    }
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("open");
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+    });
   });
 </script>
