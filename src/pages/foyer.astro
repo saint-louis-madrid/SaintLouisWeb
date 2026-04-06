@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Foyer des jeunes — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">JEUNES</span>
+        <h1>Foyer des jeunes</h1>
+        <p>Un cadre de vie et de mission pour les étudiants catholiques à Madrid.</p>
+      </div>
+    </div>
+
+<!-- PRÉSENTATION -->
+<section class="section">
+  <div class="container reveal">
+    <div class="foyer-grid">
+      <div class="foyer-imagen">
+        <img src="public/images/foyer.jpg" alt="Foyer des jeunes" />
+      </div>
+      <div class="text">
+        <span class="eyebrow">QU'EST-CE QUE C'EST</span>
+        <h2>Un foyer créé en 2023</h2>
+        <p>
+          Le Foyer de jeunes Saint Louis a été créé en septembre 2023 par la 
+          paroisse Saint Louis des Français de Madrid. Il permet à de jeunes 
+          étudiants catholiques de s'investir dans l'œuvre éducative et 
+          pastorale de la paroisse, tout en bénéficiant d'un logement à 
+          prix réduit pour poursuivre leurs études.
+        </p>
+        <p>
+          Ces étudiants ont soit une expérience préalable en animation 
+          et en éducation chrétienne, soit le désir de l'acquérir, ainsi que 
+          le souhait d'annoncer le Christ aux jeunes dont ils auront la charge.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- MISSION -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">MISSION</span>
+        <h2 class="section-title">Un lieu de vie et d'engagement</h2>
+        <div class="activites-list">
+          <div class="activite-item">
+            <div class="activite-meta">
+              <span class="activite-titre">Logement à prix réduit</span>
+            </div>
+            <p>Les résidents bénéficient d'un cadre de qualité pour poursuivre leurs études universitaires à Madrid.</p>
+          </div>
+          <div class="activite-item">
+            <div class="activite-meta">
+              <span class="activite-titre">Mission pastorale</span>
+            </div>
+            <p>Les jeunes s'impliquent dans l'animation et l'éducation chrétienne auprès des enfants et adolescents de la paroisse.</p>
+          </div>
+          <div class="activite-item">
+            <div class="activite-meta">
+              <span class="activite-titre">Vie communautaire</span>
+            </div>
+            <p>Au Foyer, les résidents côtoient prêtres, animateurs, parents et autres personnes engagées dans la mission paroissiale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLUS D'INFOS -->
+    <section class="cta reveal">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Vous êtes intéressé ?</h2>
+          <p>Consultez le document d'information complet ou contactez-nous.</p>
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="https://docs.google.com/document/d/1MT4z4S7utVSfH4CXQOIDSjSdRaitcRCfAWAJYYkCafc/edit"
+             target="_blank" rel="noopener noreferrer" class="cta-button">
+            Plus d'informations
+          </a>
+          <a href="/contact" class="cta-button" style="background: transparent; border: 1px solid var(--color-primary); color: var(--color-primary);">
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Denier du culte — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">SOUTIEN À LA PAROISSE</span>
+        <h1>Denier du culte</h1>
+        <p>Aidez-nous à maintenir une paroisse dynamique au service de la communauté.</p>
+      </div>
+    </div>
+
+    <!-- POURQUOI -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">POURQUOI DONNER</span>
+        <h2 class="section-title">Une paroisse qui vit grâce à vous</h2>
+        <p class="liturgie-intro">
+          La paroisse Saint Louis des Français ne reçoit aucune aide financière, 
+          ni de l'Archevêché de Madrid, ni de la conférence épiscopale française. 
+          Tous les frais sont supportés par la communauté.
+        </p>
+        <div class="activites-list">
+          <div class="activite-item">
+            <div class="activite-meta">
+              <span class="activite-titre">Ce que votre don permet</span>
+            </div>
+            <p>Financer l'organiste, les prêtres célébrants, l'entretien de l'église et l'ensemble des activités paroissiales. Votre aide est bienvenue quel qu'en soit le montant.</p>
+          </div>
+          <div class="activite-item">
+            <div class="activite-meta">
+              <span class="activite-titre">Déduction fiscale</span>
+            </div>
+            <p>Les dons à Saint Louis donnent droit à une déduction fiscale. Nous vous encourageons vivement à en bénéficier pour en faire indirectement profiter la paroisse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMENT DONNER -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">COMMENT DONNER</span>
+        <h2 class="section-title">Modalités de don</h2>
+        <div class="don-grid">
+          <div class="don-card">
+            <span class="don-label">Virement bancaire</span>
+            <span class="don-iban">ES79 0049 6791 7222 1600 9266</span>
+            <span class="don-note">Virement direct à la paroisse</span>
+          </div>
+          <div class="don-card">
+            <span class="don-label">Formulaire officiel</span>
+            <span class="don-note">
+              Téléchargez, remplissez et retournez le formulaire par email, 
+              courrier postal ou lors des messes dominicales pour bénéficier 
+              de la déduction fiscale.
+            </span>
+            <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2022/10/Denier-du-culte.pdf"
+               target="_blank" rel="noopener noreferrer" class="activite-link">
+              Télécharger le formulaire PDF →
+            </a>
+          </div>
+        </div>
+        <p class="don-contact">
+          Pour toute question, contactez-nous à
+          <a href="mailto:paroissesaintlouismadrid@gmail.com">
+            paroissesaintlouismadrid@gmail.com
+          </a>
+          ou lors des messes dominicales.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA RÉNOVATION -->
+    <section class="cta reveal">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Projet Rénovation 2026</h2>
+          <p>Vous pouvez également soutenir notre campagne de rénovation. Objectif 500 000 €.</p>
+        </div>
+        <a href="/renovation" class="cta-button">En savoir plus</a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -118,7 +118,7 @@ main {
 /* ================= HOME ================= */
 
 .section {
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   background: #ffffff;
 }
 
@@ -164,8 +164,8 @@ main {
 
 .image img {
   width: 100%;
-  height: 660px;
-  object-fit: cover;
+  height: auto;
+ object-fit: cover;
   border-radius: 6px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -314,7 +314,7 @@ main {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
   padding: 3rem 0;
   text-align: left;
@@ -351,7 +351,7 @@ main {
 
 .hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 70vh;
   background-image: url("/images/iglesia.jpg");
   background-position: 50% 25%;
   background-size: cover;
@@ -1112,4 +1112,24 @@ main {
 
 .annonces-note a:hover {
   text-decoration: underline;
+}
+/* ================= FOYER ================= */
+
+.foyer-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.foyer-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .foyer-grid {
+    grid-template-columns: 1fr;
+  }
 }
