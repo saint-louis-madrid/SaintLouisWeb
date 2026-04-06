@@ -63,17 +63,21 @@ main {
   align-items: center;
   gap: 0.8rem;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .logo img {
-  height: 68px;
   width: auto;
+  height: 40px;
+  transform: none;
 }
 
 .logo span {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-primary);
+   font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
 }
 
 .nav {
