@@ -45,29 +45,6 @@ main {
 
 /* ================= HEADER ================= */
 
-.topbar {
-  background: #efeae2;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.topbar-inner {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  min-height: 54px;
-}
-
-.topbar a,
-.topbar span {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-}
-
-.topbar a:hover {
-  color: var(--color-primary);
-}
-
 .site-header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -89,10 +66,8 @@ main {
 }
 
 .logo img {
-  height: 52px;
+  height: 68px;
   width: auto;
-  transform: scale(1.2);
-  transform-origin: left center;
 }
 
 .logo span {
@@ -103,14 +78,14 @@ main {
 
 .nav {
   display: flex;
-  justify-content: center;
+   justify-content: flex-end;
   gap: 2rem;
   width: 100%;
 }
 
 .nav a {
   position: relative;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: color 0.3s ease;
@@ -142,26 +117,15 @@ main {
 
 /* ================= HOME ================= */
 
-.hero {
-  min-height: 40vh;
-  background-image: url("/images/hero.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .section {
   padding: 5rem 0;
   background: #ffffff;
 }
 
 .section.alt {
-  background: #f5f1ea;
+   background: #ffffff;
 }
 
-.section + .section {
-  border-top: 1px solid #e8e2d9;
-}
 
 .section-grid {
   display: grid;
@@ -178,25 +142,29 @@ main {
   max-width: 500px;
 }
 
-.text h2 {
-  font-size: 1.8rem;
-  margin: 0.5rem 0 1rem;
+.text h2,
+.section-title {
+  font-size: 2.2rem;
+  margin: 0.5rem 0 1.2rem;
+  line-height: 1.2;
 }
 
 .text p {
-  color: var(--color-muted);
-  line-height: 1.6;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
   color: #b08a5a;
+  font-weight: 600;
 }
 
 .image img {
   width: 100%;
-  height: 260px;
+  height: 660px;
   object-fit: cover;
   border-radius: 6px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -205,6 +173,71 @@ main {
 .image img:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= HORAIRES ================= */
+.horaires {
+  padding: 1rem 0;
+}
+.section-title {
+  font-size: 1.8rem;
+  margin: 0.4rem 0 2rem;
+}
+
+.horaires-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.horaire-card {
+  background: #faf8f5;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.horaire-day {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.horaire-times {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.horaire-times span {
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+}
+
+.horaire-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.horaires-extra {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .horaires-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================= CTA ================= */
@@ -314,23 +347,31 @@ main {
   color: var(--color-muted);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO ACCUEIL================= */
 
 .hero {
   position: relative;
   min-height: 60vh;
-  background-image: url("/images/hero.jpg");
-  background-position: center;
+  background-image: url("/images/iglesia.jpg");
+  background-position: 50% 25%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.hero-content p {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* oscurece imagen */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items:flex-start; 
+  align-items:center; 
+  padding-bottom: 13rem;
 }
 
 
@@ -343,10 +384,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
+
 
 /* ================= RESPONSIVE ================= */
 
@@ -361,7 +399,7 @@ main {
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .topbar-inner {
     justify-content: center;
     flex-wrap: wrap;
@@ -388,7 +426,7 @@ main {
   }
 
   .logo span {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
 
   .menu-toggle {
@@ -418,13 +456,17 @@ main {
     display: flex;
   }
 
-  .nav a {
-    font-size: 1.1rem;
-  }
+.nav a {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
 
   .section-grid,
   .reverse {
     grid-template-columns: 1fr;
+    align-items: stretch;
   }
 
   .text {
@@ -447,4 +489,627 @@ main {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
+
+/* ================= BANNER ================= */
+
+.banner-renovation {
+  background: var(--color-primary);
+  padding: 0.9rem 0;
+}
+
+.banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-inner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.banner-inner strong {
+  color: white;
+}
+
+.banner-inner a {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner-inner a:hover {
+  opacity: 0.8;
+}
+
+/* ================= HERO RENOVATION ================= */
+
+.hero-page {
+  background: var(--color-primary);
+  padding: 2.5rem 0 2rem;
+}
+
+.hero-page .eyebrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-page h1 {
+  color: white;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0.4rem 0 0.75rem;
+}
+
+.hero-page p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ================= RENOVATION DON ================= */
+
+.renovation-don {
+  background: #faf8f5;
+}
+
+.don-intro {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin: 0.4rem 0 2rem;
+}
+
+.don-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.don-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: white;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.don-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.don-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.don-date {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.don-iban {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  word-break: break-all;
+}
+
+.don-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.don-contact {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+.don-contact a {
+  color: var(--color-primary);
+}
+
+.don-contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .don-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.form-submit:hover {
+  background: #5e1717;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-notice {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.25rem;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-block:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.info-block span,
+.info-block a {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.info-block a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin: 0.4rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+.page-header p {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ================= LITURGIE ================= */
+
+.liturgie-intro {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0.4rem 0 1.5rem;
+  max-width: 600px;
+}
+
+.liturgie-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.familles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.famille-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.jours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.jour-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.jour-nom {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.jour-date {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.note-ete {
+  background: #fdf8f0;
+  border: 1px solid #e8d5b0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  max-width: 680px;
+}
+
+.note-ete p {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ================= PAROISSE ================= */
+
+.oeuvre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.oeuvre-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.oeuvre-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.oeuvre-card p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.acces-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.acces-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.acces-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.acces-item:last-child {
+  border-bottom: none;
+}
+
+.acces-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.acces-item span,
+.acces-item a {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.acces-item a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .oeuvre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acces-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.hero-paroisse {
+  background-image: url("/images/hero.jpg");
+  position: relative;
+  min-height: 80vh;
+  background-position: 50% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+/* ================= ACTIVITÉS ================= */
+
+.activites-header {
+  margin-bottom: 2rem;
+}
+
+.activites-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.activite-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.activite-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.activite-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.activite-age {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.activite-item p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.activite-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.activite-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .activite-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* ================= SACREMENTS ================= */
+
+.reconciliation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.reconciliation-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reconciliation-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.reconciliation-horaire {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.reconciliation-card p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .reconciliation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= ANNONCES ================= */
+
+.annonces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.annonce-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.annonce-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.annonce-date {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.annonce-label {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.annonces-note {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.annonces-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.annonces-note a:hover {
+  text-decoration: underline;
 }

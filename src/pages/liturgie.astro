@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Liturgie — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">LITURGIE</span>
+        <h1>Horaires des messes</h1>
+        <p>Toutes les célébrations de la paroisse en français.</p>
+      </div>
+    </div>
+
+    <!-- HORAIRES HABITUELS -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">CHAQUE SEMAINE</span>
+        <h2 class="section-title">Messes régulières</h2>
+
+        <div class="horaires-grid reveal">
+          <div class="horaire-card">
+            <span class="horaire-day">Dimanche</span>
+            <div class="horaire-times">
+              <span>11h30</span>
+              <span>19h00</span>
+            </div>
+            <span class="horaire-note">Messes en français</span>
+          </div>
+          <div class="horaire-card">
+            <span class="horaire-day">Mercredi</span>
+            <div class="horaire-times">
+              <span>20h00</span>
+            </div>
+            <span class="horaire-note">Précédée des confessions dès 19h</span>
+          </div>
+          <div class="horaire-card">
+            <span class="horaire-day">Tous les jours</span>
+            <div class="horaire-times">
+              <span>12h00</span>
+            </div>
+            <span class="horaire-note">
+              En espagnol · Hogar Residencia San Luis<br />
+              Claudio Coello, 94
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESSES DES FAMILLES -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">CHAQUE MOIS</span>
+        <h2 class="section-title">Messe des familles</h2>
+        <p class="liturgie-intro">
+          Une fois par mois, la messe des familles est célébrée à 11h30, 
+          lors d'un dimanche de catéchisme.
+        </p>
+        <div class="familles-grid">
+          <div class="famille-card">12 octobre 2025</div>
+          <div class="famille-card">30 novembre 2025</div>
+          <div class="famille-card">11 janvier 2026</div>
+          <div class="famille-card">1er mars 2026</div>
+          <div class="famille-card">31 mai 2026</div>
+          <div class="famille-card">21 juin 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURS SPÉCIAUX -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">JOURS DE FÊTE</span>
+        <h2 class="section-title">Jours fériés et solennités</h2>
+        <p class="liturgie-intro">
+          Les jours de précepte qui ne tombent pas un dimanche sont également célébrés à 11h30.
+        </p>
+        <div class="jours-grid">
+          <div class="jour-card">
+            <span class="jour-nom">Noël</span>
+            <span class="jour-date">24 déc. · 20h00</span>
+            <span class="jour-date">25 déc. · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Toussaint</span>
+            <span class="jour-date">1er nov. · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Défunts</span>
+            <span class="jour-date">2 nov. · 20h00</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Immaculée Conception</span>
+            <span class="jour-date">8 déc. · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Jour de l'An</span>
+            <span class="jour-date">1er jan. · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Épiphanie</span>
+            <span class="jour-date">6 jan. · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Saint Joseph</span>
+            <span class="jour-date">19 mars · 11h30</span>
+          </div>
+          <div class="jour-card">
+            <span class="jour-nom">Ascension</span>
+            <span class="jour-date">Dimanche avant la Pentecôte</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE ÉTÉ -->
+    <section class="section">
+      <div class="container reveal">
+        <div class="note-ete">
+          <span class="eyebrow">PÉRIODE ESTIVALE</span>
+          <p>
+            Pas de messes en français du <strong>21 juillet au 20 août</strong>. 
+            Les messes en espagnol continuent à 12h00 au Hogar Residencia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEMAINE SAINTE -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">SEMAINE SAINTE</span>
+        <h2 class="section-title">Célébrations pascales</h2>
+        <p class="liturgie-intro">
+          Les horaires de la Semaine Sainte sont publiés chaque année sur cette page 
+          et dans la feuille d'annonces paroissiale.
+        </p>
+        <p class="liturgie-note">
+          Pour être informé des horaires, inscrivez-vous à notre liste WhatsApp 
+          ou consultez régulièrement cette page à l'approche de Pâques.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

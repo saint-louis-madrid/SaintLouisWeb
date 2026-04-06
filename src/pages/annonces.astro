@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Feuilles d'annonces — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">ACTUALITÉ</span>
+        <h1>Feuilles d'annonces</h1>
+        <p>Les annonces hebdomadaires de la paroisse.</p>
+      </div>
+    </div>
+
+    <!-- ANNONCES -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">2026</span>
+        <h2 class="section-title">Annonces récentes</h2>
+
+        <div class="annonces-grid">
+          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/26-03-15.png"
+             target="_blank" rel="noopener noreferrer" class="annonce-card">
+            <span class="annonce-date">15 mars 2026</span>
+            <span class="annonce-label">Feuille d'annonces →</span>
+          </a>
+          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/26-03-22.png"
+             target="_blank" rel="noopener noreferrer" class="annonce-card">
+            <span class="annonce-date">22 mars 2026</span>
+            <span class="annonce-label">Feuille d'annonces →</span>
+          </a>
+          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/Semaine-Sainte-2026.png"
+             target="_blank" rel="noopener noreferrer" class="annonce-card">
+            <span class="annonce-date">Semaine Sainte 2026</span>
+            <span class="annonce-label">Feuille d'annonces →</span>
+          </a>
+          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/Celebrations-de-la-Semaine-Sainte.png"
+             target="_blank" rel="noopener noreferrer" class="annonce-card">
+            <span class="annonce-date">Célébrations de la Semaine Sainte</span>
+            <span class="annonce-label">Feuille d'annonces →</span>
+          </a>
+        </div>
+
+        <p class="annonces-note">
+          Les feuilles sont publiées chaque semaine. Pour être informé dès leur parution, 
+          inscrivez-vous à notre 
+          <a href="https://wa.me/34689053259" target="_blank" rel="noopener noreferrer">liste WhatsApp</a> 
+          ou à notre <a href="http://eepurl.com/hcN1hn" target="_blank" rel="noopener noreferrer">newsletter</a>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

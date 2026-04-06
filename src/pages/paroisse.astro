@@ -4,77 +4,134 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="Accueil">
+<BaseLayout title="Paroisse — Saint Louis des Français">
   <Header />
 
   <main>
-   
-</section>
 
-    <!-- SECCIÓN 1 -->
+     <div class="page-header">
+  <div class="container">
+    <span class="eyebrow">Actualité</span>
+    <h1>Projet Rénovation 2026</h1>
+    <p>Aidez-nous à préserver notre église pour les 400 prochaines années.</p>
+  </div>
+</div>
+
+    <!-- HISTOIRE -->
     <section class="section">
       <div class="container section-grid">
         <div class="text reveal">
-          <span class="eyebrow">LA PAROISSE</span>
-          <h2>Une communauté catholique francophone à Madrid</h2>
+          <span class="eyebrow">DEPUIS 1613</span>
+          <h2>Plus de 400 ans de présence à Madrid</h2>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+            La paroisse Saint Louis des Français a été fondée en 1613 par 
+            Henri de Saureulx, un diplomate français établi à Madrid. 
+            Depuis plus de quatre siècles, elle accompagne les francophones 
+            de la capitale espagnole dans leur vie de foi.
+          </p>
+          <p>
+            Installée Calle Lagasca, 89 depuis 1972, elle est rattachée au 
+            diocèse de Madrid et rassemble des fidèles de nombreuses 
+            nationalités autour d'une pastorale en français.
           </p>
         </div>
-
         <div class="image reveal">
-          <img src="/parroquia.jpg" alt="Paroisse" />
+          <img src="/images/saintlouis.jpg" alt="Église Saint Louis des Français" />
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 2 -->
-    <section class="section alt">
+    <!-- L'ŒUVRE SAINT LOUIS -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">L'ŒUVRE SAINT LOUIS</span>
+        <h2 class="section-title">Une institution au service de tous</h2>
+        <p class="liturgie-intro">
+          La paroisse constitue avec deux autres établissements l'Œuvre Saint Louis, 
+          fondée en 1613. Elle vient en aide à plus de 200 000 € par an aux personnes 
+          dans le besoin, sans recevoir aucune subvention.
+        </p>
+        <div class="oeuvre-grid">
+          <div class="oeuvre-card">
+            <span class="oeuvre-titre">La Paroisse</span>
+            <p>Calle Lagasca, 89 · Madrid</p>
+            <p>Célébrations, catéchèse, sacrements et vie communautaire.</p>
+          </div>
+          <div class="oeuvre-card">
+            <span class="oeuvre-titre">Foyer-Résidence</span>
+            <p>Claudio Coello, 94 · Madrid</p>
+            <p>Résidence pour personnes âgées · 91 431 28 00</p>
+          </div>
+          <div class="oeuvre-card">
+            <span class="oeuvre-titre">Colegio San Luis</span>
+            <p>Pozuelo de Alarcón · Madrid</p>
+            <p>École française · 91 352 05 17</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LE RECTEUR -->
+    <section class="section">
       <div class="container section-grid reverse">
         <div class="image reveal">
-          <img src="/comunidad.jpg" alt="Communauté" />
+          <img src="/comunidad.jpg" alt="Père Rodrigo" />
         </div>
-
         <div class="text reveal">
-          <span class="eyebrow">LA COMMUNAUTÉ</span>
-          <h2>Un lieu de foi, de rencontre et de partage</h2>
+          <span class="eyebrow">NOTRE RECTEUR</span>
+          <h2>Père Rodrigo Alfaro Uriarte</h2>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+            Le père Rodrigo Alfaro Uriarte est notre recteur depuis septembre 2020. 
+            Il est disponible à la sortie des messes dominicales de 11h30 et 19h 
+            pour toute demande de sacrements ou renseignement.
+          </p>
+          <p>
+            Pour toute préparation au mariage ou au baptême, la première étape 
+            est de venir se présenter au père Rodrigo à la sortie de la messe.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta reveal">
-      <div class="container cta-inner">
-        <div class="cta-text">
-          <h2>Horaires des messes</h2>
-          <p>Consultez les horaires des célébrations.</p>
+    <!-- ACCÈS -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">ACCÈS</span>
+        <h2 class="section-title">Comment nous trouver</h2>
+        <div class="acces-grid">
+          <div class="acces-info">
+            <div class="acces-item">
+              <span class="acces-label">Adresse</span>
+              <span>Calle Lagasca, 89 · 28006 Madrid</span>
+            </div>
+    <div class="acces-item">
+              <span class="acces-label">Métro</span>
+              <span>Nuñez de Balboa (L5 et L9)</span>
+              <span>Sortie Juan Bravo</span>
+            </div>
+            <div class="acces-item">
+              <span class="acces-label">Email</span>
+              <a href="mailto:paroissesaintlouismadrid@gmail.com">
+                paroissesaintlouismadrid@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="acces-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8!2d-3.6847643!3d40.4321096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228951b99e26f%3A0xdcc82f3e4e56e7f5!2sCalle%20de%20Lagasca%2C%2089%2C%2028006%20Madrid!5e0!3m2!1ses!2ses!4v1"
+              width="100%"
+              height="260"
+              style="border:0; border-radius: 6px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-
-        <a href="/liturgie" class="cta-button">Voir les horaires</a>
       </div>
     </section>
+
   </main>
 
   <Footer />
 </BaseLayout>
-
-
-<script>
-  const elements = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  elements.forEach((el) => observer.observe(el));
-</script>

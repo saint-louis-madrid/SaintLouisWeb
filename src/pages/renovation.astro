@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Projet Rénovation 2026 — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+   <div class="page-header">
+  <div class="container">
+    <span class="eyebrow">Actualité</span>
+    <h1>Projet Rénovation 2026</h1>
+    <p>Aidez-nous à préserver notre église pour les 400 prochaines années.</p>
+  </div>
+</div>
+
+    <!-- TEXTE PRINCIPAL -->
+    <section class="section">
+      <div class="container section-grid">
+        <div class="text reveal">
+          <span class="eyebrow">POURQUOI CE PROJET</span>
+          <h2>Un héritage vivant qui a besoin de vous</h2>
+          <p>
+            Saviez-vous que depuis plus de 400 ans, il existe au cœur de Madrid 
+            un foyer spirituel pour des milliers de familles francophones ? 
+            La paroisse Saint Louis des Français n'est pas seulement un bâtiment : 
+            c'est un pont entre les cultures, un lieu de foi, de rencontre et d'espérance.
+          </p>
+          <p>
+            Chaque jour, enfants, jeunes et aînés y trouvent un accompagnement, 
+            une communauté et un sens. Aujourd'hui, cet héritage vivant a besoin 
+            de vous. Notre église doit être rénovée pour continuer à accueillir 
+            dignement les générations à venir.
+          </p>
+          <p>
+            En soutenant ce projet, vous contribuez à préserver bien plus qu'un 
+            lieu : vous participez à faire vivre une communauté, à transmettre 
+            une histoire et à maintenir un espace ouvert à tous.
+          </p>
+        </div>
+        <div class="image reveal">
+          <img src="/images/iglesia.jpg" alt="Église Saint Louis des Français" />
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIF & DON -->
+    <section class="section renovation-don reveal">
+      <div class="container">
+        <span class="eyebrow">COMMENT AIDER</span>
+        <h2>Faire un don</h2>
+        <p class="don-intro">
+          Ensemble, gardons ses portes ouvertes pour les 400 prochaines années.
+        </p>
+
+        <div class="don-grid">
+          <div class="don-card">
+            <span class="don-label">Objectif</span>
+            <span class="don-amount">500 000 €</span>
+            <span class="don-date">d'ici décembre 2026</span>
+          </div>
+          <div class="don-card don-card--iban">
+            <span class="don-label">Virement bancaire</span>
+            <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
+            <span class="don-note">Mentionner « Rénovation 2026 » en référence</span>
+          </div>
+        </div>
+
+        <p class="don-contact">
+          Pour toute question sur le projet ou les modalités de don, 
+          contactez-nous à 
+          <a href="mailto:paroissesaintlouismadrid@gmail.com">
+            paroissesaintlouismadrid@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

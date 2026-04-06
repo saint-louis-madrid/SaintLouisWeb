@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Sacrements — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">VIE CHRÉTIENNE</span>
+        <h1>Sacrements</h1>
+        <p>Les grandes étapes de la vie chrétienne célébrées en français.</p>
+      </div>
+    </div>
+
+    <!-- BAPTÊME -->
+    <section class="section">
+      <div class="container section-grid">
+        <div class="text reveal">
+          <span class="eyebrow">BAPTÊME</span>
+          <h2>La porte d'entrée dans l'Église</h2>
+          <p>
+            Les parents désirant demander le baptême pour leur enfant s'adressent 
+            en premier lieu au père Rodrigo. Le lieu privilégié pour un premier 
+            échange est la sortie de la messe du dimanche à 11h30 ou 19h.
+          </p>
+          <p>
+            Les adultes souhaitant être baptisés peuvent également contacter 
+            le père Rodrigo pour définir un chemin de préparation avec 
+            un catéchiste accompagnateur.
+          </p>
+        </div>
+        <div class="image reveal">
+          <img src="/images/cristo.jpg" alt="Baptême" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MARIAGE -->
+    <section class="section">
+      <div class="container section-grid reverse">
+        <div class="image reveal">
+          <img src="/images/matrimonio.jpg" alt="Mariage" />
+        </div>
+        <div class="text reveal">
+          <span class="eyebrow">MARIAGE</span>
+          <h2>Un chemin de préparation accompagné</h2>
+          <p>
+            Les couples désirant se préparer au mariage s'adressent au père Rodrigo 
+            à la sortie de la messe du dimanche. Un chemin de préparation sera 
+            ensuite proposé avec l'accompagnement de Benoît et Viviane Mahé.
+          </p>
+          <p>
+            Anne Gras, au secrétariat, accompagnera les futurs époux pour 
+            la constitution du dossier canonique de mariage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉCONCILIATION -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">RÉCONCILIATION</span>
+        <h2 class="section-title">Sacrement de la réconciliation</h2>
+        <p class="liturgie-intro">
+          Le père Rodrigo est à la disposition des paroissiens tous les 
+          mercredis de 19h00 à 20h00 à l'église, avant la messe de 20h.
+        </p>
+        <div class="reconciliation-grid">
+          <div class="reconciliation-card">
+            <span class="reconciliation-titre">Chaque mercredi</span>
+            <span class="reconciliation-horaire">19h00 – 20h00</span>
+            <p>En français ou en espagnol · Église Saint Louis, Calle Lagasca 89</p>
+          </div>
+          <div class="reconciliation-card">
+            <span class="reconciliation-titre">Veillée de Noël</span>
+            <span class="reconciliation-horaire">Avant le 24 décembre</span>
+            <p>Veillée de réconciliation proposée quelques jours avant Noël.</p>
+          </div>
+          <div class="reconciliation-card">
+            <span class="reconciliation-titre">Veillée pascale</span>
+            <span class="reconciliation-horaire">Avant Pâques</span>
+            <p>Veillée de réconciliation proposée quelques jours avant Pâques.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Une question sur un sacrement ?</h2>
+          <p>N'hésitez pas à nous contacter ou à vous présenter après la messe.</p>
+        </div>
+        <a href="/contact" class="cta-button">Nous contacter</a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Contact — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <div class="page-header">
+  <div class="container">
+    <span class="eyebrow">CONTACT</span>
+    <h1>Nous contacter</h1>
+    <p>Une question, une demande de sacrement ou simplement nous rejoindre ?</p>
+  </div>
+</div>
+
+    <!-- CONTENU -->
+    <section class="section">
+      <div class="container contact-grid">
+
+        <!-- FORMULAIRE -->
+        <div class="reveal">
+          <h2 class="contact-title">Envoyer un message</h2>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Marie Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="marie@exemple.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject">
+                <option value="">Choisir un sujet</option>
+                <option value="information">Renseignement général</option>
+                <option value="bapteme">Baptême</option>
+                <option value="mariage">Mariage</option>
+                <option value="catechisme">Catéchisme</option>
+                <option value="renovation">Projet Rénovation</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Envoyer le message</button>
+            <p class="form-notice">
+              <!-- TODO: connecter Resend via API Route Astro SSR -->
+              Le formulaire sera actif prochainement.
+            </p>
+          </form>
+        </div>
+
+        <!-- INFO PRATIQUE -->
+        <div class="contact-info reveal">
+          <h2 class="contact-title">Informations pratiques</h2>
+
+          <div class="info-block">
+            <span class="info-label">Adresse</span>
+            <span>Calle Lagasca, 89</span>
+            <span>28006 Madrid</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">Métro</span>
+            <span>Nuñez de Balboa (L5 et L9)</span>
+            <span>Sortie Juan Bravo</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">Email</span>
+            <a href="mailto:paroissesaintlouismadrid@gmail.com">
+              paroissesaintlouismadrid@gmail.com
+            </a>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">Messes en français</span>
+            <span>Dimanche 11h30 et 19h00</span>
+            <span>Mercredi 20h00</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">Père Rodrigo</span>
+            <span>Disponible à la sortie des messes</span>
+            <span>du dimanche (11h30 et 19h)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
