@@ -11,7 +11,30 @@ const { title = "Paroisse" } = Astro.props;
   </head>
   <body>
     <slot />
-    <script>
+
+    <!-- BANNER COOKIES -->
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <p>
+            <strong>Cookies</strong> — Ce site utilise des services tiers (Google Maps, Google Fonts) 
+            qui peuvent déposer des cookies. Aucune donnée n'est utilisée à des fins publicitaires.
+            <a href="/privacy">En savoir plus</a>
+          </p>
+          <p class="cookie-es">
+            Este sitio utiliza cookies de terceros (Google Maps, Google Fonts) para mostrar mapas 
+            y fuentes. No se recopilan datos publicitarios.
+            <a href="/privacy">Más información</a>
+          </p>
+        </div>
+        <div class="cookie-buttons">
+          <button id="cookieAccept" class="cookie-btn cookie-btn--accept">Accepter / Aceptar</button>
+          <button id="cookieRefuse" class="cookie-btn cookie-btn--refuse">Refuser / Rechazar</button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
   const elements = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -22,6 +45,37 @@ const { title = "Paroisse" } = Astro.props;
     { threshold: 0.15 }
   );
   elements.forEach((el) => observer.observe(el));
-</script>
+
+      function loadFonts() {
+        const link = document.createElement("link");
+        link.href = "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap";
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
+      }
+
+      const banner = document.getElementById("cookieBanner");
+      const consent = localStorage.getItem("cookieConsent");
+
+      if (consent === "accepted") {
+        banner.style.display = "none";
+        loadFonts();
+      } else if (consent === "refused") {
+        banner.style.display = "none";
+      } else {
+        banner.style.display = "flex";
+      }
+
+      document.getElementById("cookieAccept").addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+        loadFonts();
+      });
+
+      document.getElementById("cookieRefuse").addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "refused");
+        banner.style.display = "none";
+      });
+    </script>
+
   </body>
 </html>

@@ -41,10 +41,19 @@
       <p><a href="http://www.aelf.org/" target="_blank" rel="noopener noreferrer">Liturgie en français</a></p>
     </div>
 
-  </div>
+    
 
-  <div class="footer-bottom">
-    <p>© 2026 Paroisse Saint Louis des Français</p>
   </div>
+<div class="footer-bottom">
+  <p>
+    © <span id="year"></span> Paroisse Saint Louis des Français · 
+    <a href="/legal">Aviso legal</a> · 
+    <a href="/privacy">Politique de confidentialité</a>
+  </p>
+</div>
+
+<script is:inline>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </footer>

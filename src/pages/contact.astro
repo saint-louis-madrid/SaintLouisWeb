@@ -49,6 +49,16 @@ import Footer from "../components/Footer.astro";
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
             </div>
+            <div class="form-group">
+  <label class="form-checkbox">
+    <input type="checkbox" name="consent" required />
+    <span>
+      J'accepte que mes données soient utilisées pour répondre à ma demande, 
+      conformément à la 
+      <a href="/privacy" target="_blank">politique de confidentialité</a>.
+    </span>
+  </label>
+</div>
             <button type="submit" class="form-submit">Envoyer le message</button>
             <p class="form-notice">
               <!-- TODO: connecter Resend via API Route Astro SSR -->

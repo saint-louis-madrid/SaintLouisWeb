@@ -35,30 +35,23 @@ import Footer from "../components/Footer.astro";
       <span class="eyebrow">LITURGIE</span>
       <h2 class="section-title">Horaires des messes</h2>
     </div>
-    <div class="horaires-grid reveal">
-      <div class="horaire-card">
-        <span class="horaire-day">Dimanche</span>
-        <div class="horaire-times">
-          <span>11h30</span>
-          <span>19h00</span>
-        </div>
-        <span class="horaire-note">Messes en français</span>
-      </div>
-      <div class="horaire-card">
-        <span class="horaire-day">Mercredi</span>
-        <div class="horaire-times">
-          <span>20h00</span>
-        </div>
-        <span class="horaire-note">Confessions dès 19h</span>
-      </div>
-      <div class="horaire-card">
-        <span class="horaire-day">Jours fériés</span>
-        <div class="horaire-times">
-          <span>11h30</span>
-        </div>
-        <span class="horaire-note">Noël, Toussaint, Épiphanie…</span>
-      </div>
-    </div>
+   <div class="horaires-cols reveal">
+  <div class="horaire-col">
+    <span class="horaire-day">Dimanche</span>
+    <span class="horaire-hour">11h30 · 19h00</span>
+    <span class="horaire-note">Messes en français</span>
+  </div>
+  <div class="horaire-col">
+    <span class="horaire-day">Mercredi</span>
+    <span class="horaire-hour">20h00</span>
+    <span class="horaire-note">Confessions dès 19h</span>
+  </div>
+  <div class="horaire-col">
+    <span class="horaire-day">Jours fériés</span>
+    <span class="horaire-hour">11h30</span>
+    <span class="horaire-note">Noël, Toussaint, Épiphanie…</span>
+  </div>
+</div>
     <p class="horaires-extra reveal">
       Messes en espagnol tous les jours à 12h00 — Hogar Residencia San Luis, Claudio Coello 94.
     </p>
