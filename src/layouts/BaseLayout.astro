@@ -1,5 +1,10 @@
 ---
-import "../styles/global.css";
+import "../styles/base.css";
+import "../styles/layout.css";
+import "../styles/components.css";
+import "../styles/pages.css";
+import "../styles/animations.css";
+import "../styles/responsive.css";
 const { title = "Paroisse" } = Astro.props;
 ---
 <!doctype html>
@@ -76,6 +81,31 @@ const { title = "Paroisse" } = Astro.props;
         banner.style.display = "none";
       });
     </script>
+<script is:inline>
+  // Carousel
+  const track = document.getElementById("carouselTrack");
+  const dots = document.querySelectorAll(".carousel-dot");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
+  if (track) {
+    let current = 0;
+    const total = document.querySelectorAll(".carousel-slide").length;
+    let timer = setInterval(next, 5000);
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle("active", i === current));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    nextBtn.addEventListener("click", () => { clearInterval(timer); next(); timer = setInterval(next, 5000); });
+    prevBtn.addEventListener("click", () => { clearInterval(timer); prev(); timer = setInterval(next, 5000); });
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { clearInterval(timer); goTo(i); timer = setInterval(next, 5000); }));
+  }
+</script>
   </body>
 </html>

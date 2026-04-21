@@ -1,0 +1,580 @@
+/* ================= HORAIRES ================= */
+
+.horaires {
+  padding: 1rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 0.4rem 0 2rem;
+}
+
+.horaires-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.horaire-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.horaire-day {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.horaire-hour {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.horaire-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.horaires-extra {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin: 0;
+}
+
+/* ================= LITURGIE ================= */
+
+.liturgie-intro {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0.4rem 0 1.5rem;
+  max-width: 600px;
+}
+
+.liturgie-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.familles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.famille-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.jours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.jour-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.jour-nom {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.jour-date {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.note-ete {
+  background: #fdf8f0;
+  border: 1px solid #e8d5b0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  max-width: 680px;
+}
+
+.note-ete p {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ================= PAROISSE ================= */
+
+.oeuvre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.oeuvre-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.oeuvre-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.oeuvre-card p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.acces-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.acces-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.acces-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.acces-item:last-child {
+  border-bottom: none;
+}
+
+.acces-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.acces-item span,
+.acces-item a {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.acces-item a:hover {
+  color: var(--color-primary);
+}
+
+/* ================= ACTIVITÉS ================= */
+
+.activites-header {
+  margin-bottom: 2rem;
+}
+
+.activites-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.activite-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.activite-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.activite-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.activite-age {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.activite-item p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+}
+
+.activite-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.activite-link:hover {
+  text-decoration: underline;
+}
+
+/* ================= SACREMENTS ================= */
+
+.reconciliation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.reconciliation-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reconciliation-titre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.reconciliation-horaire {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.reconciliation-card p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ================= RÉNOVATION ================= */
+
+.renovation-don {
+  background: #faf8f5;
+}
+
+.don-intro {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin: 0.4rem 0 2rem;
+}
+
+.don-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.don-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: white;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.don-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b08a5a;
+  font-weight: 600;
+}
+
+.don-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.don-date {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.don-iban {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  word-break: break-all;
+}
+
+.don-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.don-contact {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+.don-contact a {
+  color: var(--color-primary);
+}
+
+.don-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ================= ANNONCES ================= */
+
+.annonces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.annonce-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.annonce-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.annonce-date {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.annonce-label {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.annonces-note {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.annonces-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.annonces-note a:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOYER ================= */
+
+.foyer-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.foyer-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ================= LEGAL ================= */
+
+.legal-content h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+  color: var(--color-text);
+}
+
+.legal-content p,
+.legal-content li {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.legal-content ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.legal-content a {
+  color: var(--color-primary);
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+.legal-fecha {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.legal-es {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ================= CAROUSEL ================= */
+
+.hero-carousel {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  position: relative;
+  height: 70vh;
+  transition: transform 0.8s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3rem;
+  z-index: 2;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.carousel-btn--prev {
+  left: 1.5rem;
+}
+
+.carousel-btn--next {
+  right: 1.5rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: white;
+}

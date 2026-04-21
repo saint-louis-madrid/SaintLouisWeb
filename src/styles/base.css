@@ -1,0 +1,53 @@
+:root {
+  --color-bg: #f7f4ef;
+  --color-surface: #ffffff;
+  --color-text: #1f1f1f;
+  --color-muted: #666;
+  --color-primary: #7a1f1f;
+  --color-border: #e7e0d6;
+  --container: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  padding: 0;
+}
+
+.container {
+  width: min(var(--container), 92%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #b08a5a;
+  font-weight: 600;
+}

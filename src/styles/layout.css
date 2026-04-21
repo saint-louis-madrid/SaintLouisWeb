@@ -1,0 +1,319 @@
+/* ================= HEADER ================= */
+
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  width: 100%;
+}
+
+.nav a {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.nav a.active {
+  color: var(--color-primary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 0;
+}
+
+/* ================= DROPDOWN ================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f1ea !important;
+  color: var(--color-primary) !important;
+}
+
+.dropdown-menu a::after {
+  display: none !important;
+}
+
+/* ================= BANNER ================= */
+
+.banner-renovation {
+  background: var(--color-primary);
+  padding: 0.9rem 0;
+}
+
+.banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.banner-inner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.banner-inner strong {
+  color: white;
+}
+
+.banner-inner a {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner-inner a:hover {
+  opacity: 0.8;
+}
+
+/* ================= HERO ACCUEIL ================= */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background-image: url("/images/iglesia.jpg");
+  background-position: 50% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3rem;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-paroisse {
+  background-image: url("/images/hero.jpg");
+  position: relative;
+  min-height: 80vh;
+  background-position: 50% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+  padding: 4rem 0 3rem;
+  background: #f5f1ea;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin: 0.4rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+.page-header p {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ================= HERO PAGE INTÉRIEURE ================= */
+
+.hero-page {
+  background: var(--color-primary);
+  padding: 2.5rem 0 2rem;
+}
+
+.hero-page .eyebrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-page h1 {
+  color: white;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0.4rem 0 0.75rem;
+}
+
+.hero-page p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+  margin-top: 4rem;
+  background: #f5f1ea;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+  text-align: left;
+}
+
+.footer-grid h3 {
+  margin: 0 0 0.5rem;
+}
+
+.footer-grid h4 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.footer-grid p {
+  margin: 0.3rem 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.footer-grid a:hover {
+  color: var(--color-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

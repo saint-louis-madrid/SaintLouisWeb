@@ -16,7 +16,6 @@ import Footer from "../components/Footer.astro";
         <h1>Horaires des messes</h1>
         <p>Toutes les célébrations de la paroisse en français.</p>
       </div>
-      
     </div>
 
     <!-- HORAIRES HABITUELS -->
@@ -24,40 +23,29 @@ import Footer from "../components/Footer.astro";
       <div class="container">
         <span class="eyebrow">CHAQUE SEMAINE</span>
         <h2 class="section-title">Messes régulières</h2>
-
-        <div class="horaires-grid reveal">
-          <div class="horaire-card">
+        <div class="horaires-cols reveal">
+          <div class="horaire-col">
             <span class="horaire-day">Dimanche</span>
-            <div class="horaire-times">
-              <span>11h30</span>
-              <span>19h00</span>
-            </div>
+            <span class="horaire-hour">11h30 · 19h00</span>
             <span class="horaire-note">Messes en français</span>
           </div>
-          <div class="horaire-card">
+          <div class="horaire-col">
             <span class="horaire-day">Mercredi</span>
-            <div class="horaire-times">
-              <span>20h00</span>
-            </div>
+            <span class="horaire-hour">20h00</span>
             <span class="horaire-note">Précédée des confessions dès 19h</span>
           </div>
-          <div class="horaire-card">
+          <div class="horaire-col">
             <span class="horaire-day">Tous les jours</span>
-            <div class="horaire-times">
-              <span>12h00</span>
-            </div>
-            <span class="horaire-note">
-              En espagnol · Hogar Residencia San Luis<br />
-              Claudio Coello, 94
-            </span>
+            <span class="horaire-hour">12h00</span>
+            <span class="horaire-note">En espagnol · Hogar Residencia San Luis · Claudio Coello, 94</span>
           </div>
-          <p class="horaires-extra">
-          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2020/09/carnet-de-chants-saint-louis.pdf" 
+        </div>
+        <p class="horaires-extra reveal">
+          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2020/09/carnet-de-chants-saint-louis.pdf"
             target="_blank" rel="noopener noreferrer">
             Télécharger le carnet de chants →
           </a>
         </p>
-        </div>
       </div>
     </section>
 

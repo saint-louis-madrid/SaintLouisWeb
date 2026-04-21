@@ -1,0 +1,21 @@
+/* ================= ANIMATIONS ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal img {
+  transform: scale(1.05);
+  transition: transform 1.2s ease;
+}
+
+.reveal.active img {
+  transform: scale(1);
+}
