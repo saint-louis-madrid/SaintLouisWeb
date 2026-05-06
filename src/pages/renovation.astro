@@ -9,14 +9,32 @@ import Footer from "../components/Footer.astro";
 
   <main>
 
-    <!-- PAGE HEADER -->
-  <div class="page-header">
-  <div class="container">
-    <span class="eyebrow">ACTUALITÉ</span>
-    <h1>Projet Rénovation 2026</h1>
-    <p>Proyecto de Renovación 2026</p>
+    <!-- HERO -->
+   <section class="hero-carousel">
+  <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-slide" style="background-image: url('/images/iglesia.jpg')"></div>
+  
   </div>
-</div>
+
+  <div class="carousel-overlay">
+    <div class="container hero-content">
+     
+      <h1 style="color:white; font-size:clamp(1.8rem,4vw,3rem); margin:0.4rem 0 0.5rem;">
+        Projet Rénovation 2026
+      </h1>
+      
+    </div>
+  </div>
+
+  <button class="carousel-btn carousel-btn--prev" id="prevBtn">&#8592;</button>
+  <button class="carousel-btn carousel-btn--next" id="nextBtn">&#8594;</button>
+
+  <div class="carousel-dots" id="carouselDots">
+    <span class="carousel-dot active"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+  </div>
+</section>
 
     <!-- SELECTOR DE IDIOMA -->
     <div class="lang-selector-bar">
