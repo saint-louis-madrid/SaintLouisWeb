@@ -87,6 +87,13 @@ const { title = "Paroisse" } = Astro.props;
   const dots = document.querySelectorAll(".carousel-dot");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+  }
 
   if (track) {
     let current = 0;
