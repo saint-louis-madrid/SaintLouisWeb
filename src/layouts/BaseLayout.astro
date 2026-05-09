@@ -17,6 +17,8 @@ const { title = "Paroisse" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+       <!-- BOTÓN VOLVER ARRIBA -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
     <slot />
 
     <!-- BANNER COOKIES -->
