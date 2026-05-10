@@ -775,6 +775,14 @@
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
+#content-fr,
+#content-es {
+  overflow-x: hidden;
+}
+
+.fiscal-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 /* ================= BACK TO TOP ================= */
 
@@ -805,4 +813,9 @@
 .back-to-top:hover {
   background: #5e1717;
   transform: translateY(-2px);
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
