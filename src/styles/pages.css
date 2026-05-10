@@ -316,6 +316,7 @@
   grid-template-columns: 1fr 2fr;
   gap: 1.25rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .don-card {
@@ -639,6 +640,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin: 1rem 0 2rem;
+  overflow: hidden;
 }
 
 .fiscal-card {
@@ -693,6 +695,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 1.5rem;
+  overflow: hidden;
 }
 
 .recurso-card {
@@ -815,7 +818,3 @@
   transform: translateY(-2px);
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
