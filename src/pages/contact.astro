@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
         <!-- FORMULAIRE -->
         <div class="reveal">
           <h2 class="contact-title">Envoyer un message</h2>
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xzdolqoy" method="POST">
             <div class="form-group">
               <label for="name">Nom complet</label>
               <input type="text" id="name" name="name" placeholder="Marie Dupont" required />
@@ -60,10 +60,7 @@ import Footer from "../components/Footer.astro";
   </label>
 </div>
             <button type="submit" class="form-submit">Envoyer le message</button>
-            <p class="form-notice">
-              <!-- TODO: connecter Resend via API Route Astro SSR -->
-              Le formulaire sera actif prochainement.
-            </p>
+           <p class="form-notice">Vos données sont traitées conformément à notre <a href="/privacy">politique de confidentialité</a>.</p>
           </form>
         </div>
 
