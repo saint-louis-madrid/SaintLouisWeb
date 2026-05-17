@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
         <!-- FORMULAIRE -->
         <div class="reveal">
           <h2 class="contact-title">Envoyer un message</h2>
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xzdolqoy" method="POST">
+          <form class="contact-form" id="contact-form">
             <div class="form-group">
               <label for="name">Nom complet</label>
               <input type="text" id="name" name="name" placeholder="Marie Dupont" required />
@@ -119,6 +119,28 @@ import Footer from "../components/Footer.astro";
     </section>
 
   </main>
+
+  <script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const notice = document.querySelector('.form-notice');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      body: data
+    });
+
+    if (res.ok) {
+      form.reset();
+      if (notice) notice.textContent = 'Message envoyé avec succès. Merci !';
+    } else {
+      if (notice) notice.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
+    }
+  });
+</script>
 
   <Footer />
 </BaseLayout>

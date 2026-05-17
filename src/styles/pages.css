@@ -818,3 +818,25 @@
   transform: translateY(-2px);
 }
 
+/* ================= VOIR PLUS ================= */
+.voir-plus-content {
+  display: none;
+  margin-top: 0.75rem;
+}
+
+.voir-plus-content.visible {
+  display: block;
+}
+
+.voir-plus-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.75rem;
+  text-decoration: underline;
+}
