@@ -383,14 +383,43 @@ import Footer from "../components/Footer.astro";
     <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
   </div>
 </section>
+<section class="section" id="fr-10">
+  <div class="container reveal">
+    <span class="eyebrow">10. RÉSULTATS DE LA CAMPAGNE</span>
+    <h2 class="section-title">Résultats de la campagne</h2>
 
-      <section class="section" id="fr-10">
-        <div class="container reveal">
-          <span class="eyebrow">10. RÉSULTATS DE LA CAMPAGNE</span>
-          <h2 class="section-title">Résultats de la campagne</h2>
-          <p class="liturgie-note">À compléter en fonction de l'avancement de la campagne.</p>
-        </div>
-      </section>
+    <!-- TOTALES -->
+    <div class="resultats-totales" id="resultatsTotales">
+      <div class="resultat-card">
+        <span class="don-label">Total collecté</span>
+        <span class="don-amount recurso-ok" id="totalCollecte">Chargement...</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Donateurs</span>
+        <span class="don-amount" id="totalDonateurs">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Don moyen</span>
+        <span class="don-amount" id="donMoyen">—</span>
+      </div>
+    </div>
+
+    <!-- BARRA DE PROGRESO -->
+    <div class="progreso-wrapper">
+      <div class="progreso-bar">
+        <div class="progreso-fill" id="progresoFill"></div>
+      </div>
+      <div class="progreso-labels">
+        <span id="progresoPercent">0%</span>
+        <span>Objectif : 500 000 €</span>
+      </div>
+    </div>
+
+    <!-- GRÁFICO -->
+    <canvas id="donationsChart" style="margin-top:2rem;"></canvas>
+
+  </div>
+</section>
 
     </div>
 
@@ -717,13 +746,41 @@ import Footer from "../components/Footer.astro";
   </div>
 </section>
 
-      <section class="section" id="es-10">
-        <div class="container reveal">
-          <span class="eyebrow">10. RESULTADOS DE LA CAMPAÑA</span>
-          <h2 class="section-title">Resultados de la campaña</h2>
-          <p class="liturgie-note">A completar según el avance de la campaña.</p>
-        </div>
-      </section>
+     <section class="section" id="es-10">
+  <div class="container reveal">
+    <span class="eyebrow">10. RESULTADOS DE LA CAMPAÑA</span>
+    <h2 class="section-title">Resultados de la campaña</h2>
+
+    <div class="resultats-totales" id="resultatsTotalesES">
+      <div class="resultat-card">
+        <span class="don-label">Total recaudado</span>
+        <span class="don-amount recurso-ok" id="totalCollecteES">Cargando...</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Donantes</span>
+        <span class="don-amount" id="totalDonateursES">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Donación media</span>
+        <span class="don-amount" id="donMoyenES">—</span>
+      </div>
+    </div>
+
+    <div class="progreso-wrapper">
+      <div class="progreso-bar">
+        <div class="progreso-fill" id="progresoFillES"></div>
+      </div>
+      <div class="progreso-labels">
+        <span id="progresoPercentES">0%</span>
+        <span>Objetivo : 500 000 €</span>
+      </div>
+    </div>
+
+    <canvas id="donationsChartES" style="margin-top:2rem;"></canvas>
+
+
+  </div>
+</section>
 
     </div>
 
@@ -751,4 +808,131 @@ import Footer from "../components/Footer.astro";
     document.getElementById('indexFR').style.display = lang === 'fr' ? 'flex' : 'none';
     document.getElementById('indexES').style.display = lang === 'es' ? 'flex' : 'none';
   }
+</script>
+
+<script is:inline>
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQtfPy2zuJrGy8KD9avNGRprZDa_qDv6j_oHnvWVj1Jq8qlQRHQHNbYfxiqJElOZb-UNcmE6wIQFby1/pub?gid=0&single=true&output=csv';
+const OBJETIVO = 500000;
+
+function getWeekKey(dateStr) {
+  const parts = dateStr.trim().replace(/"/g,'').split('/');
+  if (parts.length < 3) return dateStr;
+  const d = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+  if (isNaN(d)) return dateStr;
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  const monday = new Date(d.setDate(diff));
+  return `${String(monday.getDate()).padStart(2,'0')}/${String(monday.getMonth()+1).padStart(2,'0')}/${monday.getFullYear()}`;
+}
+
+async function loadDonations() {
+  try {
+    const res = await fetch(CSV_URL + '&t=' + Date.now());
+    const text = await res.text();
+    const rows = text.trim().split('\n').slice(1).map(r => r.split(','));
+
+    // Agrupar por semana
+    const weekMap = new Map();
+    rows.forEach(row => {
+      if (row.length < 6) return;
+      const weekKey = getWeekKey(row[0]);
+      const cumulEur = parseFloat(row[4]?.replace(/[^0-9.]/g, '')) || 0;
+      const cumulNum = parseInt(row[3]) || 0;
+      const donMoyen = parseFloat(row[5]?.replace(/[^0-9.]/g, '')) || 0;
+      
+      if (!weekMap.has(weekKey) || cumulEur > weekMap.get(weekKey).cumulEur) {
+        weekMap.set(weekKey, { cumulEur, cumulNum, donMoyen });
+      }
+    });
+
+    const labels = [];
+    const cumuls = [];
+    let lastCumulEur = 0;
+    let lastCumulNum = 0;
+    let lastDonMoyen = 0;
+
+    weekMap.forEach((val, key) => {
+      labels.push(key);
+      cumuls.push(val.cumulEur);
+      lastCumulEur = val.cumulEur;
+      lastCumulNum = val.cumulNum;
+      lastDonMoyen = val.donMoyen;
+    });
+
+    const pct = Math.min((lastCumulEur / OBJETIVO) * 100, 100).toFixed(1);
+    const fmt = n => n.toLocaleString('fr-FR') + ' €';
+
+    // FR
+    document.getElementById('totalCollecte').textContent = fmt(lastCumulEur);
+    document.getElementById('totalDonateurs').textContent = lastCumulNum;
+    document.getElementById('donMoyen').textContent = fmt(lastDonMoyen);
+    document.getElementById('progresoFill').style.width = pct + '%';
+    document.getElementById('progresoPercent').textContent = pct + '%';
+
+    // ES
+    document.getElementById('totalCollecteES').textContent = fmt(lastCumulEur);
+    document.getElementById('totalDonateursES').textContent = lastCumulNum;
+    document.getElementById('donMoyenES').textContent = fmt(lastDonMoyen);
+    document.getElementById('progresoFillES').style.width = pct + '%';
+    document.getElementById('progresoPercentES').textContent = pct + '%';
+
+    // Gráfico
+    if (typeof Chart !== 'undefined') {
+      const chartConfig = {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Cumul €',
+              data: cumuls,
+              borderColor: '#7a1f1f',
+              backgroundColor: 'rgba(122,31,31,0.1)',
+              tension: 0.3,
+              fill: true,
+              pointRadius: 3,
+            },
+            {
+              label: 'Objectif 500 000 €',
+              data: new Array(labels.length).fill(OBJETIVO),
+              borderColor: '#b08a5a',
+              borderDash: [6, 4],
+              pointRadius: 0,
+              fill: false,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { position: 'top' } },
+          scales: {
+            x: {
+              ticks: {
+                maxTicksLimit: 12,
+                maxRotation: 45
+              }
+            },
+            y: {
+              ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' }
+            }
+          }
+        }
+      };
+
+      new Chart(document.getElementById('donationsChart'), chartConfig);
+      new Chart(document.getElementById('donationsChartES'), {
+        ...chartConfig,
+        data: JSON.parse(JSON.stringify(chartConfig.data))
+      });
+    }
+
+  } catch(e) {
+    console.error('Error cargando datos:', e);
+  }
+}
+
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+script.onload = loadDonations;
+document.head.appendChild(script);
 </script>
