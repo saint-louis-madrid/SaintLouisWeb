@@ -1,0 +1,738 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Orgue Cavaillé-Coll — Saint Louis des Français">
+  <Header />
+
+  <main>
+
+    <!-- HERO -->
+    <div class="page-header">
+      <div class="container">
+        <span class="eyebrow">PATRIMOINE MUSICAL · PATRIMONIO MUSICAL</span>
+        <h1>Orgue Cavaillé-Coll</h1>
+        <p>Le plus ancien orgue Cavaillé-Coll conservé à Madrid · El órgano Cavaillé-Coll más antiguo conservado en Madrid</p>
+      </div>
+    </div>
+
+    <!-- SELECTOR DE IDIOMA -->
+    <div class="lang-selector-bar">
+      <div class="container">
+        <button class="lang-selector-btn active" id="btnFR-orgue">FR Français</button>
+        <button class="lang-selector-btn" id="btnES-orgue">ES Español</button>
+      </div>
+    </div>
+
+    <!-- ÍNDICE -->
+    <div class="renovation-index">
+      <div class="container">
+        <div class="index-links" id="indexFR-orgue">
+          <a href="#fr-0">Intro</a>
+          <a href="#fr-1">1. Cavaillé-Coll</a>
+          <a href="#fr-2">2. L'instrument</a>
+          <a href="#fr-3">3. La paroisse</a>
+          <a href="#fr-4">4. Le projet</a>
+          <a href="#fr-5">5. Pourquoi soutenir</a>
+          <a href="#fr-6">6. Avantages fiscaux</a>
+          <a href="#fr-7">7. Cercle des mécènes</a>
+          <a href="#fr-8">8. Documents</a>
+          <a href="#fr-9">9. Devenir partenaire</a>
+        </div>
+        <div class="index-links" id="indexES-orgue" style="display:none;">
+          <a href="#es-0">Intro</a>
+          <a href="#es-1">1. Cavaillé-Coll</a>
+          <a href="#es-2">2. El instrumento</a>
+          <a href="#es-3">3. La parroquia</a>
+          <a href="#es-4">4. El proyecto</a>
+          <a href="#es-5">5. Por qué apoyar</a>
+          <a href="#es-6">6. Ventajas fiscales</a>
+          <a href="#es-7">7. Círculo de mecenas</a>
+          <a href="#es-8">8. Documentos</a>
+          <a href="#es-9">9. Ser socio</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <!-- ===== CONTENIDO FR ===== -->
+    <div id="content-fr-orgue">
+
+      <section class="section" id="fr-0">
+        <div class="container reveal">
+          <h2 class="section-title">Faire revivre la voix d'un orgue Cavaillé-Coll à Madrid</h2>
+          <p class="orgue-tagline">
+            Associez votre entreprise à un projet d'excellence culturelle et de rayonnement franco-espagnol
+          </p>
+          <p>
+            Au cœur de Madrid, la paroisse Saint-Louis des Français porte un projet ambitieux :
+            restaurer un orgue construit en 1861 par Aristide Cavaillé-Coll, référence mondiale
+            de la facture d'orgue. Le plus ancien orgue Cavaillé-Coll conservé à Madrid.
+            Aujourd'hui fragilisé, cet instrument exceptionnel attend de retrouver sa voix.
+          </p>
+          <div class="orgue-coste reveal">
+            <span class="don-label">Coût total du projet</span>
+            <span class="don-amount recurso-needed">369 600 €</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🎯 Pourquoi ce projet concerne votre entreprise</h3>
+          <p>Soutenir ce projet, c'est faire le choix d'un engagement à forte valeur ajoutée :</p>
+          <div class="renovation-lista">
+            <span>✔ Visibilité institutionnelle auprès d'un public français et international à Madrid</span>
+            <span>✔ Impact RSE immédiat (préservation du patrimoine, accès à la culture)</span>
+            <span>✔ Avantages fiscaux significatifs en Espagne et en France</span>
+            <span>✔ Valorisation de votre image autour d'un projet d'excellence</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fr-1">
+        <div class="container reveal">
+          <span class="eyebrow">1. QUI ÉTAIT CAVAILLÉ-COLL ?</span>
+          <h2 class="section-title">Aristide Cavaillé-Coll (1811–1899)</h2>
+          <p>
+            Aristide Cavaillé-Coll est considéré comme le plus grand facteur d'orgues du XIXᵉ siècle.
+            Ses instruments, présents notamment à Notre-Dame de Paris et à l'église Saint-Sulpice,
+            ont révolutionné la musique en offrant une richesse sonore comparable à un orchestre.
+          </p>
+          <p>
+            Ils ont inspiré les grands compositeurs du romantisme tels que : César Franck et Charles-Marie Widor.
+          </p>
+          <p class="liturgie-note">
+            👉 Restaurer cet orgue, c'est associer votre entreprise à une référence mondiale du patrimoine musical.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-2">
+        <div class="container reveal">
+          <span class="eyebrow">2. UN INSTRUMENT UNIQUE À MADRID</span>
+          <h2 class="section-title">Un instrument unique à Madrid</h2>
+          <p>
+            Construit en 1861, cet orgue est aujourd'hui le plus ancien orgue Cavaillé-Coll conservé à Madrid.
+            Il constitue un témoignage exceptionnel :
+          </p>
+          <div class="renovation-lista">
+            <span>De la présence française en Espagne</span>
+            <span>De l'histoire musicale européenne</span>
+            <span>Du savoir-faire artisanal du XIXᵉ siècle</span>
+          </div>
+          <p class="liturgie-note" style="margin-top:1rem;">
+            👉 Une restauration fidèle lui redonnera toute sa puissance sonore et son rayonnement.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-3">
+        <div class="container reveal">
+          <span class="eyebrow">3. LA PAROISSE SAINT-LOUIS DES FRANÇAIS</span>
+          <h2 class="section-title">Un lieu de rayonnement à Madrid</h2>
+          <p>
+            Depuis plus de 400 ans, au cœur de Madrid, la paroisse Saint-Louis des Français est
+            un point de repère pour des milliers de familles francophones. La paroisse bénéficie
+            du soutien de l'Ambassade de France en Espagne, témoignant de son rôle dans le
+            rayonnement culturel français à Madrid.
+          </p>
+          <p>Bien plus qu'un bâtiment, c'est :</p>
+          <div class="renovation-lista">
+            <span>Un lieu de foi</span>
+            <span>Un espace de rencontre</span>
+            <span>Un pont entre les cultures</span>
+          </div>
+          <p style="margin-top:1rem;">
+            Chaque jour, la paroisse accueille familles, jeunes et adultes autour d'activités
+            spirituelles, culturelles et éducatives.
+          </p>
+          <p class="liturgie-note">
+            👉 Soutenir ce projet, c'est préserver un patrimoine vivant<br/>
+            👉 C'est aussi associer votre entreprise à un acteur reconnu du rayonnement culturel français en Espagne
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-4">
+        <div class="container reveal">
+          <span class="eyebrow">4. UN PROJET CONCRET ET STRUCTURÉ</span>
+          <h2 class="section-title">Budget global : 369 600 €</h2>
+          <p class="liturgie-intro">👉 Chaque contribution a un impact direct et mesurable.</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card">
+              <span class="fiscal-don">Soufflerie</span>
+              <span class="fiscal-coste"><strong>40 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Claviers et console</span>
+              <span class="fiscal-coste"><strong>35 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Mécanique</span>
+              <span class="fiscal-coste"><strong>70 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Sommiers</span>
+              <span class="fiscal-coste"><strong>60 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Tuyauterie</span>
+              <span class="fiscal-coste"><strong>120 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Buffet</span>
+              <span class="fiscal-coste"><strong>25 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Harmonisation finale</span>
+              <span class="fiscal-coste"><strong>19 600 €</strong></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fr-5">
+        <div class="container reveal">
+          <span class="eyebrow">5. POURQUOI SOUTENIR CE PROJET</span>
+          <h2 class="section-title">Pourquoi soutenir ce projet</h2>
+
+          <h3 class="renovation-subtitle">🌍 Un engagement RSE concret</h3>
+          <div class="renovation-lista">
+            <span>Préservation d'un patrimoine culturel européen</span>
+            <span>Contribution à la vie culturelle madrilène</span>
+            <span>Projet durable et intergénérationnel</span>
+          </div>
+<h3 class="renovation-subtitle">
+  <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;">
+    <rect width="7" height="14" fill="#002395"/>
+    <rect x="7" width="6" height="14" fill="#fff"/>
+    <rect x="13" width="7" height="14" fill="#ED2939"/>
+  </svg>
+  <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:6px; vertical-align:middle;">
+  <rect width="20" height="14" fill="#c60b1e"/>
+  <rect y="3.5" width="20" height="7" fill="#ffc400"/>
+  <rect y="10.5" width="20" height="3.5" fill="#c60b1e"/>
+</svg>
+  Un projet franco-espagnol
+</h3>
+          <div class="renovation-lista">
+            <span>Symbole de la présence française à Madrid</span>
+            <span>Rayonnement culturel bilatéral</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🎵 Un impact visible</h3>
+          <p>Une fois restauré, l'orgue permettra :</p>
+          <div class="renovation-lista">
+            <span>Concerts et festivals d'art sacré</span>
+            <span>Événements culturels</span>
+            <span>Rayonnement international</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fr-6">
+        <div class="container reveal">
+          <span class="eyebrow">6. AVANTAGES FISCAUX</span>
+          <h2 class="section-title">Avantages fiscaux (Espagne et France)</h2>
+
+          <h3 class="renovation-subtitle">Espagne :</h3>
+          <p>Le mécénat ouvre droit à des déductions fiscales importantes :</p>
+          <p class="liturgie-intro">
+            👉 <strong>40% à 50%</strong> du montant du don (selon la Ley 49/2002 et la récurrence).
+          </p>
+
+          <h3 class="renovation-subtitle">France :</h3>
+          <p>
+            Un don à une paroisse en Espagne peut être déductible en France si cette paroisse
+            est reconnue comme équivalente à un organisme d'intérêt général français.
+          </p>
+          <p class="liturgie-note">
+            💡 Un levier efficace pour allier engagement sociétal et optimisation fiscale.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-7">
+        <div class="container reveal">
+          <span class="eyebrow">7. CERCLE DES MÉCÈNES FONDATEURS</span>
+          <h2 class="section-title">Rejoignez les 10 entreprises fondatrices</h2>
+          <p>
+            Afin de financer la restauration complète de cet instrument exceptionnel, la paroisse
+            Saint-Louis des Français souhaite réunir un cercle de <strong>10 entreprises mécènes</strong>
+            engagées à hauteur d'un dixième du budget, soit <strong>37 000 €</strong>.
+          </p>
+          <p>En devenant mécène fondateur, votre entreprise associe durablement son image :</p>
+          <div class="renovation-lista">
+            <span>À la sauvegarde d'un patrimoine musical européen unique</span>
+            <span>Au rayonnement culturel franco-espagnol à Madrid</span>
+            <span>À un projet artistique, éducatif et intergénérationnel</span>
+          </div>
+
+          <h3 class="renovation-subtitle">✨ Contreparties réservées aux mécènes fondateurs</h3>
+
+          <h3 class="renovation-subtitle" style="font-size:0.95rem; margin-top:1rem;">🔹 Visibilité institutionnelle</h3>
+          <div class="renovation-lista">
+            <span>Logo sur la plaque officielle des mécènes</span>
+            <span>Présence sur les supports de communication du projet</span>
+            <span>Mention lors des événements liés à l'inauguration</span>
+          </div>
+
+          <h3 class="renovation-subtitle" style="font-size:0.95rem;">🔹 Relations publiques & hospitalité</h3>
+          <div class="renovation-lista">
+            <span>Invitations VIP aux concerts inauguraux et événements culturels</span>
+            <span>Possibilité d'organiser un événement musical privé pour vos clients ou collaborateurs, accompagné d'un accueil dans les salles paroissiales rénovées</span>
+            <span>Visites privées de l'orgue restauré</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🤝 Autres formes de mécénat</h3>
+          <p>
+            Les entreprises souhaitant soutenir le projet à une autre hauteur peuvent également
+            participer au financement d'éléments spécifiques :
+          </p>
+          <div class="renovation-lista">
+            <span>Soufflerie</span>
+            <span>Claviers</span>
+            <span>Tuyauterie</span>
+            <span>Mécanique</span>
+            <span>Harmonisation</span>
+          </div>
+          <p class="liturgie-note">
+            👉 Chaque contribution participe concrètement à la renaissance de l'orgue.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-8">
+        <div class="container reveal">
+          <span class="eyebrow">8. DOCUMENTS</span>
+          <h2 class="section-title">Documents de référence</h2>
+          <div class="orgue-docs">
+            <div class="orgue-doc-card">
+              <span class="orgue-doc-icon">📄</span>
+              <div>
+                <span class="orgue-doc-title">Lettre de soutien de l'Ambassadrice de France en Espagne</span>
+                <span class="orgue-doc-desc">Soutien officiel au projet de restauration</span>
+              </div>
+              <button class="lang-selector-btn" id="btnModalFR">Voir →</button>
+            </div>
+            <div class="orgue-doc-card">
+              <span class="orgue-doc-icon">📋</span>
+              <div>
+                <span class="orgue-doc-title">Devis complet — Facteurs d'Orgues</span>
+                <span class="orgue-doc-desc">Budget détaillé de la restauration</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
+                 target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
+                Ouvrir →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fr-9">
+        <div class="container reveal">
+          <span class="eyebrow">10. DEVENEZ PARTENAIRE</span>
+          <h2 class="section-title">Construisons ensemble votre engagement</h2>
+          <p>
+            Restaurer cet orgue, c'est transmettre aux générations futures un patrimoine musical
+            exceptionnel au cœur de Madrid. Rejoignez les entreprises qui s'engagent pour la
+            culture, le patrimoine et le rayonnement franco-espagnol.
+          </p>
+          <div class="orgue-contact">
+            <a href="mailto:paroissesaintlouismadrid@gmail.com" class="cta-button">
+              📧 paroissesaintlouismadrid@gmail.com
+            </a>
+            <a href="tel:+34689053259" class="lang-selector-btn" style="padding:0.8rem 1.6rem;">
+              📞 +34 689 05 32 59
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===== CONTENIDO ES ===== -->
+    <div id="content-es-orgue" style="display:none;">
+
+      <section class="section" id="es-0">
+        <div class="container reveal">
+          <h2 class="section-title">Hacer renacer la voz de un órgano Cavaillé-Coll en Madrid</h2>
+          <p class="orgue-tagline">
+            Asocie su empresa a un proyecto de excelencia cultural y de proyección franco-española
+          </p>
+          <p>
+            En el corazón de Madrid, la parroquia San Luis de los Franceses impulsa un ambicioso proyecto:
+            la restauración de un órgano construido en 1861 por Aristide Cavaillé-Coll, referencia mundial
+            en la construcción de órganos. El órgano Cavaillé-Coll más antiguo conservado en Madrid.
+            Hoy, este instrumento excepcional, debilitado por el paso del tiempo, espera recuperar su voz.
+          </p>
+          <div class="orgue-coste reveal">
+            <span class="don-label">Coste total del proyecto</span>
+            <span class="don-amount recurso-needed">369 600 € (IVA incluido)</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🎯 ¿Por qué este proyecto es importante para su empresa?</h3>
+          <p>Apoyar este proyecto significa apostar por un compromiso de gran valor añadido:</p>
+          <div class="renovation-lista">
+            <span>✔ Visibilidad institucional ante un público francés e internacional en Madrid</span>
+            <span>✔ Impacto inmediato en materia de RSC (preservación del patrimonio y acceso a la cultura)</span>
+            <span>✔ Importantes ventajas fiscales en España y Francia</span>
+            <span>✔ Valorización de la imagen de su empresa en torno a un proyecto de excelencia</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="es-1">
+        <div class="container reveal">
+          <span class="eyebrow">1. ¿QUIÉN FUE CAVAILLÉ-COLL?</span>
+          <h2 class="section-title">Aristide Cavaillé-Coll (1811–1899)</h2>
+          <p>
+            Aristide Cavaillé-Coll está considerado el constructor de órganos más importante del siglo XIX.
+            Sus instrumentos, presentes especialmente en Notre-Dame de Paris y en la iglesia de Saint-Sulpice,
+            revolucionaron la música gracias a una riqueza sonora comparable a la de una orquesta.
+          </p>
+          <p>
+            Inspiraron a grandes compositores del romanticismo como César Franck y Charles-Marie Widor entre otros.
+          </p>
+          <p class="liturgie-note">
+            👉 Restaurar este órgano significa asociar su empresa a una referencia mundial del patrimonio musical.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="es-2">
+        <div class="container reveal">
+          <span class="eyebrow">2. UN INSTRUMENTO ÚNICO EN MADRID</span>
+          <h2 class="section-title">Un instrumento único en Madrid</h2>
+          <p>
+            Construido en 1861, este órgano es hoy el órgano Cavaillé-Coll más antiguo conservado en Madrid.
+            Constituye un testimonio excepcional:
+          </p>
+          <div class="renovation-lista">
+            <span>De las relaciones entre Francia y España</span>
+            <span>De la historia musical europea</span>
+            <span>Del saber hacer artesanal del siglo XIX</span>
+          </div>
+          <p class="liturgie-note" style="margin-top:1rem;">
+            👉 Una restauración fiel le devolverá toda su potencia sonora y su prestigio.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="es-3">
+        <div class="container reveal">
+          <span class="eyebrow">3. LA PARROQUIA SAN LUIS DE LOS FRANCESES</span>
+          <h2 class="section-title">Un lugar de referencia en Madrid</h2>
+          <p>
+            Desde hace más de 400 años, en pleno corazón de Madrid, la parroquia San Luis de los Franceses
+            es un punto de referencia para miles de familias francófonas y franco-españolas.
+            La parroquia cuenta con el apoyo de la Embajada de Francia en España, como reflejo de
+            su papel en la difusión de la cultura francesa en Madrid.
+          </p>
+          <p>Mucho más que un edificio, es:</p>
+          <div class="renovation-lista">
+            <span>Un lugar de fe</span>
+            <span>Un espacio de encuentro</span>
+            <span>Un puente entre culturas</span>
+          </div>
+          <p style="margin-top:1rem;">
+            Cada día, la parroquia acoge a familias, jóvenes y adultos en torno a actividades
+            espirituales, culturales y educativas.
+          </p>
+          <p class="liturgie-note">
+            👉 Apoyar este proyecto significa preservar un patrimonio vivo<br/>
+            👉 También significa asociar su empresa a un actor reconocido de la proyección cultural francesa en España
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="es-4">
+        <div class="container reveal">
+          <span class="eyebrow">4. UN PROYECTO CONCRETO Y ESTRUCTURADO</span>
+          <h2 class="section-title">Presupuesto global: 369 600 €</h2>
+          <p class="liturgie-intro">👉 Cada contribución tiene un impacto directo y medible.</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card">
+              <span class="fiscal-don">Sistema de viento</span>
+              <span class="fiscal-coste"><strong>40 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Teclados y consola</span>
+              <span class="fiscal-coste"><strong>35 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Mecánica</span>
+              <span class="fiscal-coste"><strong>70 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Secretos</span>
+              <span class="fiscal-coste"><strong>60 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Tubería</span>
+              <span class="fiscal-coste"><strong>120 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Caja del órgano</span>
+              <span class="fiscal-coste"><strong>25 000 €</strong></span>
+            </div>
+            <div class="fiscal-card">
+              <span class="fiscal-don">Armonización final</span>
+              <span class="fiscal-coste"><strong>19 600 €</strong></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="es-5">
+        <div class="container reveal">
+          <span class="eyebrow">5. ¿POR QUÉ APOYAR ESTE PROYECTO?</span>
+          <h2 class="section-title">¿Por qué apoyar este proyecto?</h2>
+
+          <h3 class="renovation-subtitle">🌍 Un compromiso real de RSC</h3>
+          <div class="renovation-lista">
+            <span>Preservación del patrimonio cultural europeo</span>
+            <span>Contribución a la vida cultural madrileña</span>
+            <span>Proyecto sostenible e intergeneracional</span>
+          </div>
+            <h3 class="renovation-subtitle">
+            <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:6px; vertical-align:middle;">
+                <rect width="7" height="14" fill="#002395"/>
+                <rect x="7" width="6" height="14" fill="#fff"/>
+                <rect x="13" width="7" height="14" fill="#ED2939"/>
+            </svg>
+            <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;">
+                <rect width="20" height="14" fill="#c60b1e"/>
+                <rect y="3.5" width="20" height="7" fill="#ffc400"/>
+                <rect y="10.5" width="20" height="3.5" fill="#c60b1e"/>
+            </svg>
+            
+            Un proyecto franco-español
+            </h3>
+          <div class="renovation-lista">
+            <span>Símbolo de la presencia francesa en Madrid</span>
+            <span>Proyección cultural bilateral</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🎵 Un impacto visible</h3>
+          <p>Una vez restaurado, el órgano permitirá:</p>
+          <div class="renovation-lista">
+            <span>Conciertos y festivales de música sacra</span>
+            <span>Eventos culturales</span>
+            <span>Proyección internacional</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="es-6">
+        <div class="container reveal">
+          <span class="eyebrow">6. VENTAJAS FISCALES</span>
+          <h2 class="section-title">Ventajas fiscales (España y Francia)</h2>
+
+          <h3 class="renovation-subtitle">España:</h3>
+          <p>El mecenazgo da derecho a importantes deducciones fiscales:</p>
+          <p class="liturgie-intro">
+            Del <strong>40% al 50%</strong> del importe donado (comprueben bien con sus asesores).
+          </p>
+
+          <h3 class="renovation-subtitle">Francia:</h3>
+          <p class="liturgie-intro">
+            Del <strong>60%</strong> del importe donado (comprueben bien con sus asesores).
+          </p>
+          <p>
+            Una donación a una parroquia en España puede ser deducible en Francia si esta parroquia
+            es reconocida como equivalente a un organismo de interés general francés.
+          </p>
+          <p class="liturgie-note">
+            Una herramienta eficaz para unir compromiso social y optimización fiscal.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="es-7">
+        <div class="container reveal">
+          <span class="eyebrow">7. CÍRCULO DE MECENAS FUNDADORES</span>
+          <h2 class="section-title">Únase a las 10 empresas fundadoras</h2>
+          <p>
+            Con el fin de financiar la restauración completa de este instrumento excepcional, la parroquia
+            San Luis de los Franceses desea reunir un círculo de <strong>10 empresas mecenas</strong>
+            comprometidas con una aportación de una décima parte del presupuesto, es decir <strong>37 000 €</strong>.
+          </p>
+          <p>Al convertirse en mecenas fundador, su empresa asociará de forma duradera su imagen:</p>
+          <div class="renovation-lista">
+            <span>A la preservación de un patrimonio musical europeo único</span>
+            <span>A la proyección cultural franco-española en Madrid</span>
+            <span>A un proyecto artístico, educativo e intergeneracional</span>
+          </div>
+
+          <h3 class="renovation-subtitle">✨ Beneficios reservados a los mecenas fundadores</h3>
+
+          <h3 class="renovation-subtitle" style="font-size:0.95rem; margin-top:1rem;">🔹 Visibilidad institucional</h3>
+          <div class="renovation-lista">
+            <span>Logo en la placa oficial de mecenas</span>
+            <span>Presencia en los soportes de comunicación del proyecto</span>
+            <span>Mención en los eventos relacionados con la inauguración</span>
+          </div>
+
+          <h3 class="renovation-subtitle" style="font-size:0.95rem;">🔹 Relaciones públicas y hospitalidad</h3>
+          <div class="renovation-lista">
+            <span>Invitaciones VIP a conciertos inaugurales y eventos culturales</span>
+            <span>Posibilidad de organizar un evento musical privado para clientes o colaboradores, acompañado de una recepción en las salas parroquiales renovadas</span>
+          </div>
+
+          <h3 class="renovation-subtitle" style="font-size:0.95rem;">🔹 Experiencias exclusivas</h3>
+          <div class="renovation-lista">
+            <span>Visitas privadas al órgano restaurado</span>
+          </div>
+
+          <h3 class="renovation-subtitle">🤝 Otras formas de mecenazgo</h3>
+          <p>
+            Las empresas que deseen apoyar el proyecto con otra aportación también podrán
+            participar financiando elementos específicos:
+          </p>
+          <div class="renovation-lista">
+            <span>Sistema de viento</span>
+            <span>Teclados</span>
+            <span>Tubería</span>
+            <span>Mecánica</span>
+            <span>Armonización</span>
+          </div>
+          <p class="liturgie-note">
+            👉 Cada contribución participa concretamente en el renacimiento del órgano.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="es-8">
+        <div class="container reveal">
+          <span class="eyebrow">8. DOCUMENTOS</span>
+          <h2 class="section-title">Documentos de referencia</h2>
+          <div class="orgue-docs">
+            <div class="orgue-doc-card">
+              <span class="orgue-doc-icon">📄</span>
+              <div>
+                <span class="orgue-doc-title">Carta de apoyo de la Embajadora de Francia en España</span>
+                <span class="orgue-doc-desc">Apoyo oficial al proyecto de restauración</span>
+              </div>
+              <button class="lang-selector-btn" id="btnModalES">Ver →</button>
+            </div>
+            <div class="orgue-doc-card">
+              <span class="orgue-doc-icon">📋</span>
+              <div>
+                <span class="orgue-doc-title">Presupuesto completo — Restauración del órgano</span>
+                <span class="orgue-doc-desc">Presupuesto detallado de la restauración</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
+                 target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
+                Abrir →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="es-9">
+        <div class="container reveal">
+          <span class="eyebrow">10. CONVIÉRTASE EN SOCIO</span>
+          <h2 class="section-title">Construyamos juntos su compromiso</h2>
+          <p>
+            Restaurar este órgano significa transmitir a las futuras generaciones un patrimonio musical
+            excepcional en el corazón de Madrid. Únase a las empresas que apuestan por la cultura,
+            el patrimonio y la proyección franco-española.
+          </p>
+          <div class="orgue-contact">
+            <a href="mailto:paroissesaintlouismadrid@gmail.com" class="cta-button">
+              📧 paroissesaintlouismadrid@gmail.com
+            </a>
+            <a href="tel:+34689053259" class="lang-selector-btn" style="padding:0.8rem 1.6rem;">
+              📞 +34 689 05 32 59
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- MODAL PDF -->
+    <div id="pdfModal" class="pdf-modal">
+      <div class="pdf-modal-content">
+        <button class="pdf-modal-close" id="btnCloseModal">✕</button>
+        <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>paroissesaintlouismadrid@gmail.com</h2>
+        </div>
+        <a href="/contact" class="cta-button">Contact</a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Selector idioma
+    var btnFR = document.getElementById('btnFR-orgue');
+    var btnES = document.getElementById('btnES-orgue');
+
+    if (btnFR) btnFR.addEventListener('click', function() { setLangOrgue('fr'); });
+    if (btnES) btnES.addEventListener('click', function() { setLangOrgue('es'); });
+
+    function setLangOrgue(lang) {
+      var fr = document.getElementById('content-fr-orgue');
+      var es = document.getElementById('content-es-orgue');
+      var iFR = document.getElementById('indexFR-orgue');
+      var iES = document.getElementById('indexES-orgue');
+      if (fr) fr.style.display = lang === 'fr' ? 'block' : 'none';
+      if (es) es.style.display = lang === 'es' ? 'block' : 'none';
+      if (btnFR) btnFR.classList.toggle('active', lang === 'fr');
+      if (btnES) btnES.classList.toggle('active', lang === 'es');
+      if (iFR) iFR.style.display = lang === 'fr' ? 'flex' : 'none';
+      if (iES) iES.style.display = lang === 'es' ? 'flex' : 'none';
+    }
+
+    // Modal PDF
+    var modal = document.getElementById('pdfModal');
+    var frame = document.getElementById('pdfFrame');
+    var closeBtn = document.getElementById('btnCloseModal');
+    var btnMFR = document.getElementById('btnModalFR');
+    var btnMES = document.getElementById('btnModalES');
+    var PDF_URL = 'https://drive.google.com/file/d/1nETWqQZTGXH7FXtAHdnpLwF1KHXSX50a/preview';
+
+    function openModal() {
+      if (frame) frame.src = PDF_URL;
+      if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+
+    function closeModal() {
+      if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+      if (frame) frame.src = '';
+    }
+
+    if (btnMFR) btnMFR.addEventListener('click', openModal);
+    if (btnMES) btnMES.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modal) modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    // Back to top
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+      });
+    }
+
+  });
+</script>
