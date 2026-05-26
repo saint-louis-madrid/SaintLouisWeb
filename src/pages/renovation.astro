@@ -957,7 +957,7 @@ async function loadDonations() {
               }
             },
             y: {
-              min: 0,
+              beginAtZero: true,
               max: 500000,
               ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' }
             }
