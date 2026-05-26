@@ -330,20 +330,31 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-      <section class="section" id="fr-7">
-        <div class="container reveal">
-          <span class="eyebrow">7. PROJET EN IMAGES ET VIDÉOS 🎥</span>
-          <h2 class="section-title">Projet en images et vidéos</h2>
-          <p class="liturgie-intro">
-            Découvrez notre projet sur notre chaîne 
-            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
-            notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> 
-            et Facebook.
-          </p>
-          <h3>Images et vidéos a suivre.</h3>
+     <section class="section" id="fr-7">
+  <div class="container reveal">
+    <span class="eyebrow">7. PROJET EN IMAGES ET VIDÉOS 🎥</span>
+    <h2 class="section-title">Projet en images et vidéos</h2>
+    <p class="liturgie-intro">
+      Découvrez notre projet sur notre chaîne 
+      <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+      notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> 
+      et Facebook.
+    </p>
+    <h3 class="renovation-subtitle">La Projet</h3>
+    <div class="fresque-grid" style="grid-template-columns: 1fr; max-width: 400px;">
+      <div class="fresque-item" data-index="0">
+        <img src="/images/fresque/fresque-1.jpg"
+             alt="Panneau 1 — vue d'ensemble" loading="lazy" />
+        <div class="fresque-item-overlay">
+          <span class="fresque-item-caption">Panneau 1 — vue d'ensemble</span>
         </div>
-      </section>
+        <span class="fresque-zoom-icon">⤢</span>
+      </div>
+    </div>
 
+    <h3> Images et vidéos à venir.</h3>
+  </div>
+</section>
      <section class="section" id="fr-8">
   <div class="container reveal">
     <span class="eyebrow">8. JUMELAGE SOLIDAIRE</span>
@@ -718,8 +729,19 @@ import Footer from "../components/Footer.astro";
             y Facebook.
           </p>
           
-            <h3>Imagenes y vídeos muy pronto.</h3>
-          
+            <h3 class="renovation-subtitle">El Proyecto</h3>
+
+            <div class="fresque-grid" id="fresqueGridES" style="grid-template-columns: 1fr; max-width: 400px;">
+              <div class="fresque-item" data-index="0">
+                <img src="/images/fresque/fresque-1.jpg"
+                    alt="Panel 1 — vista general" loading="lazy" />
+                <div class="fresque-item-overlay">
+                  <span class="fresque-item-caption">Panel 1 — vista general</span>
+                </div>
+                <span class="fresque-zoom-icon">⤢</span>
+              </div>
+            </div>
+          <h3>Imagenes y vídeos muy pronto.</h3>
         </div>
       </section>
 
@@ -836,6 +858,17 @@ import Footer from "../components/Footer.astro";
       </div>
     </section>
 
+    <!-- LIGHTBOX FRESQUE -->
+<div class="fresque-lightbox" id="fresqueLightbox" role="dialog" aria-modal="true">
+  <button class="fresque-lightbox-close" id="fresqueClose" aria-label="Fermer">✕</button>
+  <button class="fresque-lightbox-nav fresque-lightbox-prev" id="fresquePrev" aria-label="Précédent">&#8592;</button>
+  <img class="fresque-lightbox-img" id="fresqueLbImg" src="" alt="" />
+  <button class="fresque-lightbox-nav fresque-lightbox-next" id="fresqueNext" aria-label="Suivant">&#8594;</button>
+  <div class="fresque-lightbox-footer">
+    <span class="fresque-lightbox-caption-text" id="fresqueLbCaption"></span>
+    <span class="fresque-lightbox-counter" id="fresqueLbCounter"></span>
+  </div>
+</div>
   </main>
 
   <Footer />
@@ -981,4 +1014,69 @@ const script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
 script.onload = loadDonations;
 document.head.appendChild(script);
+</script>
+
+<script is:inline>
+(function() {
+  const images = [
+  { src: '/images/fresque/fresque-1.jpg', captionFR: 'Panneau 1 — vue d\'ensemble', captionES: 'Panel 1 — vista general' },
+];
+
+  let current = 0;
+
+  function getLang() {
+    return document.getElementById('btnFR')?.classList.contains('active') ? 'fr' : 'es';
+  }
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    document.getElementById('fresqueLightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('fresqueLightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function updateLightbox() {
+    const img   = images[current];
+    const lang  = getLang();
+    document.getElementById('fresqueLbImg').src       = img.src;
+    document.getElementById('fresqueLbImg').alt       = lang === 'fr' ? img.captionFR : img.captionES;
+    document.getElementById('fresqueLbCaption').textContent = lang === 'fr' ? img.captionFR : img.captionES;
+    document.getElementById('fresqueLbCounter').textContent = (current + 1) + ' / ' + images.length;
+  }
+
+  // Click en thumbnails
+  document.addEventListener('click', function(e) {
+    const item = e.target.closest('.fresque-item');
+    if (item) openLightbox(parseInt(item.dataset.index));
+  });
+
+  document.getElementById('fresqueClose').addEventListener('click', closeLightbox);
+
+  document.getElementById('fresquePrev').addEventListener('click', function() {
+    current = (current - 1 + images.length) % images.length;
+    updateLightbox();
+  });
+
+  document.getElementById('fresqueNext').addEventListener('click', function() {
+    current = (current + 1) % images.length;
+    updateLightbox();
+  });
+
+  // Cerrar con Escape / click fuera
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('fresqueLightbox').classList.contains('open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')  { current = (current - 1 + images.length) % images.length; updateLightbox(); }
+    if (e.key === 'ArrowRight') { current = (current + 1) % images.length; updateLightbox(); }
+  });
+
+  document.getElementById('fresqueLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+})();
 </script>
