@@ -9,12 +9,10 @@ import Footer from "../components/Footer.astro";
 
   <main>
 
-   
     <!-- HERO -->
     <section class="hero-carousel">
       <div class="carousel-track" id="carouselTrack">
         <div class="carousel-slide" style="background-image: url('/images/iglesia.jpg')"></div>
-
       </div>
       <div class="carousel-overlay">
         <div class="container hero-content">
@@ -25,21 +23,14 @@ import Footer from "../components/Footer.astro";
       </div>
       <button class="carousel-btn carousel-btn--prev" id="prevBtn">&#8592;</button>
       <button class="carousel-btn carousel-btn--next" id="nextBtn">&#8594;</button>
-      <div class="carousel-dots" id="carouselDots">
-      
-        
-      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
     </section>
 
     <!-- SELECTOR DE IDIOMA -->
     <div class="lang-selector-bar">
       <div class="container">
-        <button class="lang-selector-btn active" id="btnFR" onclick="setLang('fr')">
-          🇫🇷 Français
-        </button>
-        <button class="lang-selector-btn" id="btnES" onclick="setLang('es')">
-          🇪🇸 Español
-        </button>
+        <button class="lang-selector-btn active" id="btnFR" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button class="lang-selector-btn" id="btnES" onclick="setLang('es')">🇪🇸 Español</button>
       </div>
     </div>
 
@@ -47,281 +38,99 @@ import Footer from "../components/Footer.astro";
     <div class="renovation-index">
       <div class="container">
         <div class="index-links" id="indexFR">
-          <a href="#fr-1">1. Je donne</a>
-          <a href="#fr-2">2. Collaborer</a>
-          <a href="#fr-3">3. Fiscal</a>
-          <a href="#fr-4">4. Histoire</a>
-          <a href="#fr-5">5. Travaux</a>
-          <a href="#fr-6">6. Projet</a>
-          <a href="#fr-7">7. Images et Vidéos</a>
-          <a href="#fr-8">8. Liban</a>
-          <a href="#fr-9">9. Ressources</a>
+          <a href="#fr-1">1. Histoire</a>
+          <a href="#fr-2">2. Images & Vidéos</a>
+          <a href="#fr-3">3. Travaux</a>
+          <a href="#fr-4">4. Projet</a>
+          <a href="#fr-5">5. Ressources</a>
+          <a href="#fr-6">6. Fiscal</a>
+          <a href="#fr-7">7. Je donne</a>
+          <a href="#fr-8">8. Faire connaître</a>
+          <a href="#fr-9">9. Liban</a>
           <a href="#fr-10">10. Résultats</a>
         </div>
         <div class="index-links" id="indexES" style="display:none;">
-          <a href="#es-1">1. Donar</a>
-          <a href="#es-2">2. Colaborar</a>
-          <a href="#es-3">3. Fiscal</a>
-          <a href="#es-4">4. Historia</a>
-          <a href="#es-5">5. Obras</a>
-          <a href="#es-6">6. Proyecto</a>
-          <a href="#es-7">7. Imágenes y Vídeos</a>
-          <a href="#es-8">8. Líbano</a>
-          <a href="#es-9">9. Recursos</a>
+          <a href="#es-1">1. Historia</a>
+          <a href="#es-2">2. Imágenes y Vídeos</a>
+          <a href="#es-3">3. Obras</a>
+          <a href="#es-4">4. Proyecto</a>
+          <a href="#es-5">5. Recursos</a>
+          <a href="#es-6">6. Fiscal</a>
+          <a href="#es-7">7. Donar</a>
+          <a href="#es-8">8. Dar a conocer</a>
+          <a href="#es-9">9. Líbano</a>
           <a href="#es-10">10. Resultados</a>
         </div>
       </div>
     </div>
+
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
     <!-- ===== CONTENIDO FR ===== -->
     <div id="content-fr">
 
       <section class="section" id="fr-1">
         <div class="container reveal">
-          <span class="eyebrow">1. JE DONNE</span>
-          <h2 class="section-title">Je donne</h2>
-          <p class="liturgie-intro">
-            Vous pouvez soutenir le projet de la paroisse de plusieurs manières.<br/>
-            ⚠️ Attention : prenez connaissance des avantages fiscaux au point 3, pour mieux nous aider.
-          </p>
-          <div class="renovation-bizum">
-            <span class="don-label">Bizum solidaire – code : 13902</span>
-            <span class="bizum-code">13902</span>
-            <p>
-              Dans l'app Bizum, choisissez « Donner à une ONG », « Bizum solidaire » ou « Donación », 
-              puis entrez le code <strong>13902</strong>. Disponible seulement depuis l'Espagne.
-            </p>
-             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Demander un reçu fiscal →
-              </a>
+          <span class="eyebrow">1. SAINT-LOUIS-DES-FRANÇAIS</span>
+          <h2 class="section-title">Un lieu emblématique</h2>
+          <p>Depuis plus de 400 ans, au cœur de Madrid, la paroisse Saint-Louis-des-Français est un point de repère pour des milliers de familles francophones.</p>
+          <div class="voir-plus-content">
+            <p>Bien plus qu'un bâtiment, c'est un lieu de foi, un espace de rencontre, un pont entre les cultures. Chaque jour, enfants, jeunes et adultes y trouvent accompagnement, communauté et sens.</p>
+            <p>Aujourd'hui, cet héritage vivant doit être préservé. La rénovation de l'église et des installations paroissiales est essentielle pour continuer à accueillir dignement les générations futures.</p>
+            <p>Soutenir ce projet, c'est préserver un patrimoine vivant, faire grandir une communauté et transmettre une histoire. Porté par la communauté, ce projet s'inscrit dans une vision à long terme : assurer la vitalité et le rayonnement d'une paroisse en croissance.</p>
+            <p>Une équipe dédiée dirige cette campagne afin de mobiliser les donateurs et garantir la réussite du projet.</p>
           </div>
-          <div class="don-grid">
-            <div class="don-card">
-              <span class="don-label">Virement bancaire</span>
-              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
-              <span class="don-note">BIC : BSCHESMM</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Demander un reçu fiscal →
-              </a>
-            </div>
-            <div class="don-card">
-              <span class="don-label">Carte bancaire</span>
-              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" 
-              target="_blank" rel="noopener noreferrer" 
-              class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">
-              💳 Payer par carte
-              </a>
-              <span class="don-note">⚠️ Une commission est appliquée sur les dons par carte. Pour les dons importants, privilégiez le virement ou le Bizum.</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Demander un reçu fiscal →
-              </a>
-            </div>
-           
-          </div>
-          <p class="don-contact">
-            Contact : <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a>
-          </p>
+          <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
         </div>
       </section>
 
       <section class="section" id="fr-2">
         <div class="container reveal">
-          <span class="eyebrow">2. AUTRES MOYENS DE FAIRE CONNAITRE</span>
-          <h2 class="section-title">Autres moyens de faire connaître</h2>
-          <p>
-            Nous souhaitons ouvrir le plus largement possible notre rayon d'action. Pensez à toutes 
-            les personnes qui seront heureuses de participer à ce beau projet : famille, amis, parrains, 
-            marraines, etc. Cette multitude de petites aides peuvent faire la différence.
+          <span class="eyebrow">2. PROJET EN IMAGES ET VIDÉOS 🎥</span>
+          <h2 class="section-title">Projet en images et vidéos</h2>
+          <p class="liturgie-intro">
+            Découvrez notre projet sur notre chaîne 
+            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+            notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> et Facebook.
           </p>
-          <p>
-            Nous cherchons aussi de <strong>grands donateurs</strong>. Si vous pensez avoir accès à 
-            une personne pouvant faire un grand don, contactez le père Rodrigo pour organiser une 
-            présentation personnalisée.
-          </p>
-          <p>Faites connaître ce beau projet ! Partagez le lien de cette page !</p>
+        
+          <h3>Images et vidéos à venir.</h3>
         </div>
       </section>
 
       <section class="section" id="fr-3">
         <div class="container reveal">
-          <span class="eyebrow">3. LES AVANTAGES FISCAUX</span>
-          <h2 class="section-title">Les avantages fiscaux</h2>
-         <h3 class="renovation-subtitle">Si vous êtes imposable en Espagne :</h3>
-<p class="liturgie-intro">
-  <strong>80%</strong> de réduction fiscale sur les premiers <strong>250€</strong> et 
-  <strong>40%</strong> pour le reste (<strong>45%</strong> si le don se répète pendant 3 ans).
-  <br><br>
-  Limite du don : <strong>10%</strong> du revenu imposable 
-  (si le don dépasse 10 % de votre revenu imposable,
-  vous ne perdez pas l’avantage fiscal : il est simplement réparti 
-  sur les années suivantes, jusqu’à 10 ans).
-</p>
-
-<div class="fiscal-grid">
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 250 €</span>
-    <span class="fiscal-coste">Coût réel <strong>50 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 200 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 500 €</span>
-    <span class="fiscal-coste">Coût réel <strong>200 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 300 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 1 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>500 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 500 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 2 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>1 100 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 900 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 3 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>1 700 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 1 300 €</span>
-  </div>
-</div>
-
-<h3 class="renovation-subtitle">Si vous êtes imposable en France :</h3>
-
-<p class="liturgie-intro">
-  <strong>66%</strong> sur l'ensemble du don. 
-  Limite : 20% du revenu imposable.
-</p>
-
-<div class="fiscal-grid">
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 500 €</span>
-    <span class="fiscal-coste">Coût réel <strong>170 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 330 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 1 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>340 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 660 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 2 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>680 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 1 320 €</span>
-  </div>
-
-  <div class="fiscal-card">
-    <span class="fiscal-don">Don 3 000 €</span>
-    <span class="fiscal-coste">Coût réel <strong>1 020 €</strong></span>
-    <span class="fiscal-reduccion">Réduction 1 980 €</span>
-  </div>
-</div>
-          <p class="liturgie-note">
-            "Un don à une paroisse en Espagne peut être déductible en France si cette paroisse 
-            est reconnue comme équivalente à un organisme d'intérêt général français."
-          </p>
+          <span class="eyebrow">3. POURQUOI CES TRAVAUX ?</span>
+          <h2 class="section-title">Pourquoi ces travaux ?</h2>
+          <p>L'église et les installations actuelles nécessitent une rénovation importante pour répondre aux normes de sécurité (anti-incendie), environnementales (isolation et climatisation) et adapter les espaces aux besoins actuels.</p>
+          <div class="voir-plus-content">
+            <p>Ces travaux sont indispensables pour continuer à accueillir la communauté dans de bonnes conditions. Mais pas seulement ! Ils embelliront l'église grâce à une monumentale catéchèse pictorique et une statue-reliquaire de Saint Louis, et permettront qu'elle reste ouverte quotidiennement pour le culte de tous les madrilènes.</p>
+            <p>Ces travaux témoignent également, de manière concrète, de la confiance placée dans la mission de notre Église : loin de disparaître, nous sommes en croissance et engagés dans un processus de renouveau.</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
         </div>
       </section>
 
-    <section class="section" id="fr-4">
-  <div class="container reveal">
-    <span class="eyebrow">4. SAINT-LOUIS-DES-FRANÇAIS</span>
-    <h2 class="section-title">Un lieu emblématique</h2>
-    <p>
-      Depuis plus de 400 ans, au cœur de Madrid, la paroisse Saint-Louis-des-Français 
-      est un point de repère pour des milliers de familles francophones.
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        Bien plus qu'un bâtiment, c'est un lieu de foi, un espace de rencontre, un pont 
-        entre les cultures. Chaque jour, enfants, jeunes et adultes y trouvent 
-        accompagnement, communauté et sens.
-      </p>
-      <p>
-        Aujourd'hui, cet héritage vivant doit être préservé. La rénovation de l'église 
-        et des installations paroissiales est essentielle pour continuer à accueillir 
-        dignement les générations futures.
-      </p>
-      <p>
-        Soutenir ce projet, c'est préserver un patrimoine vivant, faire grandir une 
-        communauté et transmettre une histoire. Porté par la communauté, ce projet 
-        s'inscrit dans une vision à long terme : assurer la vitalité et le rayonnement 
-        d'une paroisse en croissance.
-      </p>
-      <p>
-        Une équipe dédiée dirige cette campagne afin de mobiliser les donateurs et 
-        garantir la réussite du projet.
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
-  </div>
-</section>
-
-     <section class="section" id="fr-5">
-  <div class="container reveal">
-    <span class="eyebrow">5. POURQUOI CES TRAVAUX ?</span>
-    <h2 class="section-title">Pourquoi ces travaux ?</h2>
-    <p>
-      L'église et les installations actuelles nécessitent une rénovation importante pour 
-      répondre aux normes de sécurité (anti-incendie), environnementales (isolation et 
-      climatisation) et adapter les espaces aux besoins actuels.
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        Ces travaux sont indispensables pour continuer à accueillir la communauté dans de 
-        bonnes conditions. Mais pas seulement ! Ils embelliront l'église grâce à une 
-        monumentale catéchèse pictorique et une statue-reliquaire de Saint Louis, et 
-        permettront qu'elle reste ouverte quotidiennement pour le culte de tous les 
-        madrilènes.
-      </p>
-      <p>
-        Ces travaux témoignent également, de manière concrète, de la confiance placée 
-        dans la mission de notre Église : loin de disparaître, nous sommes en croissance 
-        et engagés dans un processus de renouveau.
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
-  </div>
-</section>
-
-      <section class="section" id="fr-6">
+      <section class="section" id="fr-4">
         <div class="container reveal">
-          <span class="eyebrow">6. PROJET DÉTAILLÉ</span>
+          <span class="eyebrow">4. PROJET DÉTAILLÉ</span>
           <h2 class="section-title">Projet détaillé</h2>
           <h3 class="renovation-subtitle">La rénovation de l'église :</h3>
           <div class="renovation-lista">
-            <span>Isolation thermique complète</span>
-            <span>Climatisation par aérothermie</span>
-            <span>Nouveau faux-plafond avec sécurité incendie</span>
-            <span>Décoration artistique et catéchétique</span>
-            <span>Éclairage professionnel</span>
-            <span>Amélioration acoustique</span>
-            <span>Nouveaux bancs avec prie-Dieu intégré</span>
-            <span>Sacristie rénovée et unifiée</span>
-            <span>Câblage pour retransmissions</span>
-            <span>Systèmes de sécurité pour une église ouverte aux visites</span>
-            <span>Rénovation de l'orgue</span>
-            <span>Création d'un columbarium</span>
+            <span>Isolation thermique complète</span><span>Climatisation par aérothermie</span>
+            <span>Nouveau faux-plafond avec sécurité incendie</span><span>Décoration artistique et catéchétique</span>
+            <span>Éclairage professionnel</span><span>Amélioration acoustique</span>
+            <span>Nouveaux bancs avec prie-Dieu intégré</span><span>Sacristie rénovée et unifiée</span>
+            <span>Câblage pour retransmissions</span><span>Systèmes de sécurité pour une église ouverte aux visites</span>
+            <span>Rénovation de l'orgue</span><span>Création d'un columbarium</span>
             <span>Statue de Saint Louis avec reliquaire</span>
           </div>
           <h3 class="renovation-subtitle">Les espaces paroissiaux :</h3>
           <div class="renovation-lista">
-            <span>Salles modulables pour les activités</span>
-            <span>Sas d'entrée vers la salle Saureulx</span>
-            <span>Grande salle rénovée et lumineuse</span>
-            <span>Cuisine et bar fonctionnels</span>
-            <span>Studio de création de contenus</span>
-            <span>Nouveaux sanitaires accessibles</span>
-            <span>Wifi et équipements adaptés</span>
-            <span>Espaces de rangement optimisés</span>
+            <span>Salles modulables pour les activités</span><span>Sas d'entrée vers la salle Saureulx</span>
+            <span>Grande salle rénovée et lumineuse</span><span>Cuisine et bar fonctionnels</span>
+            <span>Studio de création de contenus</span><span>Nouveaux sanitaires accessibles</span>
+            <span>Wifi et équipements adaptés</span><span>Espaces de rangement optimisés</span>
           </div>
           <h3 class="renovation-subtitle">Passerelle d'accès ♿ :</h3>
           <p>Une passerelle accessible reliera l'église à la résidence Saint-Louis.</p>
@@ -330,100 +139,110 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-     <section class="section" id="fr-7">
-  <div class="container reveal">
-    <span class="eyebrow">7. PROJET EN IMAGES ET VIDÉOS 🎥</span>
-    <h2 class="section-title">Projet en images et vidéos</h2>
-    <p class="liturgie-intro">
-      Découvrez notre projet sur notre chaîne 
-      <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
-      notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> 
-      et Facebook.
-    </p>
-    <h3 class="renovation-subtitle">Le Projet</h3>
-    <div class="fresque-grid" style="grid-template-columns: 1fr; max-width: 400px;">
-      <div class="fresque-item" data-index="0">
-        <img src="/images/fresque/fresque-1.jpg"
-             alt="Panneau 1 — vue d'ensemble" loading="lazy" />
-        <div class="fresque-item-overlay">
-          <span class="fresque-item-caption">Panneau 1 — vue d'ensemble</span>
+      <section class="section" id="fr-5">
+        <div class="container reveal">
+          <span class="eyebrow">5. NOS RESSOURCES</span>
+          <h2 class="section-title">Nos ressources et nos besoins</h2>
+          <div class="recursos-grid">
+            <div class="recurso-card"><span class="don-label">Coût total</span><span class="don-amount">3 500 000 €</span></div>
+            <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
+            <div class="recurso-card"><span class="don-label">À lever fin 2026</span><span class="don-amount recurso-needed">1 000 000 €</span></div>
+          </div>
+          <div class="voir-plus-content">
+            <p>Grâce à la bonne gestion de l'Œuvre Saint Louis et de la trésorerie de la paroisse, nous disposons déjà de <strong>2.020.000€</strong>. Un grand donateur a déjà donné <strong>200.000€</strong> pour nous aider à financer le projet. Grâce à une personne généreuse, nous disposons aussi d'un <strong>emprunt sans intérêts de 250.000€</strong> à rendre sur deux ans. Le total de la disponibilité au moment de lancer notre campagne est donc de <strong>2.470.000€</strong>. C'est une excellente nouvelle !</p>
+            <p><strong>Coût du projet :</strong> Concernant le projet, les négociations sont encore en cours avec les constructeurs mais nous pouvons déjà prévoir que le coût va s'élever à un total de <strong>3.500.000€</strong> (tout compris, aussi le mobilier, les taxes, honoraires des architectes, etc.)</p>
+            <p>Il nous faut lever <strong>1.000.000€</strong> d'ici la fin 2026. <strong>500.000€</strong> par une levée de fonds en ouvrant le plus possible nos cercles d'action. <strong>500.000€</strong> par les grands donateurs (ou éventuellement des legs).</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
         </div>
-        <span class="fresque-zoom-icon">⤢</span>
-      </div>
-    </div>
+      </section>
 
-    <h3> Images et vidéos à venir.</h3>
-  </div>
-</section>
-     <section class="section" id="fr-8">
-  <div class="container reveal">
-    <span class="eyebrow">8. JUMELAGE SOLIDAIRE</span>
-    <h2 class="section-title">Jumelage solidaire avec le Liban (3%)</h2>
-    <p>
-      En soutenant notre projet, vous pensez aussi à ceux qui sont dans un plus grand 
-      besoin : par le biais de l'Œuvre d'Orient, <strong>3% de l'argent récolté</strong> 
-      servira à soutenir les chrétiens du Liban.
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        La communauté paroissiale de Saint Louis des Français ne vit pas dans un monde 
-        isolé. L'Œuvre d'Orient, qui depuis 167 ans accompagne et aide les chrétiens 
-        d'Orient, fait cela en contact direct avec les diocèses et les paroisses libanaises. 
-        Nous financerons nos travaux… mais sans oublier les autres !
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
-  </div>
-</section>
+      <section class="section" id="fr-6">
+        <div class="container reveal">
+          <span class="eyebrow">6. LES AVANTAGES FISCAUX</span>
+          <h2 class="section-title">Les avantages fiscaux</h2>
+          <h3 class="renovation-subtitle">Si vous êtes imposable en Espagne :</h3>
+          <p class="liturgie-intro"><strong>80%</strong> de réduction fiscale sur les premiers <strong>250€</strong> et <strong>40%</strong> pour le reste (<strong>45%</strong> si le don se répète pendant 3 ans).<br><br>Limite du don : <strong>10%</strong> du revenu imposable (si le don dépasse 10 % de votre revenu imposable, vous ne perdez pas l'avantage fiscal : il est simplement réparti sur les années suivantes, jusqu'à 10 ans).</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card"><span class="fiscal-don">Don 250 €</span><span class="fiscal-coste">Coût réel <strong>50 €</strong></span><span class="fiscal-reduccion">Réduction 200 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 500 €</span><span class="fiscal-coste">Coût réel <strong>200 €</strong></span><span class="fiscal-reduccion">Réduction 300 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 1 000 €</span><span class="fiscal-coste">Coût réel <strong>500 €</strong></span><span class="fiscal-reduccion">Réduction 500 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 2 000 €</span><span class="fiscal-coste">Coût réel <strong>1 100 €</strong></span><span class="fiscal-reduccion">Réduction 900 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 3 000 €</span><span class="fiscal-coste">Coût réel <strong>1 700 €</strong></span><span class="fiscal-reduccion">Réduction 1 300 €</span></div>
+          </div>
+          <h3 class="renovation-subtitle">Si vous êtes imposable en France :</h3>
+          <p class="liturgie-intro"><strong>66%</strong> sur l'ensemble du don. Limite : 20% du revenu imposable.</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card"><span class="fiscal-don">Don 500 €</span><span class="fiscal-coste">Coût réel <strong>170 €</strong></span><span class="fiscal-reduccion">Réduction 330 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 1 000 €</span><span class="fiscal-coste">Coût réel <strong>340 €</strong></span><span class="fiscal-reduccion">Réduction 660 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 2 000 €</span><span class="fiscal-coste">Coût réel <strong>680 €</strong></span><span class="fiscal-reduccion">Réduction 1 320 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Don 3 000 €</span><span class="fiscal-coste">Coût réel <strong>1 020 €</strong></span><span class="fiscal-reduccion">Réduction 1 980 €</span></div>
+          </div>
+          <p class="liturgie-note">"Un don à une paroisse en Espagne peut être déductible en France si cette paroisse est reconnue comme équivalente à un organisme d'intérêt général français."</p>
+        </div>
+      </section>
 
-  <section class="section" id="fr-9">
-  <div class="container reveal">
-    <span class="eyebrow">9. NOS RESSOURCES</span>
-    <h2 class="section-title">Nos ressources et nos besoins</h2>
-    <div class="recursos-grid">
-      <div class="recurso-card">
-        <span class="don-label">Coût total</span>
-        <span class="don-amount">3 500 000 €</span>
-      </div>
-      <div class="recurso-card">
-        <span class="don-label">Disponible</span>
-        <span class="don-amount recurso-ok">2 470 000 €</span>
-      </div>
-      <div class="recurso-card">
-        <span class="don-label">À lever fin 2026</span>
-        <span class="don-amount recurso-needed">1 000 000 €</span>
-      </div>
-    </div>
-   <div class="voir-plus-content">
-  <p>
-    Grâce à la bonne gestion de l'Œuvre Saint Louis et de la trésorerie de la paroisse, 
-    nous disposons déjà de <strong>2.020.000€</strong>. Un grand donateur a déjà donné 
-    <strong>200.000€</strong> pour nous aider à financer le projet. Grâce à une personne 
-    généreuse, nous disposons aussi d'un <strong>emprunt sans intérêts de 250.000€</strong> 
-    à rendre sur deux ans. Le total de la disponibilité au moment de lancer notre campagne 
-    est donc de <strong>2.470.000€</strong>. C'est une excellente nouvelle !
-  </p>
-  <p>
-    <strong>Coût du projet :</strong> Concernant le projet, les négociations sont encore 
-    en cours avec les constructeurs mais nous pouvons déjà prévoir que le coût va s'élever 
-    à un total de <strong>3.500.000€</strong> (tout compris, aussi le mobilier, les taxes, 
-    honoraires des architectes, etc.)
-  </p>
-  <p>
-    Il nous faut lever <strong>1.000.000€</strong> d'ici la fin 2026. 
-    <strong>500.000€</strong> par une levée de fonds en ouvrant le plus possible nos cercles 
-    d'action. <strong>500.000€</strong> par les grands donateurs (ou éventuellement des legs).
-  </p>
+      <section class="section" id="fr-7">
+        <div class="container reveal">
+          <span class="eyebrow">7. JE DONNE</span>
+          <h2 class="section-title">Je donne</h2>
+          <p class="liturgie-intro">Vous pouvez soutenir le projet de la paroisse de plusieurs manières.<br/>⚠️ Attention : prenez connaissance des avantages fiscaux au point 6, pour mieux nous aider.</p>
+          <div class="renovation-bizum">
+            <span class="don-label">Bizum solidaire – code : 13902</span>
+            <span class="bizum-code">13902</span>
+            <p>Dans l'app Bizum, choisissez « Donner à une ONG », « Bizum solidaire » ou « Donación », puis entrez le code <strong>13902</strong>. Disponible seulement depuis l'Espagne.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+          </div>
+          <div class="don-grid">
+            <div class="don-card">
+              <span class="don-label">Virement bancaire</span>
+              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
+              <span class="don-note">BIC : BSCHESMM</span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+            </div>
+            <div class="don-card">
+              <span class="don-label">Carte bancaire</span>
+              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Payer par carte</a>
+              <span class="don-note">⚠️ Une commission est appliquée sur les dons par carte. Pour les dons importants, privilégiez le virement ou le Bizum.</span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+            </div>
+          </div>
+          <p class="don-contact">Contact : <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="fr-8">
+        <div class="container reveal">
+          <span class="eyebrow">8. FAIRE CONNAÎTRE</span>
+          <h2 class="section-title">Autres moyens de faire connaître</h2>
+          <p>Nous souhaitons ouvrir le plus largement possible notre rayon d'action. Pensez à toutes les personnes qui seront heureuses de participer à ce beau projet : famille, amis, parrains, marraines, etc. Cette multitude de petites aides peuvent faire la différence.</p>
+          <p>Nous cherchons aussi de <strong>grands donateurs</strong>. Si vous pensez avoir accès à une personne pouvant faire un grand don, contactez le père Rodrigo pour organiser une présentation personnalisée.</p>
+          <p>Faites connaître ce beau projet ! Partagez le lien de cette page !</p>
+        </div>
+      <div style="text-align:center;">
+  <button class="share-trigger-btn" id="shareBtn">
+    🔗 Partager ce projet
+  </button>
 </div>
-    <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
-  </div>
-</section>
-<section class="section" id="fr-10">
+      </section>
+
+      <section class="section" id="fr-9">
+        <div class="container reveal">
+          <span class="eyebrow">9. JUMELAGE SOLIDAIRE</span>
+          <h2 class="section-title">Jumelage solidaire avec le Liban (3%)</h2>
+          <p>En soutenant notre projet, vous pensez aussi à ceux qui sont dans un plus grand besoin : par le biais de l'Œuvre d'Orient, <strong>3% de l'argent récolté</strong> servira à soutenir les chrétiens du Liban.</p>
+          <div class="voir-plus-content">
+            <p>La communauté paroissiale de Saint Louis des Français ne vit pas dans un monde isolé. L'Œuvre d'Orient, qui depuis 167 ans accompagne et aide les chrétiens d'Orient, fait cela en contact direct avec les diocèses et les paroisses libanaises. Nous financerons nos travaux… mais sans oublier les autres !</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
+        </div>
+      </section>
+
+      <section class="section" id="fr-10">
   <div class="container reveal">
     <span class="eyebrow">10. RÉSULTATS DE LA CAMPAGNE</span>
     <h2 class="section-title">Résultats de la campagne</h2>
 
-    <!-- TOTALES -->
     <div class="resultats-totales" id="resultatsTotales">
       <div class="resultat-card">
         <span class="don-label">Total collecté</span>
@@ -439,20 +258,31 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
 
-    <!-- BARRA DE PROGRESO -->
     <div class="progreso-wrapper">
-      <div class="progreso-bar">
-        <div class="progreso-fill" id="progresoFill"></div>
-      </div>
+      <div class="progreso-bar"><div class="progreso-fill" id="progresoFill"></div></div>
       <div class="progreso-labels">
         <span id="progresoPercent">0%</span>
         <span>Objectif : 500 000 €</span>
       </div>
     </div>
 
-    <!-- GRÁFICO -->
-    <canvas id="donationsChart" style="margin-top:2rem;"></canvas>
+    <h3 class="renovation-subtitle" style="margin-top:2rem;">Activités paroissiales</h3>
+    <div class="resultats-totales">
+      <div class="resultat-card">
+        <span class="don-label">Nº d'activités</span>
+        <span class="don-amount" id="totalActivitesFR">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Total activités</span>
+        <span class="don-amount recurso-ok" id="montantActivitesFR">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Moyenne par activité</span>
+        <span class="don-amount" id="moyenneActivitesFR">—</span>
+      </div>
+    </div>
 
+    <canvas id="donationsChart" style="margin-top:2rem;"></canvas>
   </div>
 </section>
 
@@ -463,253 +293,70 @@ import Footer from "../components/Footer.astro";
 
       <section class="section" id="es-1">
         <div class="container reveal">
-          <span class="eyebrow">1. QUIERO DONAR</span>
-          <h2 class="section-title">Quiero donar</h2>
-          <p class="liturgie-intro">
-            Apoya el proyecto de la parroquia de cualquiera de estas maneras.<br/>
-            ⚠️ Consulta las ventajas fiscales en el punto 3 para ayudarnos mejor.
-          </p>
-          <div class="renovation-bizum">
-            <span class="don-label">Bizum solidario – código : 13902</span>
-            <span class="bizum-code">13902</span>
-            <p>En la app de Bizum, elige «Donar a una ONG» e introduce el código <strong>13902</strong>.</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Solicitar recibo fiscal →
-              </a>
+          <span class="eyebrow">1. UN LUGAR EMBLEMÁTICO</span>
+          <h2 class="section-title">Saint-Louis-des-Français, un lugar emblemático</h2>
+          <p>Durante más de 400 años, en el corazón de Madrid, la parroquia Saint Louis des Français ha sido un referente para miles de familias francófonas… ¡pero no sólo!</p>
+          <div class="voir-plus-content">
+            <p>Como San Luis, hijo de madre española y de padre francés, nuestra parroquia ha sido siempre un lugar de encuentro y de enriquecimiento mutuo de dos culturas.</p>
+            <p>Mucho más que un edificio, es un lugar de fe, un espacio de encuentro, un puente entre culturas. Cada día, niños, jóvenes y adultos encuentran acompañamiento, comunidad y sentido.</p>
+            <p>¡Cientos son los matrimonios que se han preparado aquí donde ella es española y él francés, o donde él es español y ella francesa! Cientos o miles los bautizos de niños franco-españoles. Por no hablar de tantos jóvenes y niños de colegios franceses que han recibido aquí la primera comunión, la confirmación…</p>
+            <p>Decenas también las instituciones españolas que han colaborado con nosotros o disfrutado de nuestras instalaciones para una actividad, un mercadillo o una comida benéfica…</p>
+            <p>Hoy además queremos que San Luis, primo de San Fernando, con su nueva estatua y su relicario, pueda tener un lugar de culto. Como rey santo, como marido santo, como santo padre de familia.</p>
+            <p>Hoy, este legado vivo debe preservarse. La renovación de la iglesia y de las instalaciones parroquiales es esencial para continuar acogiendo dignamente a las futuras generaciones.</p>
+            <p>Apoyar este proyecto significa preservar un patrimonio vivo, hacer crecer una comunidad y transmitir una historia. Impulsado por la comunidad, este proyecto se enmarca en una visión a largo plazo: asegurar la vitalidad y el alcance de una parroquia en crecimiento, de una iglesia en el corazón de un barrio.</p>
+            <p>Un equipo lleno de ilusión dirige esta campaña para movilizar a los donantes y garantizar el éxito del proyecto.</p>
           </div>
-          <div class="don-grid">
-            <div class="don-card">
-              <span class="don-label">Transferencia bancaria</span>
-              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
-              <span class="don-note">BIC : BSCHESMM</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Solicitar recibo fiscal →
-              </a>
-            </div>
-           <div class="don-card">
-              <span class="don-label">Tarjeta bancaria</span>
-              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" 
-                target="_blank" rel="noopener noreferrer" 
-                class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">
-                💳 Pagar con tarjeta
-              </a>
-              <span class="don-note">⚠️ Se aplica una comisión a los donativos con tarjeta. Para donaciones importantes se recomienda transferencia o Bizum.</span>
-               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" 
-                target="_blank" rel="noopener noreferrer" class="activite-link">
-                Solicitar recibo fiscal →
-              </a>
-            </div>
-          </div>
-          <p class="don-contact">
-            Contacto: <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a>
-          </p>
+          <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
         </div>
       </section>
 
       <section class="section" id="es-2">
         <div class="container reveal">
-          <span class="eyebrow">2. DAR A CONOCER</span>
-          <h2 class="section-title">Dar a conocer</h2>
-          <p>
-            Pensad en todas las personas que estarán felices de participar: familia, amigos, padrinos, 
-            madrinas, etc. Esta multitud de pequeñas ayudas puede marcar la diferencia.
+          <span class="eyebrow">2. PROYECTO EN IMÁGENES Y VÍDEOS 🎥</span>
+          <h2 class="section-title">Proyecto en imágenes y vídeos</h2>
+          <p class="liturgie-intro">
+            Descubre nuestro proyecto en 
+            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+            <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> y Facebook.
           </p>
-          <p>
-            También buscamos <strong>grandes donantes</strong>. Contactad con el padre Rodrigo 
-            para organizar una presentación personalizada.
-          </p>
-          <p>¡Compartid el enlace de esta página y los vídeos!</p>
+      
+          <h3>Imágenes y vídeos muy pronto.</h3>
         </div>
       </section>
 
       <section class="section" id="es-3">
         <div class="container reveal">
-          <span class="eyebrow">3. VENTAJAS FISCALES</span>
-          <h2 class="section-title">Ventajas fiscales</h2>
-          <h3 class="renovation-subtitle">Si está sujeto a impuestos en España:</h3>
-<p class="liturgie-intro">
-  <strong>80%</strong> de deducción sobre los primeros <strong>250€</strong> y 
-  <strong>40%</strong> sobre el resto (<strong>45%</strong> si se repite 3 años).
-  <br><br>
-  Límite de la donación: <strong>10%</strong> de los ingresos sujetos a impuestos (si la donación supera el 10% de sus ingresos sujetos a impuestos, 
-  no pierde la ventaja fiscal: simplemente se distribuye en los años siguientes, hasta 10 años).
-</p>
-<div class="fiscal-grid">
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 250 €</span>
-    <span class="fiscal-coste">Coste real <strong>50 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 200 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 500 €</span>
-    <span class="fiscal-coste">Coste real <strong>200 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 300 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 1 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>500 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 500 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 2 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>1 100 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 900 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 3 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>1 700 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 1 300 €</span>
-  </div>
-</div>
-
-<h3 class="renovation-subtitle">Si está sujeto a impuestos en Francia:</h3>
-<p class="liturgie-intro">
-  <strong>66%</strong> de deducción sobre el total de la donación. 
-  Límite: 20% de los ingresos sujetos a impuestos.
-</p>
-<div class="fiscal-grid">
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 500 €</span>
-    <span class="fiscal-coste">Coste real <strong>170 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 330 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 1 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>340 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 660 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 2 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>680 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 1 320 €</span>
-  </div>
-  <div class="fiscal-card">
-    <span class="fiscal-don">Donación 3 000 €</span>
-    <span class="fiscal-coste">Coste real <strong>1 020 €</strong></span>
-    <span class="fiscal-reduccion">Reducción 1 980 €</span>
-  </div>
-</div>
-<p class="liturgie-note">
-  "Una donación a una parroquia en España puede ser deducible en Francia si esta parroquia 
-  es reconocida como equivalente a un organismo de interés general francés."
-</p>
+          <span class="eyebrow">3. ¿POR QUÉ ESTAS OBRAS?</span>
+          <h2 class="section-title">¿Por qué estas obras?</h2>
+          <p>La iglesia y las instalaciones actuales requieren una renovación importante para cumplir con las normas de seguridad (antiincendios), medioambientales (aislamiento y climatización) y adaptar los espacios a las necesidades actuales.</p>
+          <div class="voir-plus-content">
+            <p>Estas obras son indispensables para continuar acogiendo a la comunidad en buenas condiciones… ¡pero no sólo! Van a embellecer esta iglesia con una espectacular catequesis pictórica y una estatua-relicario de San Luis, y van a permitir que esté abierta para el culto de todos los madrileños.</p>
+            <p>Además, demuestran de manera concreta la confianza depositada en la misión de nuestra Iglesia: lejos de desaparecer, estamos en crecimiento y comprometidos en un proceso de renovación.</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
         </div>
-       
-          
       </section>
 
-<section class="section" id="es-4">
-  <div class="container reveal">
-    <span class="eyebrow">4. UN LUGAR EMBLEMÁTICO</span>
-    <h2 class="section-title">Saint-Louis-des-Français, un lugar emblemático</h2>
-    <p>
-      Durante más de 400 años, en el corazón de Madrid, la parroquia Saint Louis des 
-      Français ha sido un referente para miles de familias francófonas… ¡pero no sólo!
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        Como San Luis, hijo de madre española y de padre francés, nuestra parroquia ha 
-        sido siempre un lugar de encuentro y de enriquecimiento mutuo de dos culturas.
-      </p>
-      <p>
-        Mucho más que un edificio, es un lugar de fe, un espacio de encuentro, un puente 
-        entre culturas. Cada día, niños, jóvenes y adultos encuentran acompañamiento, 
-        comunidad y sentido.
-      </p>
-      <p>
-        ¡Cientos son los matrimonios que se han preparado aquí donde ella es española y 
-        él francés, o donde él es español y ella francesa! Cientos o miles los bautizos 
-        de niños franco-españoles. Por no hablar de tantos jóvenes y niños de colegios 
-        franceses que han recibido aquí la primera comunión, la confirmación…
-      </p>
-      <p>
-        Decenas también las instituciones españolas que han colaborado con nosotros o 
-        disfrutado de nuestras instalaciones para una actividad, un mercadillo o una 
-        comida benéfica…
-      </p>
-      <p>
-        Hoy además queremos que San Luis, primo de San Fernando, con su nueva estatua 
-        y su relicario, pueda tener un lugar de culto. Como rey santo, como marido santo, 
-        como santo padre de familia.
-      </p>
-      <p>
-        Hoy, este legado vivo debe preservarse. La renovación de la iglesia y de las 
-        instalaciones parroquiales es esencial para continuar acogiendo dignamente a las 
-        futuras generaciones.
-      </p>
-      <p>
-        Apoyar este proyecto significa preservar un patrimonio vivo, hacer crecer una 
-        comunidad y transmitir una historia. Impulsado por la comunidad, este proyecto 
-        se enmarca en una visión a largo plazo: asegurar la vitalidad y el alcance de 
-        una parroquia en crecimiento, de una iglesia en el corazón de un barrio.
-      </p>
-      <p>
-        Un equipo lleno de ilusión dirige esta campaña para movilizar a los donantes y 
-        garantizar el éxito del proyecto.
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
-  </div>
-</section>
-
-    <section class="section" id="es-5">
-  <div class="container reveal">
-    <span class="eyebrow">5. ¿POR QUÉ ESTAS OBRAS?</span>
-    <h2 class="section-title">¿Por qué estas obras?</h2>
-    <p>
-      La iglesia y las instalaciones actuales requieren una renovación importante para 
-      cumplir con las normas de seguridad (antiincendios), medioambientales (aislamiento 
-      y climatización) y adaptar los espacios a las necesidades actuales.
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        Estas obras son indispensables para continuar acogiendo a la comunidad en buenas 
-        condiciones… ¡pero no sólo! Van a embellecer esta iglesia con una espectacular 
-        catequesis pictórica y una estatua-relicario de San Luis, y van a permitir que 
-        esté abierta para el culto de todos los madrileños.
-      </p>
-      <p>
-        Además, demuestran de manera concreta la confianza depositada en la misión de 
-        nuestra Iglesia: lejos de desaparecer, estamos en crecimiento y comprometidos 
-        en un proceso de renovación.
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
-  </div>
-</section>
-
-      <section class="section" id="es-6">
+      <section class="section" id="es-4">
         <div class="container reveal">
-          <span class="eyebrow">6. PROYECTO DETALLADO</span>
+          <span class="eyebrow">4. PROYECTO DETALLADO</span>
           <h2 class="section-title">Proyecto detallado</h2>
           <h3 class="renovation-subtitle">Renovación de la iglesia:</h3>
           <div class="renovation-lista">
-            <span>Aislamiento térmico completo</span>
-            <span>Climatización mediante aerotermia</span>
-            <span>Nuevo falso techo con seguridad contra incendios</span>
-            <span>Decoración artística y catequética</span>
-            <span>Iluminación profesional</span>
-            <span>Mejora acústica</span>
-            <span>Nuevos bancos con reclinatorios</span>
-            <span>Sacristía renovada</span>
-            <span>Cableado para retransmisiones</span>
-            <span>Sistemas de seguridad para una iglesia abierta a las visitas</span>
-            <span>Renovación del órgano</span>
-            <span>Creación de un columbario</span>
+            <span>Aislamiento térmico completo</span><span>Climatización mediante aerotermia</span>
+            <span>Nuevo falso techo con seguridad contra incendios</span><span>Decoración artística y catequética</span>
+            <span>Iluminación profesional</span><span>Mejora acústica</span>
+            <span>Nuevos bancos con reclinatorios</span><span>Sacristía renovada</span>
+            <span>Cableado para retransmisiones</span><span>Sistemas de seguridad para una iglesia abierta a las visitas</span>
+            <span>Renovación del órgano</span><span>Creación de un columbario</span>
             <span>Estatua de San Luis con relicario</span>
           </div>
           <h3 class="renovation-subtitle">Espacios parroquiales:</h3>
           <div class="renovation-lista">
-            <span>Salas modulables</span>
-            <span>Vestíbulo hacia la Sala Saureulx</span>
-            <span>Gran sala renovada</span>
-            <span>Cocina y bar funcionales</span>
-            <span>Estudio de contenidos</span>
-            <span>Nuevos baños accesibles</span>
-            <span>Wifi y equipamiento</span>
-            <span>Espacios de almacenamiento</span>
+            <span>Salas modulables</span><span>Vestíbulo hacia la Sala Saureulx</span>
+            <span>Gran sala renovada</span><span>Cocina y bar funcionales</span>
+            <span>Estudio de contenidos</span><span>Nuevos baños accesibles</span>
+            <span>Wifi y equipamiento</span><span>Espacios de almacenamiento</span>
           </div>
           <h3 class="renovation-subtitle">Pasarela de acceso ♿:</h3>
           <p>Pasarela accesible entre la iglesia y la residencia Saint-Louis.</p>
@@ -718,99 +365,106 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-      <section class="section" id="es-7">
+      <section class="section" id="es-5">
         <div class="container reveal">
-          <span class="eyebrow">7. PROYECTO EN IMÁGENES Y VÍDEOS 🎥</span>
-          <h2 class="section-title">Proyecto en imágenes y vídeos</h2>
-          <p class="liturgie-intro">
-            Descubre nuestro proyecto en 
-            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
-            <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> 
-            y Facebook.
-          </p>
-          
-            <h3 class="renovation-subtitle">El Proyecto</h3>
-
-            <div class="fresque-grid" id="fresqueGridES" style="grid-template-columns: 1fr; max-width: 400px;">
-              <div class="fresque-item" data-index="0">
-                <img src="/images/fresque/fresque-1.jpg"
-                    alt="Panel 1 — vista general" loading="lazy" />
-                <div class="fresque-item-overlay">
-                  <span class="fresque-item-caption">Panel 1 — vista general</span>
-                </div>
-                <span class="fresque-zoom-icon">⤢</span>
-              </div>
-            </div>
-          <h3>Imagenes y vídeos muy pronto.</h3>
+          <span class="eyebrow">5. NUESTROS RECURSOS</span>
+          <h2 class="section-title">Recursos y necesidades</h2>
+          <div class="recursos-grid">
+            <div class="recurso-card"><span class="don-label">Coste total</span><span class="don-amount">3 500 000 €</span></div>
+            <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
+            <div class="recurso-card"><span class="don-label">A recaudar fin 2026</span><span class="don-amount recurso-needed">1 000 000 €</span></div>
+          </div>
+          <div class="voir-plus-content">
+            <p>Gracias a la buena gestión de la Obra San Luis y de la parroquia disponemos ya de <strong>2.020.000€</strong>. Además, un gran donante ya ha dado <strong>200.000€</strong> para ayudarnos a financiar el proyecto. Gracias a una persona generosa también disponemos de un <strong>préstamo sin intereses de 250.000€</strong> a devolver en dos años. El total de la disponibilidad en el momento de lanzar nuestra campaña es por tanto de <strong>2.470.000€</strong>. ¡Es una excelente noticia!</p>
+            <p><strong>Coste del proyecto:</strong> En cuanto al proyecto, las negociaciones siguen en curso con los constructores pero ya podemos prever que el coste ascenderá a un total de <strong>3.500.000€</strong> (todo incluido, también el mobiliario, los impuestos, las tasas, los honorarios de los arquitectos, etc.)</p>
+            <p>Es necesario recaudar <strong>1.000.000€</strong> antes de finales de 2026. <strong>500.000€</strong> mediante una campaña de recaudación de fondos abriendo al máximo nuestros círculos de acción. <strong>500.000€</strong> mediante grandes donantes (o eventualmente legados testamentarios).</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
         </div>
       </section>
 
-     <section class="section" id="es-8">
-  <div class="container reveal">
-    <span class="eyebrow">8. HERMANAMIENTO SOLIDARIO</span>
-    <h2 class="section-title">Hermanamiento solidario con Líbano (3%)</h2>
-    <p>
-      Al apoyar nuestro proyecto, también piensa en quienes tienen mayores necesidades: 
-      mediante la <em>Œuvre d'Orient</em>, el <strong>3% de los fondos recaudados</strong> 
-      se destinará a apoyar a los cristianos del Líbano.
-    </p>
-    <div class="voir-plus-content">
-      <p>
-        La comunidad parroquial de San Luis de los franceses no vive aislada. La Œuvre 
-        d'Orient, que desde hace 167 años acompaña y ayuda a los cristianos de Oriente, 
-        realiza esta labor en contacto directo con los obispados y parroquias libanesas. 
-        ¡Lograremos financiar este proyecto!… pero sin olvidar a los demás.
-      </p>
-    </div>
-    <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
-  </div>
-</section>
+      <section class="section" id="es-6">
+        <div class="container reveal">
+          <span class="eyebrow">6. VENTAJAS FISCALES</span>
+          <h2 class="section-title">Ventajas fiscales</h2>
+          <h3 class="renovation-subtitle">Si está sujeto a impuestos en España:</h3>
+          <p class="liturgie-intro"><strong>80%</strong> de deducción sobre los primeros <strong>250€</strong> y <strong>40%</strong> sobre el resto (<strong>45%</strong> si se repite 3 años).<br><br>Límite de la donación: <strong>10%</strong> de los ingresos sujetos a impuestos (si la donación supera el 10% de sus ingresos sujetos a impuestos, no pierde la ventaja fiscal: simplemente se distribuye en los años siguientes, hasta 10 años).</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card"><span class="fiscal-don">Donación 250 €</span><span class="fiscal-coste">Coste real <strong>50 €</strong></span><span class="fiscal-reduccion">Reducción 200 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 500 €</span><span class="fiscal-coste">Coste real <strong>200 €</strong></span><span class="fiscal-reduccion">Reducción 300 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 1 000 €</span><span class="fiscal-coste">Coste real <strong>500 €</strong></span><span class="fiscal-reduccion">Reducción 500 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 2 000 €</span><span class="fiscal-coste">Coste real <strong>1 100 €</strong></span><span class="fiscal-reduccion">Reducción 900 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 3 000 €</span><span class="fiscal-coste">Coste real <strong>1 700 €</strong></span><span class="fiscal-reduccion">Reducción 1 300 €</span></div>
+          </div>
+          <h3 class="renovation-subtitle">Si está sujeto a impuestos en Francia:</h3>
+          <p class="liturgie-intro"><strong>66%</strong> de deducción sobre el total de la donación. Límite: 20% de los ingresos sujetos a impuestos.</p>
+          <div class="fiscal-grid">
+            <div class="fiscal-card"><span class="fiscal-don">Donación 500 €</span><span class="fiscal-coste">Coste real <strong>170 €</strong></span><span class="fiscal-reduccion">Reducción 330 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 1 000 €</span><span class="fiscal-coste">Coste real <strong>340 €</strong></span><span class="fiscal-reduccion">Reducción 660 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 2 000 €</span><span class="fiscal-coste">Coste real <strong>680 €</strong></span><span class="fiscal-reduccion">Reducción 1 320 €</span></div>
+            <div class="fiscal-card"><span class="fiscal-don">Donación 3 000 €</span><span class="fiscal-coste">Coste real <strong>1 020 €</strong></span><span class="fiscal-reduccion">Reducción 1 980 €</span></div>
+          </div>
+          <p class="liturgie-note">"Una donación a una parroquia en España puede ser deducible en Francia si esta parroquia es reconocida como equivalente a un organismo de interés general francés."</p>
+        </div>
+      </section>
 
-     <section class="section" id="es-9">
-  <div class="container reveal">
-    <span class="eyebrow">9. NUESTROS RECURSOS</span>
-    <h2 class="section-title">Recursos y necesidades</h2>
-    <div class="recursos-grid">
-      <div class="recurso-card">
-        <span class="don-label">Coste total</span>
-        <span class="don-amount">3 500 000 €</span>
-      </div>
-      <div class="recurso-card">
-        <span class="don-label">Disponible</span>
-        <span class="don-amount recurso-ok">2 470 000 €</span>
-      </div>
-      <div class="recurso-card">
-        <span class="don-label">A recaudar fin 2026</span>
-        <span class="don-amount recurso-needed">1 000 000 €</span>
-      </div>
-    </div>
-    <div class="voir-plus-content">
-  <p>
-    Gracias a la buena gestión de la Obra San Luis y de la parroquia disponemos ya de 
-    <strong>2.020.000€</strong>. Además, un gran donante ya ha dado <strong>200.000€</strong> 
-    para ayudarnos a financiar el proyecto. Gracias a una persona generosa también disponemos 
-    de un <strong>préstamo sin intereses de 250.000€</strong> a devolver en dos años. El total 
-    de la disponibilidad en el momento de lanzar nuestra campaña es por tanto de 
-    <strong>2.470.000€</strong>. ¡Es una excelente noticia!
-  </p>
-  <p>
-    <strong>Coste del proyecto:</strong> En cuanto al proyecto, las negociaciones siguen en 
-    curso con los constructores pero ya podemos prever que el coste ascenderá a un total de 
-    <strong>3.500.000€</strong> (todo incluido, también el mobiliario, los impuestos, las tasas, 
-    los honorarios de los arquitectos, etc.)
-  </p>
-  <p>
-    Es necesario recaudar <strong>1.000.000€</strong> antes de finales de 2026. 
-    <strong>500.000€</strong> mediante una campaña de recaudación de fondos abriendo al máximo 
-    nuestros círculos de acción. <strong>500.000€</strong> mediante grandes donantes 
-    (o eventualmente legados testamentarios).
-  </p>
+      <section class="section" id="es-7">
+        <div class="container reveal">
+          <span class="eyebrow">7. QUIERO DONAR</span>
+          <h2 class="section-title">Quiero donar</h2>
+          <p class="liturgie-intro">Apoya el proyecto de la parroquia de cualquiera de estas maneras.<br/>⚠️ Consulta las ventajas fiscales en el punto 6 para ayudarnos mejor.</p>
+          <div class="renovation-bizum">
+            <span class="don-label">Bizum solidario – código : 13902</span>
+            <span class="bizum-code">13902</span>
+            <p>En la app de Bizum, elige «Donar a una ONG» e introduce el código <strong>13902</strong>.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+          </div>
+          <div class="don-grid">
+            <div class="don-card">
+              <span class="don-label">Transferencia bancaria</span>
+              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
+              <span class="don-note">BIC : BSCHESMM</span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+            </div>
+            <div class="don-card">
+              <span class="don-label">Tarjeta bancaria</span>
+              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Pagar con tarjeta</a>
+              <span class="don-note">⚠️ Se aplica una comisión a los donativos con tarjeta. Para donaciones importantes se recomienda transferencia o Bizum.</span>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+            </div>
+          </div>
+          <p class="don-contact">Contacto: <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="es-8">
+        <div class="container reveal">
+          <span class="eyebrow">8. DAR A CONOCER</span>
+          <h2 class="section-title">Dar a conocer</h2>
+          <p>Pensad en todas las personas que estarán felices de participar: familia, amigos, padrinos, madrinas, etc. Esta multitud de pequeñas ayudas puede marcar la diferencia.</p>
+          <p>También buscamos <strong>grandes donantes</strong>. Contactad con el padre Rodrigo para organizar una presentación personalizada.</p>
+          <p>¡Compartid el enlace de esta página y los vídeos!</p>
+        </div>
+     <div style="text-align:center;">
+  <button class="share-trigger-btn" id="shareBtnES">
+    🔗 Compartir este proyecto
+  </button>
 </div>
-    <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
-  </div>
-</section>
+      </section>
 
-     <section class="section" id="es-10">
+      <section class="section" id="es-9">
+        <div class="container reveal">
+          <span class="eyebrow">9. HERMANAMIENTO SOLIDARIO</span>
+          <h2 class="section-title">Hermanamiento solidario con Líbano (3%)</h2>
+          <p>Al apoyar nuestro proyecto, también piensa en quienes tienen mayores necesidades: mediante la <em>Œuvre d'Orient</em>, el <strong>3% de los fondos recaudados</strong> se destinará a apoyar a los cristianos del Líbano.</p>
+          <div class="voir-plus-content">
+            <p>La comunidad parroquial de San Luis de los franceses no vive aislada. La Œuvre d'Orient, que desde hace 167 años acompaña y ayuda a los cristianos de Oriente, realiza esta labor en contacto directo con los obispados y parroquias libanesas. ¡Lograremos financiar este proyecto!… pero sin olvidar a los demás.</p>
+          </div>
+          <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
+        </div>
+      </section>
+
+      <section class="section" id="es-10">
   <div class="container reveal">
     <span class="eyebrow">10. RESULTADOS DE LA CAMPAÑA</span>
     <h2 class="section-title">Resultados de la campaña</h2>
@@ -831,44 +485,102 @@ import Footer from "../components/Footer.astro";
     </div>
 
     <div class="progreso-wrapper">
-      <div class="progreso-bar">
-        <div class="progreso-fill" id="progresoFillES"></div>
-      </div>
+      <div class="progreso-bar"><div class="progreso-fill" id="progresoFillES"></div></div>
       <div class="progreso-labels">
         <span id="progresoPercentES">0%</span>
         <span>Objetivo : 500 000 €</span>
       </div>
     </div>
 
+    <h3 class="renovation-subtitle" style="margin-top:2rem;">Actividades parroquiales</h3>
+    <div class="resultats-totales">
+      <div class="resultat-card">
+        <span class="don-label">Nº de actividades</span>
+        <span class="don-amount" id="totalActivitesES">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Total actividades</span>
+        <span class="don-amount recurso-ok" id="montantActivitesES">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Media por actividad</span>
+        <span class="don-amount" id="moyenneActivitesES">—</span>
+      </div>
+    </div>
+
     <canvas id="donationsChartES" style="margin-top:2rem;"></canvas>
-
-
   </div>
 </section>
-
     </div>
 
     <!-- CTA -->
     <section class="cta reveal">
       <div class="container cta-inner">
-        <div class="cta-text">
-          <h2>paroissesaintlouismadrid@gmail.com</h2>
-        </div>
+        <div class="cta-text"><h2>paroissesaintlouismadrid@gmail.com</h2></div>
         <a href="/contact" class="cta-button">Contact</a>
       </div>
     </section>
 
     <!-- LIGHTBOX FRESQUE -->
-<div class="fresque-lightbox" id="fresqueLightbox" role="dialog" aria-modal="true">
-  <button class="fresque-lightbox-close" id="fresqueClose" aria-label="Fermer">✕</button>
-  <button class="fresque-lightbox-nav fresque-lightbox-prev" id="fresquePrev" aria-label="Précédent">&#8592;</button>
-  <img class="fresque-lightbox-img" id="fresqueLbImg" src="" alt="" />
-  <button class="fresque-lightbox-nav fresque-lightbox-next" id="fresqueNext" aria-label="Suivant">&#8594;</button>
-  <div class="fresque-lightbox-footer">
-    <span class="fresque-lightbox-caption-text" id="fresqueLbCaption"></span>
-    <span class="fresque-lightbox-counter" id="fresqueLbCounter"></span>
+    <div class="fresque-lightbox" id="fresqueLightbox" role="dialog" aria-modal="true">
+      <button class="fresque-lightbox-close" id="fresqueClose" aria-label="Fermer">✕</button>
+      <button class="fresque-lightbox-nav fresque-lightbox-prev" id="fresquePrev" aria-label="Précédent">&#8592;</button>
+      <img class="fresque-lightbox-img" id="fresqueLbImg" src="" alt="" />
+      <button class="fresque-lightbox-nav fresque-lightbox-next" id="fresqueNext" aria-label="Suivant">&#8594;</button>
+      <div class="fresque-lightbox-footer">
+        <span class="fresque-lightbox-caption-text" id="fresqueLbCaption"></span>
+        <span class="fresque-lightbox-counter" id="fresqueLbCounter"></span>
+      </div>
+    </div>
+
+<!-- BOTÓN FLOTANTE DONAR + MINI PROGRESO -->
+<div class="donate-float" id="donateFloat">
+  <div class="donate-float-progress">
+    <div class="donate-float-bar">
+      <div class="donate-float-fill" id="donateFloatFill"></div>
+    </div>
+    <span class="donate-float-pct" id="donateFloatPct">0%</span>
+  </div>
+  <a href="#fr-7" id="donateFloatBtn" class="donate-float-btn">
+    Faire un don
+  </a>
+</div>
+
+
+<!-- MODAL COMPARTIR -->
+<div class="share-modal" id="shareModal">
+  <div class="share-modal-content">
+    <button class="share-modal-close" id="shareModalClose">✕</button>
+    <h3 id="shareModalTitle">Partager ce projet</h3>
+    <div class="share-buttons">
+      <a href="https://wa.me/?text=Découvrez%20le%20projet%20de%20rénovation%20de%20la%20paroisse%20Saint-Louis%20des%20Français%20à%20Madrid%20%3A%20https://paroisse.stlouisfrancais.org/renovation" 
+         target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https://paroisse.stlouisfrancais.org/renovation&text=Soutenez%20la%20rénovation%20!" 
+         target="_blank" rel="noopener noreferrer" class="share-btn share-x">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://paroisse.stlouisfrancais.org/renovation" 
+         target="_blank" rel="noopener noreferrer" class="share-btn share-facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.994 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="https://t.me/share/url?url=https://paroisse.stlouisfrancais.org/renovation" 
+         target="_blank" rel="noopener noreferrer" class="share-btn share-telegram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Telegram
+      </a>
+      <button class="share-btn share-copy" id="copyLinkBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span id="copyLinkText">Copier le lien</span>
+      </button>
+    </div>
   </div>
 </div>
+
   </main>
 
   <Footer />
@@ -882,11 +594,53 @@ import Footer from "../components/Footer.astro";
     document.getElementById('btnES').classList.toggle('active', lang === 'es');
     document.getElementById('indexFR').style.display = lang === 'fr' ? 'flex' : 'none';
     document.getElementById('indexES').style.display = lang === 'es' ? 'flex' : 'none';
+
+    // Botón flotante
+    const donateBtn = document.getElementById('donateFloatBtn');
+    if (donateBtn) {
+      donateBtn.href = lang === 'fr' ? '#fr-7' : '#es-7';
+      donateBtn.textContent = lang === 'fr' ? 'Faire un don' : 'Donar';
+    }
   }
+
+  // Donate float visibility — esto sí va fuera de setLang
+  const donateFloat = document.getElementById('donateFloat');
+  if (donateFloat) {
+    window.addEventListener('scroll', function() {
+      donateFloat.classList.toggle('visible', window.scrollY > 300);
+    });
+  }
+
+  // Share modal
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('shareModal');
+  const closeBtn = document.getElementById('shareModalClose');
+  const copyBtn = document.getElementById('copyLinkBtn');
+  const copyText = document.getElementById('copyLinkText');
+  const shareBtn = document.getElementById('shareBtn');
+  const shareBtnES = document.getElementById('shareBtnES');
+
+  function openShare(lang) {
+    document.getElementById('shareModalTitle').textContent = lang === 'fr' ? 'Partager ce projet' : 'Compartir este proyecto';
+    copyText.textContent = lang === 'fr' ? 'Copier le lien' : 'Copiar enlace';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  if (shareBtn) shareBtn.addEventListener('click', () => openShare('fr'));
+  if (shareBtnES) shareBtnES.addEventListener('click', () => openShare('es'));
+  if (closeBtn) closeBtn.addEventListener('click', () => { modal.classList.remove('open'); document.body.style.overflow = ''; });
+  if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('open'); document.body.style.overflow = ''; }});
+  if (copyBtn) copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('https://paroisse.stlouisfrancais.org/renovation');
+    copyText.textContent = '✓ Copié !';
+    setTimeout(() => { copyText.textContent = document.getElementById('btnFR').classList.contains('active') ? 'Copier le lien' : 'Copiar enlace'; }, 2000);
+  });
+});
 </script>
 
 <script is:inline>
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQtfPy2zuJrGy8KD9avNGRprZDa_qDv6j_oHnvWVj1Jq8qlQRHQHNbYfxiqJElOZb-UNcmE6wIQFby1/pub?gid=0&single=true&output=csv';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQtfPy2zuJrGy8KD9avNGRprZDa_qDv6j_oHnvWVj1Jq8qlQRHQHNbYfxiqJElOZb-UNcmE6wIQFby1/pub?output=csv';
 const OBJETIVO = 500000;
 
 function getWeekKey(dateStr) {
@@ -906,50 +660,70 @@ async function loadDonations() {
     const text = await res.text();
     const rows = text.trim().split('\n').slice(1).map(r => r.split(','));
 
-    // Agrupar por semana
+    // Separar por tipo
+    const dons = rows.filter(r => !r[6] || r[6].trim().toLowerCase() !== 'activité');
+    const activites = rows.filter(r => r[6] && r[6].trim().toLowerCase() === 'activité');
+
+    // Agrupar donativos por semana
     const weekMap = new Map();
-    rows.forEach(row => {
-      if (row.length < 6) return;
+    dons.forEach(row => {
+      if (row.length < 5) return;
       const weekKey = getWeekKey(row[0]);
       const cumulEur = parseFloat(row[4]?.replace(/[^0-9.]/g, '')) || 0;
       const cumulNum = parseInt(row[3]) || 0;
       const donMoyen = parseFloat(row[5]?.replace(/[^0-9.]/g, '')) || 0;
-      
       if (!weekMap.has(weekKey) || cumulEur > weekMap.get(weekKey).cumulEur) {
         weekMap.set(weekKey, { cumulEur, cumulNum, donMoyen });
       }
     });
 
-    const labels = [];
-    const cumuls = [];
-    let lastCumulEur = 0;
-    let lastCumulNum = 0;
-    let lastDonMoyen = 0;
-
+    const labels = [], cumuls = [];
+    let lastCumulEur = 0, lastCumulNum = 0, lastDonMoyen = 0;
     weekMap.forEach((val, key) => {
-      labels.push(key);
-      cumuls.push(val.cumulEur);
+      labels.push(key); cumuls.push(val.cumulEur);
       lastCumulEur = val.cumulEur;
       lastCumulNum = val.cumulNum;
       lastDonMoyen = val.donMoyen;
     });
 
-    const pct = Math.min((lastCumulEur / OBJETIVO) * 100, 100).toFixed(1);
+    // Calcular actividades
+    let totalActivites = 0;
+    let numActivites = activites.length;
+    activites.forEach(row => {
+      totalActivites += parseFloat(row[2]?.replace(/[^0-9.]/g, '')) || 0;
+    });
+    const moyenneActivites = numActivites > 0 ? totalActivites / numActivites : 0;
+
+    // Total general
+    const totalGeneral = lastCumulEur + totalActivites;
+    const pct = Math.min((totalGeneral / OBJETIVO) * 100, 100).toFixed(1);
     const fmt = n => n.toLocaleString('fr-FR') + ' €';
 
     // FR
-    document.getElementById('totalCollecte').textContent = fmt(lastCumulEur);
+    document.getElementById('totalCollecte').textContent = fmt(totalGeneral);
     document.getElementById('totalDonateurs').textContent = lastCumulNum;
     document.getElementById('donMoyen').textContent = fmt(lastDonMoyen);
     document.getElementById('progresoFill').style.width = pct + '%';
     document.getElementById('progresoPercent').textContent = pct + '%';
+    document.getElementById('totalActivitesFR').textContent = numActivites;
+    document.getElementById('montantActivitesFR').textContent = fmt(totalActivites);
+    document.getElementById('moyenneActivitesFR').textContent = fmt(moyenneActivites);
 
     // ES
-    document.getElementById('totalCollecteES').textContent = fmt(lastCumulEur);
+    document.getElementById('totalCollecteES').textContent = fmt(totalGeneral);
     document.getElementById('totalDonateursES').textContent = lastCumulNum;
     document.getElementById('donMoyenES').textContent = fmt(lastDonMoyen);
     document.getElementById('progresoFillES').style.width = pct + '%';
     document.getElementById('progresoPercentES').textContent = pct + '%';
+    document.getElementById('totalActivitesES').textContent = numActivites;
+    document.getElementById('montantActivitesES').textContent = fmt(totalActivites);
+    document.getElementById('moyenneActivitesES').textContent = fmt(moyenneActivites);
+
+    // Botón flotante
+    const floatFill = document.getElementById('donateFloatFill');
+    const floatPct = document.getElementById('donateFloatPct');
+    if (floatFill) floatFill.style.width = pct + '%';
+    if (floatPct) floatPct.textContent = pct + '%';
 
     // Gráfico
     if (typeof Chart !== 'undefined') {
@@ -958,56 +732,24 @@ async function loadDonations() {
         data: {
           labels,
           datasets: [
-            {
-              label: 'Cumul €',
-              data: cumuls,
-              borderColor: '#7a1f1f',
-              backgroundColor: 'rgba(122,31,31,0.1)',
-              tension: 0.3,
-              fill: true,
-              pointRadius: 3,
-            },
-            {
-              label: 'Objectif 500 000 €',
-              data: new Array(labels.length).fill(OBJETIVO),
-              borderColor: '#b08a5a',
-              borderDash: [6, 4],
-              pointRadius: 0,
-              fill: false,
-            }
+            { label: 'Cumul €', data: cumuls, borderColor: '#7a1f1f', backgroundColor: 'rgba(122,31,31,0.1)', tension: 0.3, fill: true, pointRadius: 3 },
+            { label: 'Objectif 500 000 €', data: new Array(labels.length).fill(OBJETIVO), borderColor: '#b08a5a', borderDash: [6, 4], pointRadius: 0, fill: false }
           ]
         },
         options: {
           responsive: true,
           plugins: { legend: { position: 'top' } },
           scales: {
-            x: {
-              ticks: {
-                minRotation: 45,
-                maxTicksLimit: 5,
-                maxRotation: 45,
-                font: { size: 10 }
-              }
-            },
-            y: {
-              beginAtZero: true,
-              max: 500000,
-              ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' }
-            }
+            x: { ticks: { minRotation: 45, maxTicksLimit: 5, maxRotation: 45, font: { size: 10 } } },
+            y: { beginAtZero: true, max: 500000, ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } }
           }
         }
       };
-
       new Chart(document.getElementById('donationsChart'), chartConfig);
-      new Chart(document.getElementById('donationsChartES'), {
-        ...chartConfig,
-        data: JSON.parse(JSON.stringify(chartConfig.data))
-      });
+      new Chart(document.getElementById('donationsChartES'), { ...chartConfig, data: JSON.parse(JSON.stringify(chartConfig.data)) });
     }
 
-  } catch(e) {
-    console.error('Error cargando datos:', e);
-  }
+  } catch(e) { console.error('Error cargando datos:', e); }
 }
 
 const script = document.createElement('script');
@@ -1019,64 +761,32 @@ document.head.appendChild(script);
 <script is:inline>
 (function() {
   const images = [
-  { src: '/images/fresque/fresque-1.jpg', captionFR: 'Panneau 1 — vue d\'ensemble', captionES: 'Panel 1 — vista general' },
-];
-
+    { src: '/images/fresque/fresque-1.jpg', captionFR: "Panneau 1 — vue d'ensemble", captionES: 'Panel 1 — vista general' },
+  ];
   let current = 0;
-
-  function getLang() {
-    return document.getElementById('btnFR')?.classList.contains('active') ? 'fr' : 'es';
-  }
-
-  function openLightbox(index) {
-    current = index;
-    updateLightbox();
-    document.getElementById('fresqueLightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    document.getElementById('fresqueLightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
+  function getLang() { return document.getElementById('btnFR')?.classList.contains('active') ? 'fr' : 'es'; }
+  function openLightbox(index) { current = index; updateLightbox(); document.getElementById('fresqueLightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeLightbox() { document.getElementById('fresqueLightbox').classList.remove('open'); document.body.style.overflow = ''; }
   function updateLightbox() {
-    const img   = images[current];
-    const lang  = getLang();
-    document.getElementById('fresqueLbImg').src       = img.src;
-    document.getElementById('fresqueLbImg').alt       = lang === 'fr' ? img.captionFR : img.captionES;
+    const img = images[current]; const lang = getLang();
+    document.getElementById('fresqueLbImg').src = img.src;
+    document.getElementById('fresqueLbImg').alt = lang === 'fr' ? img.captionFR : img.captionES;
     document.getElementById('fresqueLbCaption').textContent = lang === 'fr' ? img.captionFR : img.captionES;
     document.getElementById('fresqueLbCounter').textContent = (current + 1) + ' / ' + images.length;
   }
-
-  // Click en thumbnails
-  document.addEventListener('click', function(e) {
-    const item = e.target.closest('.fresque-item');
-    if (item) openLightbox(parseInt(item.dataset.index));
-  });
-
+  document.addEventListener('click', function(e) { const item = e.target.closest('.fresque-item'); if (item) openLightbox(parseInt(item.dataset.index)); });
   document.getElementById('fresqueClose').addEventListener('click', closeLightbox);
-
-  document.getElementById('fresquePrev').addEventListener('click', function() {
-    current = (current - 1 + images.length) % images.length;
-    updateLightbox();
-  });
-
-  document.getElementById('fresqueNext').addEventListener('click', function() {
-    current = (current + 1) % images.length;
-    updateLightbox();
-  });
-
-  // Cerrar con Escape / click fuera
+  document.getElementById('fresquePrev').addEventListener('click', function() { current = (current - 1 + images.length) % images.length; updateLightbox(); });
+  document.getElementById('fresqueNext').addEventListener('click', function() { current = (current + 1) % images.length; updateLightbox(); });
   document.addEventListener('keydown', function(e) {
     if (!document.getElementById('fresqueLightbox').classList.contains('open')) return;
-    if (e.key === 'Escape')      closeLightbox();
-    if (e.key === 'ArrowLeft')  { current = (current - 1 + images.length) % images.length; updateLightbox(); }
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { current = (current - 1 + images.length) % images.length; updateLightbox(); }
     if (e.key === 'ArrowRight') { current = (current + 1) % images.length; updateLightbox(); }
   });
-
-  document.getElementById('fresqueLightbox').addEventListener('click', function(e) {
-    if (e.target === this) closeLightbox();
-  });
+  document.getElementById('fresqueLightbox').addEventListener('click', function(e) { if (e.target === this) closeLightbox(); });
 })();
+
+
 </script>
+

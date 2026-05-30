@@ -1225,3 +1225,221 @@
   .fresque-lightbox-prev { left: 0.4rem; }
   .fresque-lightbox-next { right: 0.4rem; }
 }
+
+/* ================= DONATE FLOAT ================= */
+
+.donate-float {
+  position: fixed;
+  bottom: 5rem;
+  right: 1.5rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.donate-float.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.donate-float-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.3rem 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.donate-float-bar {
+  width: 80px;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.donate-float-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width 1s ease;
+  width: 0%;
+}
+
+.donate-float-btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.4rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(122,31,31,0.4);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.donate-float-btn:hover {
+  background: #5e1717;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122,31,31,0.5);
+  color: white;
+}
+
+@media (max-width: 1080px) {
+  
+  .donate-float {
+  bottom: 8rem;
+  right: 1.5rem;
+}
+
+.back-to-top {
+  bottom: 2rem;
+  right: 1rem;
+}
+
+}
+
+/* ================= SHARE BUTTONS ================= */
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.share-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.share-whatsapp { background: #25D366; }
+.share-whatsapp:hover { background: #1da851; color: white; }
+
+.share-x { background: #000000; }
+.share-x:hover { background: #333; color: white; }
+
+.share-facebook { background: #1877F2; }
+.share-facebook:hover { background: #0d5fc4; color: white; }
+
+.share-telegram { background: #0088cc; }
+.share-telegram:hover { background: #006fa3; color: white; }
+
+.share-copy { background: var(--color-primary); }
+.share-copy:hover { background: #5e1717; color: white; }
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+/* ================= SHARE MODAL ================= */
+
+.share-trigger-btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+    justify-content: center;
+}
+
+.share-trigger-btn:hover {
+  background: #5e1717;
+  transform: translateY(-2px);
+}
+
+.share-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.share-modal.open {
+  display: flex;
+}
+
+.share-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+}
+
+.share-modal-content h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.share-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-muted);
+  line-height: 1;
+}
+
+.share-modal-close:hover {
+  color: var(--color-primary);
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
