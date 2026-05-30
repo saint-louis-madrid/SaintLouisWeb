@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
     <!-- HERO -->
     <section class="hero-carousel">
       <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-slide" style="background-image: url('/images/iglesia.jpg')"></div>
+       <div class="carousel-slide" style="background-image: url('/images/iglesia.jpg'); background-position: center 55%;"></div>
       </div>
       <div class="carousel-overlay">
         <div class="container hero-content">
@@ -40,25 +40,25 @@ import Footer from "../components/Footer.astro";
         <div class="index-links" id="indexFR">
           <a href="#fr-1">1. Histoire</a>
           <a href="#fr-2">2. Images & Vidéos</a>
-          <a href="#fr-3">3. Travaux</a>
+          <a href="#fr-3">3. Pourquoi?</a>
           <a href="#fr-4">4. Projet</a>
           <a href="#fr-5">5. Ressources</a>
           <a href="#fr-6">6. Fiscal</a>
           <a href="#fr-7">7. Je donne</a>
           <a href="#fr-8">8. Faire connaître</a>
-          <a href="#fr-9">9. Liban</a>
+          <a href="#fr-9">9. Solidarité</a>
           <a href="#fr-10">10. Résultats</a>
         </div>
         <div class="index-links" id="indexES" style="display:none;">
           <a href="#es-1">1. Historia</a>
           <a href="#es-2">2. Imágenes y Vídeos</a>
-          <a href="#es-3">3. Obras</a>
+          <a href="#es-3">3. ¿Por qué?</a>
           <a href="#es-4">4. Proyecto</a>
           <a href="#es-5">5. Recursos</a>
           <a href="#es-6">6. Fiscal</a>
           <a href="#es-7">7. Donar</a>
           <a href="#es-8">8. Dar a conocer</a>
-          <a href="#es-9">9. Líbano</a>
+          <a href="#es-9">9. Solidaridad</a>
           <a href="#es-10">10. Resultados</a>
         </div>
       </div>
@@ -146,7 +146,15 @@ import Footer from "../components/Footer.astro";
           <div class="recursos-grid">
             <div class="recurso-card"><span class="don-label">Coût total</span><span class="don-amount">3 500 000 €</span></div>
             <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
-            <div class="recurso-card"><span class="don-label">À lever fin 2026</span><span class="don-amount recurso-needed">1 000 000 €</span></div>
+            <div class="recurso-card">
+              <span class="don-label">À lever fin 2026</span>
+              <span class="don-label" style="font-size:0.65rem;">Campagne paroissiale</span>
+              <span class="don-amount recurso-needed">500 000 €</span>
+            </div>
+            <div class="recurso-card">
+              <span class="don-label">Via grands donateurs</span>
+              <span class="don-amount recurso-needed">500 000 €</span>
+            </div>
           </div>
           <div class="voir-plus-content">
             <p>Grâce à la bonne gestion de l'Œuvre Saint Louis et de la trésorerie de la paroisse, nous disposons déjà de <strong>2.020.000€</strong>. Un grand donateur a déjà donné <strong>200.000€</strong> pour nous aider à financer le projet. Grâce à une personne généreuse, nous disposons aussi d'un <strong>emprunt sans intérêts de 250.000€</strong> à rendre sur deux ans. Le total de la disponibilité au moment de lancer notre campagne est donc de <strong>2.470.000€</strong>. C'est une excellente nouvelle !</p>
@@ -178,7 +186,7 @@ import Footer from "../components/Footer.astro";
             <div class="fiscal-card"><span class="fiscal-don">Don 2 000 €</span><span class="fiscal-coste">Coût réel <strong>680 €</strong></span><span class="fiscal-reduccion">Réduction 1 320 €</span></div>
             <div class="fiscal-card"><span class="fiscal-don">Don 3 000 €</span><span class="fiscal-coste">Coût réel <strong>1 020 €</strong></span><span class="fiscal-reduccion">Réduction 1 980 €</span></div>
           </div>
-          <p class="liturgie-note">"Un don à une paroisse en Espagne peut être déductible en France si cette paroisse est reconnue comme équivalente à un organisme d'intérêt général français."</p>
+          <p class="liturgie-note">Un don à une paroisse en Espagne peut être déductible en France si cette paroisse est reconnue comme équivalente à un organisme d'intérêt général français.</p>
         </div>
       </section>
 
@@ -214,7 +222,7 @@ import Footer from "../components/Footer.astro";
       <section class="section" id="fr-8">
         <div class="container reveal">
           <span class="eyebrow">8. FAIRE CONNAÎTRE</span>
-          <h2 class="section-title">Autres moyens de faire connaître</h2>
+          <h2 class="section-title">Faire connaître</h2>
           <p>Nous souhaitons ouvrir le plus largement possible notre rayon d'action. Pensez à toutes les personnes qui seront heureuses de participer à ce beau projet : famille, amis, parrains, marraines, etc. Cette multitude de petites aides peuvent faire la différence.</p>
           <p>Nous cherchons aussi de <strong>grands donateurs</strong>. Si vous pensez avoir accès à une personne pouvant faire un grand don, contactez le père Rodrigo pour organiser une présentation personnalisée.</p>
           <p>Faites connaître ce beau projet ! Partagez le lien de cette page !</p>
@@ -237,16 +245,34 @@ import Footer from "../components/Footer.astro";
           <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
         </div>
       </section>
-
-      <section class="section" id="fr-10">
+<section class="section" id="fr-10">
   <div class="container reveal">
     <span class="eyebrow">10. RÉSULTATS DE LA CAMPAGNE</span>
     <h2 class="section-title">Résultats de la campagne</h2>
 
-    <div class="resultats-totales" id="resultatsTotales">
-      <div class="resultat-card">
+    <!-- TOTAL GENERAL -->
+    <div class="resultats-totales">
+      <div class="resultat-card" style="grid-column: 1 / -1; text-align:center;">
         <span class="don-label">Total collecté</span>
-        <span class="don-amount recurso-ok" id="totalCollecte">Chargement...</span>
+        <span class="don-amount recurso-ok" id="totalCollecte" style="font-size:2rem;">Chargement...</span>
+      </div>
+    </div>
+
+    <!-- BARRA -->
+    <div class="progreso-wrapper">
+      <div class="progreso-bar"><div class="progreso-fill" id="progresoFill"></div></div>
+      <div class="progreso-labels">
+        <span id="progresoPercent">0%</span>
+        <span>Objectif : 500 000 €</span>
+      </div>
+    </div>
+
+    <!-- DONATIVOS -->
+    <h3 class="renovation-subtitle" style="margin-top:2rem;">Donatifs</h3>
+    <div class="resultats-totales">
+      <div class="resultat-card">
+        <span class="don-label">Total dons</span>
+        <span class="don-amount recurso-ok" id="totalDons">—</span>
       </div>
       <div class="resultat-card">
         <span class="don-label">Donateurs</span>
@@ -258,23 +284,16 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
 
-    <div class="progreso-wrapper">
-      <div class="progreso-bar"><div class="progreso-fill" id="progresoFill"></div></div>
-      <div class="progreso-labels">
-        <span id="progresoPercent">0%</span>
-        <span>Objectif : 500 000 €</span>
-      </div>
-    </div>
-
+    <!-- ACTIVIDADES -->
     <h3 class="renovation-subtitle" style="margin-top:2rem;">Activités paroissiales</h3>
     <div class="resultats-totales">
       <div class="resultat-card">
-        <span class="don-label">Nº d'activités</span>
-        <span class="don-amount" id="totalActivitesFR">—</span>
-      </div>
-      <div class="resultat-card">
         <span class="don-label">Total activités</span>
         <span class="don-amount recurso-ok" id="montantActivitesFR">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Nº d'activités</span>
+        <span class="don-amount" id="totalActivitesFR">—</span>
       </div>
       <div class="resultat-card">
         <span class="don-label">Moyenne par activité</span>
@@ -285,7 +304,6 @@ import Footer from "../components/Footer.astro";
     <canvas id="donationsChart" style="margin-top:2rem;"></canvas>
   </div>
 </section>
-
     </div>
 
     <!-- ===== CONTENIDO ES ===== -->
@@ -372,7 +390,15 @@ import Footer from "../components/Footer.astro";
           <div class="recursos-grid">
             <div class="recurso-card"><span class="don-label">Coste total</span><span class="don-amount">3 500 000 €</span></div>
             <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
-            <div class="recurso-card"><span class="don-label">A recaudar fin 2026</span><span class="don-amount recurso-needed">1 000 000 €</span></div>
+           <div class="recurso-card">
+            <span class="don-label">A recaudar fin 2026</span>
+            <span class="don-label" style="font-size:0.65rem;">Campaña parroquial</span>
+            <span class="don-amount recurso-needed">500 000 €</span>
+          </div>
+          <div class="recurso-card">
+            <span class="don-label">Grandes donantes</span>
+            <span class="don-amount recurso-needed">500 000 €</span>
+          </div>
           </div>
           <div class="voir-plus-content">
             <p>Gracias a la buena gestión de la Obra San Luis y de la parroquia disponemos ya de <strong>2.020.000€</strong>. Además, un gran donante ya ha dado <strong>200.000€</strong> para ayudarnos a financiar el proyecto. Gracias a una persona generosa también disponemos de un <strong>préstamo sin intereses de 250.000€</strong> a devolver en dos años. El total de la disponibilidad en el momento de lanzar nuestra campaña es por tanto de <strong>2.470.000€</strong>. ¡Es una excelente noticia!</p>
@@ -404,7 +430,7 @@ import Footer from "../components/Footer.astro";
             <div class="fiscal-card"><span class="fiscal-don">Donación 2 000 €</span><span class="fiscal-coste">Coste real <strong>680 €</strong></span><span class="fiscal-reduccion">Reducción 1 320 €</span></div>
             <div class="fiscal-card"><span class="fiscal-don">Donación 3 000 €</span><span class="fiscal-coste">Coste real <strong>1 020 €</strong></span><span class="fiscal-reduccion">Reducción 1 980 €</span></div>
           </div>
-          <p class="liturgie-note">"Una donación a una parroquia en España puede ser deducible en Francia si esta parroquia es reconocida como equivalente a un organismo de interés general francés."</p>
+          <p class="liturgie-note">Una donación a una parroquia en España puede ser deducible en Francia si esta parroquia es reconocida como equivalente a un organismo de interés general francés.</p>
         </div>
       </section>
 
@@ -469,10 +495,29 @@ import Footer from "../components/Footer.astro";
     <span class="eyebrow">10. RESULTADOS DE LA CAMPAÑA</span>
     <h2 class="section-title">Resultados de la campaña</h2>
 
-    <div class="resultats-totales" id="resultatsTotalesES">
-      <div class="resultat-card">
+    <!-- TOTAL GENERAL -->
+    <div class="resultats-totales">
+      <div class="resultat-card" style="grid-column: 1 / -1; text-align:center;">
         <span class="don-label">Total recaudado</span>
-        <span class="don-amount recurso-ok" id="totalCollecteES">Cargando...</span>
+        <span class="don-amount recurso-ok" id="totalCollecteES" style="font-size:2rem;">Cargando...</span>
+      </div>
+    </div>
+
+    <!-- BARRA -->
+    <div class="progreso-wrapper">
+      <div class="progreso-bar"><div class="progreso-fill" id="progresoFillES"></div></div>
+      <div class="progreso-labels">
+        <span id="progresoPercentES">0%</span>
+        <span>Objetivo : 500 000 €</span>
+      </div>
+    </div>
+
+    <!-- DONATIVOS -->
+    <h3 class="renovation-subtitle" style="margin-top:2rem;">Donativos</h3>
+    <div class="resultats-totales">
+      <div class="resultat-card">
+        <span class="don-label">Total dons</span>
+        <span class="don-amount recurso-ok" id="totalDonsES">—</span>
       </div>
       <div class="resultat-card">
         <span class="don-label">Donantes</span>
@@ -484,23 +529,16 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
 
-    <div class="progreso-wrapper">
-      <div class="progreso-bar"><div class="progreso-fill" id="progresoFillES"></div></div>
-      <div class="progreso-labels">
-        <span id="progresoPercentES">0%</span>
-        <span>Objetivo : 500 000 €</span>
-      </div>
-    </div>
-
+    <!-- ACTIVIDADES -->
     <h3 class="renovation-subtitle" style="margin-top:2rem;">Actividades parroquiales</h3>
     <div class="resultats-totales">
       <div class="resultat-card">
-        <span class="don-label">Nº de actividades</span>
-        <span class="don-amount" id="totalActivitesES">—</span>
-      </div>
-      <div class="resultat-card">
         <span class="don-label">Total actividades</span>
         <span class="don-amount recurso-ok" id="montantActivitesES">—</span>
+      </div>
+      <div class="resultat-card">
+        <span class="don-label">Nº de actividades</span>
+        <span class="don-amount" id="totalActivitesES">—</span>
       </div>
       <div class="resultat-card">
         <span class="don-label">Media por actividad</span>
@@ -643,50 +681,35 @@ document.addEventListener('DOMContentLoaded', function() {
 const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQtfPy2zuJrGy8KD9avNGRprZDa_qDv6j_oHnvWVj1Jq8qlQRHQHNbYfxiqJElOZb-UNcmE6wIQFby1/pub?output=csv';
 const OBJETIVO = 500000;
 
-function getWeekKey(dateStr) {
-  const parts = dateStr.trim().replace(/"/g,'').split('/');
-  if (parts.length < 3) return dateStr;
-  const d = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
-  if (isNaN(d)) return dateStr;
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
-  const monday = new Date(d.setDate(diff));
-  return `${String(monday.getDate()).padStart(2,'0')}/${String(monday.getMonth()+1).padStart(2,'0')}/${monday.getFullYear()}`;
-}
-
 async function loadDonations() {
   try {
     const res = await fetch(CSV_URL + '&t=' + Date.now());
     const text = await res.text();
     const rows = text.trim().split('\n').slice(1).map(r => r.split(','));
 
-    // Separar por tipo
-    const dons = rows.filter(r => !r[6] || r[6].trim().toLowerCase() !== 'activité');
-    const activites = rows.filter(r => r[6] && r[6].trim().toLowerCase() === 'activité');
+const dons = rows.filter(r => !r[3] || !r[3].trim().toLowerCase().includes('activit'));
+const activites = rows.filter(r => r[3] && r[3].trim().toLowerCase().includes('activit'));
 
-    // Agrupar donativos por semana
-    const weekMap = new Map();
-    dons.forEach(row => {
-      if (row.length < 5) return;
-      const weekKey = getWeekKey(row[0]);
-      const cumulEur = parseFloat(row[4]?.replace(/[^0-9.]/g, '')) || 0;
-      const cumulNum = parseInt(row[3]) || 0;
-      const donMoyen = parseFloat(row[5]?.replace(/[^0-9.]/g, '')) || 0;
-      if (!weekMap.has(weekKey) || cumulEur > weekMap.get(weekKey).cumulEur) {
-        weekMap.set(weekKey, { cumulEur, cumulNum, donMoyen });
-      }
-    });
+  const labels = [], cumuls = [];
+let lastCumulEur = 0, lastCumulNum = 0, lastDonMoyen = 0;
+let acumuladoEur = 0, acumuladoNum = 0;
 
-    const labels = [], cumuls = [];
-    let lastCumulEur = 0, lastCumulNum = 0, lastDonMoyen = 0;
-    weekMap.forEach((val, key) => {
-      labels.push(key); cumuls.push(val.cumulEur);
-      lastCumulEur = val.cumulEur;
-      lastCumulNum = val.cumulNum;
-      lastDonMoyen = val.donMoyen;
-    });
-
-    // Calcular actividades
+dons.forEach(row => {
+  if (row.length < 3) return;
+  const fecha = row[0].trim().replace(/"/g,'');
+  const donsSemaine = parseFloat(row[2]?.replace(/[^0-9.]/g, '')) || 0;
+  const donateurs = parseInt(row[1]) || 0;
+  
+  if (donsSemaine > 0 || donateurs > 0) {
+    acumuladoEur += donsSemaine;
+    acumuladoNum += donateurs;
+    labels.push(fecha);
+    cumuls.push(acumuladoEur);
+    lastCumulEur = acumuladoEur;
+    lastCumulNum = acumuladoNum;
+    lastDonMoyen = acumuladoNum > 0 ? acumuladoEur / acumuladoNum : 0;
+  }
+});
     let totalActivites = 0;
     let numActivites = activites.length;
     activites.forEach(row => {
@@ -694,13 +717,13 @@ async function loadDonations() {
     });
     const moyenneActivites = numActivites > 0 ? totalActivites / numActivites : 0;
 
-    // Total general
     const totalGeneral = lastCumulEur + totalActivites;
     const pct = Math.min((totalGeneral / OBJETIVO) * 100, 100).toFixed(1);
-    const fmt = n => n.toLocaleString('fr-FR') + ' €';
+    const fmt = n => n.toLocaleString('fr-FR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' €';
 
     // FR
     document.getElementById('totalCollecte').textContent = fmt(totalGeneral);
+    document.getElementById('totalDons').textContent = fmt(lastCumulEur);
     document.getElementById('totalDonateurs').textContent = lastCumulNum;
     document.getElementById('donMoyen').textContent = fmt(lastDonMoyen);
     document.getElementById('progresoFill').style.width = pct + '%';
@@ -711,6 +734,7 @@ async function loadDonations() {
 
     // ES
     document.getElementById('totalCollecteES').textContent = fmt(totalGeneral);
+    document.getElementById('totalDonsES').textContent = fmt(lastCumulEur);
     document.getElementById('totalDonateursES').textContent = lastCumulNum;
     document.getElementById('donMoyenES').textContent = fmt(lastDonMoyen);
     document.getElementById('progresoFillES').style.width = pct + '%';
@@ -727,6 +751,7 @@ async function loadDonations() {
 
     // Gráfico
     if (typeof Chart !== 'undefined') {
+      const totalLabels = labels.length;
       const chartConfig = {
         type: 'line',
         data: {
@@ -740,7 +765,15 @@ async function loadDonations() {
           responsive: true,
           plugins: { legend: { position: 'top' } },
           scales: {
-            x: { ticks: { minRotation: 45, maxTicksLimit: 5, maxRotation: 45, font: { size: 10 } } },
+            x: {
+              ticks: {
+                minRotation: 45,
+                maxRotation: 45,
+                font: { size: 10 },
+                autoSkip: true,
+                maxTicksLimit: totalLabels
+              }
+            },
             y: { beginAtZero: true, max: 500000, ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } }
           }
         }
