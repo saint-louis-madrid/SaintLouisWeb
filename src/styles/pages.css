@@ -360,6 +360,10 @@
   font-size: 0.82rem;
   color: var(--color-muted);
 }
+.don-beneficiary {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
 
 .don-contact {
   font-size: 0.9rem;
