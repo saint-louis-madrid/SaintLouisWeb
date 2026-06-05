@@ -93,296 +93,279 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-      <section class="section" id="fr-2">
-        <div class="container reveal">
-          <span class="eyebrow">2. PROJET EN IMAGES ET VIDÉOS 🎥</span>
-          <h2 class="section-title">Projet en images et vidéos</h2>
-          <p class="liturgie-intro">
-            Découvrez notre projet sur notre chaîne 
-            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
-            notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> et Facebook.
-          </p>
-        
-          <h3>Images et vidéos à venir.</h3>
-          <!-- GALERÍA POR CATEGORÍAS — oculto hasta tener contenido -->
-<div class="media-categorias">
+  <section class="section" id="fr-2">
+  <div class="container reveal">
+    <span class="eyebrow">2. PROJET EN IMAGES ET VIDÉOS 🎥</span>
+    <h2 class="section-title">Projet en images et vidéos</h2>
+    <p class="liturgie-intro">
+      Découvrez notre projet sur notre chaîne 
+      <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+      notre compte <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> et Facebook.
+    </p>
 
-  <!-- 1. Le fresco -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="Le fresque" />
-      <div class="media-categoria-info">
-        <h3>🎨 Le fresque</h3>
-        <p>Renders, miniatures et présentation de l'artiste</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="0">
-      <img src="/images/fresque/fresque-completo.jpg" alt="Vue d'ensemble de la fresque" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Vue d'ensemble de la fresque</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="1">
-      <img src="/images/fresque/fresque-abraham.jpg" alt="Abraham et Isaac" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Abraham et Isaac</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="2">
-      <img src="/images/fresque/fresque-david.jpg" alt="David danse devant l'Arche de l'Alliance" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">David danse devant l'Arche de l'Alliance</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="3">
-      <img src="/images/fresque/fresque-jean.jpg" alt="Jean-Baptiste" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Jean-Baptiste</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="4">
-      <img src="/images/fresque/fresque-noe.jpg" alt="Noé et l'Arche" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Noé et l'Arche</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-     <div class="fresque-item" data-index="5">
-      <img src="/images/fresque/fresque-adaneva.jpg" alt="Adan et Ève" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Adam et Ève</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
+    <div class="media-categorias">
 
-  <!-- 2. La sculpture de Saint Louis -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/SaintLouis.jpg" alt="Saint Louis" />
-      <div class="media-categoria-info">
-        <h3>⛪ La sculpture de Saint Louis</h3>
-        <p>Images de la création de l'œuvre</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="6">
-      <img src="/images/sanluis/Aspecto final estatua.jpg" alt="Aspect final de la statue" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Aspect final de la statue</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="7">
-      <img src="/images/sanluis/Estado actual molde cabeza de frente.jpg" alt="État actuel — tête de face" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — tête de face</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="8">
-      <img src="/images/sanluis/Estado actual molde cabeza perfil.jpg" alt="État actuel — moule de tête de profil" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — moule de tête de profil</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="9">
-      <img src="/images/sanluis/Estado actual molde cabeza semi perfil.jpg" alt="État actuel — moule de tête semi-profil" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — moule de tête semi-profil</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="10">
-      <img src="/images/sanluis/Estado actual molde cabeza y mano.jpg" alt="État actuel — modèle tête et main" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — modèle tête et main</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="11">
-      <img src="/images/sanluis/Idea del estado final con cuerpo.jpg" alt="Idée de l'état final avec le corps" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Idée de l'état final avec le corps</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-
-  <!-- 3. Éclairage et bancs -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/bancos.jpg" alt="Éclairage et bancs" />
-      <div class="media-categoria-info">
-        <h3>💡 Éclairage et bancs</h3>
-        <p>Render de l'éclairage et plans des bancs circulaires</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Render de l'éclairage</h4>
-  <video controls width="100%" style="border-radius:6px; margin-bottom:1.5rem;">
-    <source src="/videos/renderiluminacion.mp4" type="video/mp4" />
-  </video>
-  <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">📐 Plan des bancs circulaires</h4>
- 
-   <div class="fresque-item" data-index="13">
-      <img src="/images/planobanco.jpg" alt="Plans de bancs circulaires" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans de bancs circulaires</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-
-
-</div>
-    </div>
-  </div>
-
-  <!-- 4. La passerelle -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La passerelle" />
-      <div class="media-categoria-info">
-        <h3>♿ La passerelle</h3>
-        <p>Plans, élévations et vidéo de présentation</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <div class="fresque-grid">
-   
-    <div class="fresque-item" data-index="14">
-      <img src="/images/pasarela/alzado.jpg" alt="Élévation" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Élévation</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="15">
-      <img src="/images/pasarela/planos.jpg" alt="Plans" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
- 
-    <div class="fresque-item" data-index="16">
-      <img src="/images/pasarela/secciones.jpg" alt="Sections" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Sections</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-
-  <!-- 5. Plans d'architecte -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/planos.jpg" alt="Plans d'architecte" />
-      <div class="media-categoria-info">
-        <h3>📐 Plans et images d'architecte</h3>
-        <p>Plans et images pour l'église</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="17">
-      <img src="/images/planos/plano1.jpg" alt="Plans" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="18">
-      <img src="/images/planos/plano2.jpg" alt="Plans" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="19">
-      <img src="/images/planos/plano3.jpg" alt="Plans" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="20">
-      <img src="/images/planos/plano4.jpg" alt="Plans" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-
-  <!-- 6. Salles paroissiales -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/salas.jpg" alt="Salles paroissiales" />
-      <div class="media-categoria-info">
-        <h3>🏛️ Les salles paroissiales</h3>
-        <p>Render extérieur, plans et images</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-     <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="21">
-      <img src="/images/salasparroquiales/salas.jpg" alt="Salles paroissiales" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Salles paroissiales</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="22">
-      <img src="/images/salasparroquiales/exteriorsalas.jpg" alt="Extérieur des salles" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Extérieur des salles</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-  <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">📐 Plans des salles</h4>
-  <iframe src="/images/salasparroquiales/planossalas.pdf" width="100%" height="500px" style="border:none; border-radius:6px;"></iframe>
-</div>
-    </div>
-  </div>
-
-  <!-- 7. Ça vaut la peine -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">❤️</div>
-      <div class="media-categoria-info">
-        <h3>Ça vaut la peine</h3>
-        <p>Témoignages vidéo de la communauté</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenu à venir.</p>
-    </div>
-  </div>
-
-  <!-- 8. Le coin de la solidarité -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;"> 🕊️ </div> 
-      <div class="media-categoria-info">
-        <h3>Le coin de la solidarité</h3>
-        <p>Communauté chrétienne du Liban</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenu à venir.</p>
-    </div>
-  </div>
-
-  <!-- 9. Journal du chantier -->
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-     <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;"> 🔨  </div> 
-      <div class="media-categoria-info">
-        <h3>Journal du chantier</h3>
-        <p>Avancement des travaux au fil du temps</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenu à venir.</p>
-    </div>
-  </div>
-
-</div>
+      <!-- 1. Le fresque -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="Le fresque" />
+          <div class="media-categoria-info">
+            <h3>🎨 Le fresque</h3>
+            <p>Renders, miniatures et présentation de l'artiste</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
         </div>
-      </section>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="0" data-index="0">
+              <img src="/images/fresque/fresque-completo.jpg" alt="Vue d'ensemble de la fresque" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Vue d'ensemble de la fresque</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="1">
+              <img src="/images/fresque/fresque-abraham.jpg" alt="Abraham et Isaac" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Abraham et Isaac</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="2">
+              <img src="/images/fresque/fresque-david.jpg" alt="David danse devant l'Arche de l'Alliance" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">David danse devant l'Arche de l'Alliance</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="3">
+              <img src="/images/fresque/fresque-jean.jpg" alt="Jean-Baptiste" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Jean-Baptiste</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="4">
+              <img src="/images/fresque/fresque-noe.jpg" alt="Noé et l'Arche" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Noé et l'Arche</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="5">
+              <img src="/images/fresque/fresque-adaneva.jpg" alt="Adam et Ève" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Adam et Ève</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. La sculpture de Saint Louis -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/SaintLouis.jpg" alt="Saint Louis" />
+          <div class="media-categoria-info">
+            <h3>⛪ La sculpture de Saint Louis</h3>
+            <p>Images de la création de l'œuvre</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="1" data-index="0">
+              <img src="/images/sanluis/Aspecto final estatua.jpg" alt="Aspect final de la statue" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Aspect final de la statue</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="1">
+              <img src="/images/sanluis/Estado actual molde cabeza de frente.jpg" alt="État actuel — tête de face" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — tête de face</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="2">
+              <img src="/images/sanluis/Estado actual molde cabeza perfil.jpg" alt="État actuel — moule de tête de profil" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — moule de tête de profil</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="3">
+              <img src="/images/sanluis/Estado actual molde cabeza semi perfil.jpg" alt="État actuel — moule de tête semi-profil" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — moule de tête semi-profil</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="4">
+              <img src="/images/sanluis/Estado actual molde cabeza y mano.jpg" alt="État actuel — modèle tête et main" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">État actuel — modèle tête et main</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="5">
+              <img src="/images/sanluis/Idea del estado final con cuerpo.jpg" alt="Idée de l'état final avec le corps" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Idée de l'état final avec le corps</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Éclairage et bancs -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/bancos.jpg" alt="Éclairage et bancs" />
+          <div class="media-categoria-info">
+            <h3>💡 Éclairage et bancs</h3>
+            <p>Render de l'éclairage et plans des bancs circulaires</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Render de l'éclairage</h4>
+          <video controls width="100%" style="border-radius:6px; margin-bottom:1.5rem;">
+            <source src="/videos/renderiluminacion.mp4" type="video/mp4" />
+          </video>
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">📐 Plan des bancs circulaires</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="2" data-index="0">
+              <img src="/images/planobanco.jpg" alt="Plans de bancs circulaires" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans de bancs circulaires</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. La passerelle -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La passerelle" />
+          <div class="media-categoria-info">
+            <h3>♿ La passerelle</h3>
+            <p>Plans, élévations et vidéo de présentation</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="3" data-index="0">
+              <img src="/images/pasarela/alzado.jpg" alt="Élévation" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Élévation</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="3" data-index="1">
+              <img src="/images/pasarela/planos.jpg" alt="Plans" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="3" data-index="2">
+              <img src="/images/pasarela/secciones.jpg" alt="Sections" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Sections</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Plans d'architecte -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/planos.jpg" alt="Plans d'architecte" />
+          <div class="media-categoria-info">
+            <h3>📐 Plans et images d'architecte</h3>
+            <p>Plans et images pour l'église</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="4" data-index="0">
+              <img src="/images/planos/plano1.jpg" alt="Plans" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="1">
+              <img src="/images/planos/plano2.jpg" alt="Plans" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="2">
+              <img src="/images/planos/plano3.jpg" alt="Plans" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="3">
+              <img src="/images/planos/plano4.jpg" alt="Plans" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Salles paroissiales -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/salas.jpg" alt="Salles paroissiales" />
+          <div class="media-categoria-info">
+            <h3>🏛️ Les salles paroissiales</h3>
+            <p>Render extérieur, plans et images</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="5" data-index="0">
+              <img src="/images/salasparroquiales/salas.jpg" alt="Salles paroissiales" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Salles paroissiales</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="5" data-index="1">
+              <img src="/images/salasparroquiales/exteriorsalas.jpg" alt="Extérieur des salles" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Extérieur des salles</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+          <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">📐 Plans des salles</h4>
+          <iframe src="/images/salasparroquiales/planossalas.pdf" width="100%" height="500px" style="border:none; border-radius:6px;"></iframe>
+        </div>
+      </div>
+
+      <!-- 7. Ça vaut la peine -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">❤️</div>
+          <div class="media-categoria-info">
+            <h3>Ça vaut la peine</h3>
+            <p>Témoignages vidéo de la communauté</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenu à venir.</p>
+        </div>
+      </div>
+
+      <!-- 8. Le coin de la solidarité -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🕊️</div>
+          <div class="media-categoria-info">
+            <h3>Le coin de la solidarité</h3>
+            <p>Communauté chrétienne du Liban</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenu à venir.</p>
+        </div>
+      </div>
+
+      <!-- 9. Journal du chantier -->
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨</div>
+          <div class="media-categoria-info">
+            <h3>Journal du chantier</h3>
+            <p>Avancement des travaux au fil du temps</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenu à venir.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section class="section" id="fr-3">
         <div class="container reveal">
@@ -615,278 +598,270 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-      <section class="section" id="es-2">
-        <div class="container reveal">
-          <span class="eyebrow">2. PROYECTO EN IMÁGENES Y VÍDEOS 🎥</span>
-          <h2 class="section-title">Proyecto en imágenes y vídeos</h2>
-          <p class="liturgie-intro">
-            Descubre nuestro proyecto en 
-            <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
-            <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> y Facebook.
-          </p>
+    <section class="section" id="es-2">
+  <div class="container reveal">
+    <span class="eyebrow">2. PROYECTO EN IMÁGENES Y VÍDEOS 🎥</span>
+    <h2 class="section-title">Proyecto en imágenes y vídeos</h2>
+    <p class="liturgie-intro">
+      Descubre nuestro proyecto en 
+      <a href="https://www.youtube.com/@stlouisfrancais" target="_blank" rel="noopener noreferrer">YouTube</a>, 
+      <a href="https://www.instagram.com/saint_louis_des_francais/" target="_blank" rel="noopener noreferrer">Instagram</a> y Facebook.
+    </p>
 
-<div class="media-categorias">
+    <div class="media-categorias">
 
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="El fresco" />
-      <div class="media-categoria-info">
-        <h3>🎨 El fresco</h3>
-        <p>Renders, miniaturas y presentación del artista</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    
-  <div class="media-categoria-content" style="display:none;">
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="0">
-      <img src="/images/fresque/fresque-completo.jpg" alt="Visión conjunta del fresco" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Visión conjunta del fresco</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="1">
-      <img src="/images/fresque/fresque-abraham.jpg" alt="Abraham e Isaac" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Abraham e Isaac</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="2">
-      <img src="/images/fresque/fresque-david.jpg" alt="David danza ante el Arca de la Alianza" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">David danza ante el Arca de la Alianza</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="3">
-      <img src="/images/fresque/fresque-jean.jpg" alt="Juan Bautista" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Juan Bautista</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="4">
-      <img src="/images/fresque/fresque-noe.jpg" alt="Noé y el Arca" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Noé y el Arca</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="5">
-      <img src="/images/fresque/fresque-adaneva.jpg" alt="Adan et Ève" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Adán y Eva</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-  </div>
-</div>
- 
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/SaintLouis.jpg" alt="San Luis" />
-      <div class="media-categoria-info">
-        <h3>⛪ La escultura de San Luis</h3>
-        <p>Imágenes de la creación de la obra</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-   <div class="media-categoria-content" style="display:none;">
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="6">
-      <img src="/images/sanluis/Aspecto final estatua.jpg" alt="Aspecto final estatua" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Aspecto final estatua</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="7">
-      <img src="/images/sanluis/Estado actual molde cabeza de frente.jpg" alt="Estado actual cabeza de frente" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual cabeza de frente</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="9">
-      <img src="/images/sanluis/Estado actual molde cabeza perfil.jpg" alt="Estado actual molde cabeza perfil" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual molde cabeza perfil</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div> 
-    <div class="fresque-item" data-index="10">
-      <img src="/images/sanluis/Estado actual molde cabeza semi perfil.jpg" alt="Estado actual molde de cabeza semi perfil" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual molde de cabeza semi perfil</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="11">
-      <img src="/images/sanluis/Estado actual molde cabeza y mano.jpg" alt="Estado actual model de cabeza y mano" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual model de cabeza y mano</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="12">
-      <img src="/images/sanluis/Idea del estado final con cuerpo.jpg" alt="Idea del estado final con cuerpo" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Idea del estado final con cuerpo</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/bancos.jpg" alt="Iluminación y bancos" />
-      <div class="media-categoria-info">
-        <h3>💡 Iluminación y bancos</h3>
-        <p>Render de iluminación y planos de bancos circulares</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content" >
-  <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Render de iluminación</h4>
-  <video controls width="100%" style="border-radius:6px; margin-bottom:1.5rem;">
-    <source src="/videos/renderiluminacion.mp4" type="video/mp4" />
-  </video>
-  <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">📐 Plano de bancos circulares</h4>
-     <div class="fresque-item" data-index="13">
-      <img src="/images/planobanco.jpg" alt="Plano de bancos circulares" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Plano de bancos circulares</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-</div>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La pasarela" />
-      <div class="media-categoria-info">
-        <h3>♿ La pasarela</h3>
-        <p>Planos, alzados y vídeo de presentación</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-     <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    
-    <div class="fresque-item" data-index="14">
-      <img src="/images/pasarela/alzado.jpg" alt="Alzado" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Alzado</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="15">
-      <img src="/images/pasarela/planos.jpg" alt="Planos" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="16">
-      <img src="/images/pasarela/secciones.jpg" alt="Secciones" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Secciones</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/planos.jpg" alt="Planos" />
-      <div class="media-categoria-info">
-        <h3>📐 Planos e imágenes de arquitecto</h3>
-        <p>Planos e imágenes para la iglesia</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-     <div class="media-categoria-content" >
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="17">
-      <img src="/images/planos/plano1.jpg" alt="Planos" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="18">
-      <img src="/images/planos/plano2.jpg" alt="Planos" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="19">
-      <img src="/images/planos/plano3.jpg" alt="Planos" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="20">
-      <img src="/images/planos/plano4.jpg" alt="Planos" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <img class="media-categoria-thumb" src="/images/salas.jpg" alt="Salas parroquiales" />
-      <div class="media-categoria-info">
-        <h3>🏛️ Las salas parroquiales</h3>
-        <p>Render exterior, planos e imágenes</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <div class="media-categoria-content">
-  <div class="fresque-grid">
-    <div class="fresque-item" data-index="21">
-      <img src="/images/salasparroquiales/salas.jpg" alt="Salas parroquiales" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Salas parroquiales</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-    <div class="fresque-item" data-index="22">
-      <img src="/images/salasparroquiales/exteriorsalas.jpg" alt="Exterior de las salas" loading="lazy" />
-      <div class="fresque-item-overlay"><span class="fresque-item-caption">Exterior de las salas</span></div>
-      <span class="fresque-zoom-icon">⤢</span>
-    </div>
-  </div>
-  <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">📐 Planos de las salas</h4>
-  <iframe src="/images/salasparroquiales/planossalas.pdf" width="100%" height="500px" style="border:none; border-radius:6px;"></iframe>
-</div>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">❤️</div>
-      <div class="media-categoria-info">
-        <h3>Vale la pena</h3>
-        <p>Testimonios en vídeo de la comunidad</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenido próximamente.</p>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🕊️</div>
-      <div class="media-categoria-info">
-        <h3>El rincón de la solidaridad</h3>
-        <p>Comunidad cristiana del Líbano</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenido próximamente.</p>
-    </div>
-  </div>
-
-  <div class="media-categoria">
-    <div class="media-categoria-header" onclick="toggleCategoria(this)">
-      <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨 </div>
-      <div class="media-categoria-info">
-        <h3>El diario de la obra</h3>
-        <p>Avance de las obras a lo largo del tiempo</p>
-      </div>
-      <span class="media-categoria-arrow">▾</span>
-    </div>
-    <div class="media-categoria-content" style="display:none;">
-      <p class="liturgie-note">Contenido próximamente.</p>
-    </div>
-  </div>
-
-</div>
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="El fresco" />
+          <div class="media-categoria-info">
+            <h3>🎨 El fresco</h3>
+            <p>Renders, miniaturas y presentación del artista</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
         </div>
-      </section>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="0" data-index="0">
+              <img src="/images/fresque/fresque-completo.jpg" alt="Visión conjunta del fresco" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Visión conjunta del fresco</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="1">
+              <img src="/images/fresque/fresque-abraham.jpg" alt="Abraham e Isaac" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Abraham e Isaac</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="2">
+              <img src="/images/fresque/fresque-david.jpg" alt="David danza ante el Arca de la Alianza" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">David danza ante el Arca de la Alianza</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="3">
+              <img src="/images/fresque/fresque-jean.jpg" alt="Juan Bautista" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Juan Bautista</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="4">
+              <img src="/images/fresque/fresque-noe.jpg" alt="Noé y el Arca" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Noé y el Arca</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="0" data-index="5">
+              <img src="/images/fresque/fresque-adaneva.jpg" alt="Adán y Eva" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Adán y Eva</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/SaintLouis.jpg" alt="San Luis" />
+          <div class="media-categoria-info">
+            <h3>⛪ La escultura de San Luis</h3>
+            <p>Imágenes de la creación de la obra</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="1" data-index="0">
+              <img src="/images/sanluis/Aspecto final estatua.jpg" alt="Aspecto final estatua" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Aspecto final estatua</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="1">
+              <img src="/images/sanluis/Estado actual molde cabeza de frente.jpg" alt="Estado actual cabeza de frente" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual cabeza de frente</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="2">
+              <img src="/images/sanluis/Estado actual molde cabeza perfil.jpg" alt="Estado actual molde cabeza perfil" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual molde cabeza perfil</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="3">
+              <img src="/images/sanluis/Estado actual molde cabeza semi perfil.jpg" alt="Estado actual molde de cabeza semi perfil" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual molde de cabeza semi perfil</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="4">
+              <img src="/images/sanluis/Estado actual molde cabeza y mano.jpg" alt="Estado actual model de cabeza y mano" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Estado actual model de cabeza y mano</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="1" data-index="5">
+              <img src="/images/sanluis/Idea del estado final con cuerpo.jpg" alt="Idea del estado final con cuerpo" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Idea del estado final con cuerpo</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/bancos.jpg" alt="Iluminación y bancos" />
+          <div class="media-categoria-info">
+            <h3>💡 Iluminación y bancos</h3>
+            <p>Render de iluminación y planos de bancos circulares</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Render de iluminación</h4>
+          <video controls width="100%" style="border-radius:6px; margin-bottom:1.5rem;">
+            <source src="/videos/renderiluminacion.mp4" type="video/mp4" />
+          </video>
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">📐 Plano de bancos circulares</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="2" data-index="0">
+              <img src="/images/planobanco.jpg" alt="Plano de bancos circulares" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plano de bancos circulares</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La pasarela" />
+          <div class="media-categoria-info">
+            <h3>♿ La pasarela</h3>
+            <p>Planos, alzados y vídeo de presentación</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="3" data-index="0">
+              <img src="/images/pasarela/alzado.jpg" alt="Alzado" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Alzado</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="3" data-index="1">
+              <img src="/images/pasarela/planos.jpg" alt="Planos" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="3" data-index="2">
+              <img src="/images/pasarela/secciones.jpg" alt="Secciones" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Secciones</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/planos.jpg" alt="Planos" />
+          <div class="media-categoria-info">
+            <h3>📐 Planos e imágenes de arquitecto</h3>
+            <p>Planos e imágenes para la iglesia</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="4" data-index="0">
+              <img src="/images/planos/plano1.jpg" alt="Planos" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="1">
+              <img src="/images/planos/plano2.jpg" alt="Planos" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="2">
+              <img src="/images/planos/plano3.jpg" alt="Planos" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="4" data-index="3">
+              <img src="/images/planos/plano4.jpg" alt="Planos" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Planos</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <img class="media-categoria-thumb" src="/images/salas.jpg" alt="Salas parroquiales" />
+          <div class="media-categoria-info">
+            <h3>🏛️ Las salas parroquiales</h3>
+            <p>Render exterior, planos e imágenes</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="5" data-index="0">
+              <img src="/images/salasparroquiales/salas.jpg" alt="Salas parroquiales" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Salas parroquiales</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="5" data-index="1">
+              <img src="/images/salasparroquiales/exteriorsalas.jpg" alt="Exterior de las salas" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Exterior de las salas</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+          <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">📐 Planos de las salas</h4>
+          <iframe src="/images/salasparroquiales/planossalas.pdf" width="100%" height="500px" style="border:none; border-radius:6px;"></iframe>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">❤️</div>
+          <div class="media-categoria-info">
+            <h3>Vale la pena</h3>
+            <p>Testimonios en vídeo de la comunidad</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenido próximamente.</p>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🕊️</div>
+          <div class="media-categoria-info">
+            <h3>El rincón de la solidaridad</h3>
+            <p>Comunidad cristiana del Líbano</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenido próximamente.</p>
+        </div>
+      </div>
+
+      <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨</div>
+          <div class="media-categoria-info">
+            <h3>El diario de la obra</h3>
+            <p>Avance de las obras a lo largo del tiempo</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <p class="liturgie-note">Contenido próximamente.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section class="section" id="es-3">
         <div class="container reveal">
@@ -1227,8 +1202,20 @@ function toggleCategoria(header) {
   const content = header.nextElementSibling;
   const arrow = header.querySelector('.media-categoria-arrow');
   const isOpen = content.style.display !== 'none';
-  content.style.display = isOpen ? 'none' : 'block';
-  arrow.classList.toggle('open', !isOpen);
+
+  // Cerrar todas las demás
+  document.querySelectorAll('.media-categoria-content').forEach(c => {
+    c.style.display = 'none';
+  });
+  document.querySelectorAll('.media-categoria-arrow').forEach(a => {
+    a.classList.remove('open');
+  });
+
+  // Abrir la clickada si estaba cerrada
+  if (!isOpen) {
+    content.style.display = 'block';
+    arrow.classList.add('open');
+  }
 }
 </script>
 
@@ -1348,65 +1335,98 @@ document.head.appendChild(script);
 
 <script is:inline>
 (function() {
- const images = [
-  { src: '/images/fresque/fresque-completo.jpg', captionFR: "Vue d'ensemble de la fresque", captionES: 'Visión conjunta del fresco' },
-  { src: '/images/fresque/fresque-abraham.jpg', captionFR: 'Abraham et Isaac', captionES: 'Abraham e Isaac' },
-  { src: '/images/fresque/fresque-david.jpg', captionFR: "David danse devant l'Arche de l'Alliance", captionES: 'David danza ante el Arca de la Alianza' },
-  { src: '/images/fresque/fresque-jean.jpg', captionFR: 'Jean-Baptiste', captionES: 'Juan Bautista' },
-  { src: '/images/fresque/fresque-noe.jpg', captionFR: "Noé et l'Arche", captionES: 'Noé y el Arca' },
-  { src: '/images/fresque/fresque-adaneva.jpg', captionFR: "Adam et Ève", captionES: 'Adán y Eva' },
+  const grupos = {
+    0: [
+      { src: '/images/fresque/fresque-completo.jpg', captionFR: "Vue d'ensemble de la fresque", captionES: 'Visión conjunta del fresco' },
+      { src: '/images/fresque/fresque-abraham.jpg', captionFR: 'Abraham et Isaac', captionES: 'Abraham e Isaac' },
+      { src: '/images/fresque/fresque-david.jpg', captionFR: "David danse devant l'Arche de l'Alliance", captionES: 'David danza ante el Arca de la Alianza' },
+      { src: '/images/fresque/fresque-jean.jpg', captionFR: 'Jean-Baptiste', captionES: 'Juan Bautista' },
+      { src: '/images/fresque/fresque-noe.jpg', captionFR: "Noé et l'Arche", captionES: 'Noé y el Arca' },
+      { src: '/images/fresque/fresque-adaneva.jpg', captionFR: "Adam et Ève", captionES: 'Adán y Eva' },
+    ],
+    1: [
+      { src: '/images/sanluis/Aspecto final estatua.jpg', captionFR: 'Aspect final de la statue', captionES: 'Aspecto final estatua' },
+      { src: '/images/sanluis/Estado actual molde cabeza de frente.jpg', captionFR: 'État actuel — tête de face', captionES: 'Estado actual cabeza de frente' },
+      { src: '/images/sanluis/Estado actual molde cabeza perfil.jpg', captionFR: 'État actuel — moule de tête de profil', captionES: 'Estado actual molde cabeza perfil' },
+      { src: '/images/sanluis/Estado actual molde cabeza semi perfil.jpg', captionFR: 'État actuel — moule de tête semi-profil', captionES: 'Estado actual molde de cabeza semi perfil' },
+      { src: '/images/sanluis/Estado actual molde cabeza y mano.jpg', captionFR: 'État actuel — modèle tête et main', captionES: 'Estado actual model de cabeza y mano' },
+      { src: '/images/sanluis/Idea del estado final con cuerpo.jpg', captionFR: "Idée de l'état final avec le corps", captionES: 'Idea del estado final con cuerpo' },
+    ],
+    2: [
+      { src: '/images/planobanco.jpg', captionFR: 'Plans de bancs circulaires', captionES: 'Planos de bancos circulares' },
+    ],
+    3: [
+      { src: '/images/pasarela/alzado.jpg', captionFR: 'Élévation', captionES: 'Alzado' },
+      { src: '/images/pasarela/planos.jpg', captionFR: 'Plans', captionES: 'Planos' },
+      { src: '/images/pasarela/secciones.jpg', captionFR: 'Sections', captionES: 'Secciones' },
+    ],
+    4: [
+      { src: '/images/planos/plano1.jpg', captionFR: 'Plans', captionES: 'Planos' },
+      { src: '/images/planos/plano2.jpg', captionFR: 'Plans', captionES: 'Planos' },
+      { src: '/images/planos/plano3.jpg', captionFR: 'Plans', captionES: 'Planos' },
+      { src: '/images/planos/plano4.jpg', captionFR: 'Plans', captionES: 'Planos' },
+    ],
+    5: [
+      { src: '/images/salasparroquiales/salas.jpg', captionFR: 'Salles paroissiales', captionES: 'Salas parroquiales' },
+      { src: '/images/salasparroquiales/exteriorsalas.jpg', captionFR: 'Extérieur des salles', captionES: 'Exterior de las salas' },
+    ],
+  };
 
-  { src: '/images/sanluis/Aspecto final estatua.jpg', captionFR: "Aspecto final estatua", captionES: 'Aspecto final estatua' },
-  { src: '/images/sanluis/Estado actual molde cabeza de frente.jpg', captionFR: "Estado actual molde cabeza de frente", captionES: 'Estado actual molde cabeza de frente' },
-  { src: '/images/sanluis/Estado actual molde cabeza perfil.jpg', captionFR: "Estado actual cabeza de profil", captionES: 'Estado actual cabeza de perfil' },
-  { src: '/images/sanluis/Estado actual molde cabeza perfil.jpg', captionFR: "Estado actual molde cabeza perfil", captionES: 'Estado actual molde cabeza perfil' },
-  { src: '/images/sanluis/Estado actual molde cabeza semi perfil.jpg', captionFR: "Estado actual molde de cabeza semi perfil", captionES: 'Estado actual molde de cabeza semi perfil' },
-  { src: '/images/sanluis/Estado actual molde cabeza y mano.jpg', captionFR: "Estado actual model de cabeza y mano", captionES: 'Estado actual model de cabeza y mano' },
-  { src: '/images/sanluis/Idea del estado final con cuerpo.jpg', captionFR: "Idea del estado final con cuerpo", captionES: 'Idea del estado final con cuerpo' },
-
-  { src: '/images/planobanco.jpg', captionFR: "Plans de bancs circulaires", captionES: 'Plano de bancos circulares' },
-
-
-  { src: '/images/pasarela/alzado.jpg', captionFR: 'Élévation', captionES: 'Alzado' },
-  { src: '/images/pasarela/planos.jpg', captionFR: 'Plans', captionES: 'Planos' }, 
-  { src: '/images/pasarela/secciones.jpg', captionFR: 'Sections', captionES: 'Secciones' },
-
-  { src: '/images/planos/plano1.jpg', captionFR: 'Plans', captionES: 'Planos' },
-  { src: '/images/planos/plano2.jpg', captionFR: 'Plans', captionES: 'Planos' },
-  { src: '/images/planos/plano3.jpg', captionFR: 'Plans', captionES: 'Planos' },
-  { src: '/images/planos/plano4.jpg', captionFR: 'Plans', captionES: 'Planos' },
-
-
-  { src: '/images/salasparroquiales/salas.jpg', captionFR: 'Salles paroissiales', captionES: 'Salas parroquiales' },
-  { src: '/images/salasparroquiales/exteriorsalas.jpg', captionFR: 'Extérieur des salles', captionES: 'Exterior de las salas' },
-
-];
-
-
+  let grupoActual = [];
   let current = 0;
+
   function getLang() { return document.getElementById('btnFR')?.classList.contains('active') ? 'fr' : 'es'; }
-  function openLightbox(index) { current = index; updateLightbox(); document.getElementById('fresqueLightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeLightbox() { document.getElementById('fresqueLightbox').classList.remove('open'); document.body.style.overflow = ''; }
+
+  function openLightbox(grupoId, indexEnGrupo) {
+    grupoActual = grupos[grupoId] || [];
+    current = indexEnGrupo;
+    updateLightbox();
+    document.getElementById('fresqueLightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('fresqueLightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   function updateLightbox() {
-    const img = images[current]; const lang = getLang();
+    const img = grupoActual[current];
+    const lang = getLang();
     document.getElementById('fresqueLbImg').src = img.src;
     document.getElementById('fresqueLbImg').alt = lang === 'fr' ? img.captionFR : img.captionES;
     document.getElementById('fresqueLbCaption').textContent = lang === 'fr' ? img.captionFR : img.captionES;
-    document.getElementById('fresqueLbCounter').textContent = (current + 1) + ' / ' + images.length;
+    document.getElementById('fresqueLbCounter').textContent = (current + 1) + ' / ' + grupoActual.length;
   }
-  document.addEventListener('click', function(e) { const item = e.target.closest('.fresque-item'); if (item) openLightbox(parseInt(item.dataset.index)); });
+
+  document.addEventListener('click', function(e) {
+    const item = e.target.closest('.fresque-item');
+    if (item) {
+      const grupo = parseInt(item.dataset.grupo);
+      const index = parseInt(item.dataset.index);
+      openLightbox(grupo, index);
+    }
+  });
+
   document.getElementById('fresqueClose').addEventListener('click', closeLightbox);
-  document.getElementById('fresquePrev').addEventListener('click', function() { current = (current - 1 + images.length) % images.length; updateLightbox(); });
-  document.getElementById('fresqueNext').addEventListener('click', function() { current = (current + 1) % images.length; updateLightbox(); });
+  document.getElementById('fresquePrev').addEventListener('click', function() {
+    current = (current - 1 + grupoActual.length) % grupoActual.length;
+    updateLightbox();
+  });
+  document.getElementById('fresqueNext').addEventListener('click', function() {
+    current = (current + 1) % grupoActual.length;
+    updateLightbox();
+  });
   document.addEventListener('keydown', function(e) {
     if (!document.getElementById('fresqueLightbox').classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') { current = (current - 1 + images.length) % images.length; updateLightbox(); }
-    if (e.key === 'ArrowRight') { current = (current + 1) % images.length; updateLightbox(); }
+    if (e.key === 'ArrowLeft') { current = (current - 1 + grupoActual.length) % grupoActual.length; updateLightbox(); }
+    if (e.key === 'ArrowRight') { current = (current + 1) % grupoActual.length; updateLightbox(); }
   });
-  document.getElementById('fresqueLightbox').addEventListener('click', function(e) { if (e.target === this) closeLightbox(); });
+  document.getElementById('fresqueLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
 })();
-
 
 </script>
 
