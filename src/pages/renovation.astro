@@ -12,17 +12,16 @@ import Footer from "../components/Footer.astro";
     
 <!-- HERO -->
 <section class="hero-carousel">
- <div class="carousel-track" id="carouselTrack">
- 
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero1.jpg'); background-position: center 65%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero2.jpg');"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero3.jpg');background-position: center 10%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero4.jpg');background-position: center 10%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero5.jpg');background-position: center 10%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero6.jpg');background-position: center 85%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero7.jpg'); background-position: center 40%;"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero8.jpg');"></div>
-  <div class="carousel-slide" style="background-image: url('/images/Hero/hero9.jpg');"></div>
+<div class="carousel-track" id="carouselTrack">
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero1.jpg&w=1400&q=80'); background-position: center 65%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero2.jpg&w=1400&q=80'); background-position: center 60%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero3.jpg&w=1400&q=80'); background-position: center 10%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero4.jpg&w=1400&q=80'); background-position: center 10%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero5.jpg&w=1400&q=80'); background-position: center 10%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero6.jpg&w=1400&q=80'); background-position: center 85%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero7.jpg&w=1400&q=80'); background-position: center 40%;"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero8.jpg&w=1400&q=80');"></div>
+  <div class="carousel-slide" style="background-image: url('/.netlify/images?url=/images/Hero/hero9.jpg&w=1400&q=80');"></div>
 </div>
   <div class="carousel-overlay">
     <div class="container hero-content">
@@ -1293,36 +1292,87 @@ dons.forEach(row => {
 
     // Gráfico
     if (typeof Chart !== 'undefined') {
-      const totalLabels = labels.length;
-      const chartConfig = {
-        type: 'line',
-        data: {
-          labels,
-          datasets: [
-            { label: 'Cumul €', data: cumuls, borderColor: '#7a1f1f', backgroundColor: 'rgba(122,31,31,0.1)', tension: 0.3, fill: true, pointRadius: 3 },
-            { label: 'Objectif 500 000 €', data: new Array(labels.length).fill(OBJETIVO), borderColor: '#b08a5a', borderDash: [6, 4], pointRadius: 0, fill: false }
-          ]
+  // Preparar puntos de actividades
+  const actLabels = activites.map(row => row[0].trim().replace(/"/g,''));
+  const actImportes = activites.map(row => parseFloat(row[2]?.replace(/[^0-9.]/g, '')) || 0);
+
+  // Combinar todas las fechas para el eje X
+  const todasFechas = [...labels, ...actLabels].sort((a, b) => {
+  const [da, ma, ya] = a.split('/').map(Number);
+  const [db, mb, yb] = b.split('/').map(Number);
+  return new Date(ya, ma-1, da) - new Date(yb, mb-1, db);
+});
+  const uniqueFechas = [...new Set(todasFechas)];
+
+  // Mapear cumuls al eje X completo
+ const cumuslMapped = uniqueFechas.map(f => {
+  const i = labels.indexOf(f);
+  return i !== -1 ? cumuls[i] : undefined;
+});
+
+// Rellenar huecos con el último valor conocido
+let lastKnown = null;
+const cumuslFilled = cumuslMapped.map(v => {
+  if (v !== undefined) { lastKnown = v; return v; }
+  return lastKnown;
+});
+
+  // Mapear actividades al eje X completo
+  const actMapped = uniqueFechas.map(f => {
+    const i = actLabels.indexOf(f);
+    return i !== -1 ? actImportes[i] : null;
+  });
+
+  const totalLabels = uniqueFechas.length;
+  const chartConfig = {
+    type: 'line',
+    data: {
+      labels: uniqueFechas,
+      datasets: [
+        {
+          label: 'Cumul dons €',
+          data: cumuslFilled,
+          borderColor: '#7a1f1f',
+          backgroundColor: 'rgba(122,31,31,0.1)',
+          tension: 0.3,
+          fill: true,
+          pointRadius: 3,
+          spanGaps: true,
         },
-        options: {
-          responsive: true,
-          plugins: { legend: { position: 'top' } },
-          scales: {
-            x: {
-              ticks: {
-                minRotation: 45,
-                maxRotation: 45,
-                font: { size: 10 },
-                autoSkip: true,
-                maxTicksLimit: totalLabels
-              }
-            },
-            y: { beginAtZero: true, max: 500000, ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } }
-          }
+        {
+          label: 'Activités €',
+          data: actMapped,
+          borderColor: '#2e7d32',
+          backgroundColor: 'rgba(46,125,50,0.15)',
+          tension: 0,
+          fill: false,
+          pointRadius: 7,
+          pointStyle: 'star',
+          showLine: false,
+          spanGaps: false,
+        },
+        {
+          label: 'Objectif 500 000 €',
+          data: new Array(uniqueFechas.length).fill(OBJETIVO),
+          borderColor: '#b08a5a',
+          borderDash: [6, 4],
+          pointRadius: 0,
+          fill: false,
         }
-      };
-      new Chart(document.getElementById('donationsChart'), chartConfig);
-      new Chart(document.getElementById('donationsChartES'), { ...chartConfig, data: JSON.parse(JSON.stringify(chartConfig.data)) });
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } },
+      scales: {
+        x: { ticks: { minRotation: 45, maxRotation: 45, font: { size: 10 }, autoSkip: true, maxTicksLimit: totalLabels } },
+        y: { beginAtZero: true, max: 500000, ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } }
+      }
     }
+  };
+  new Chart(document.getElementById('donationsChart'), chartConfig);
+  new Chart(document.getElementById('donationsChartES'), { ...chartConfig, data: JSON.parse(JSON.stringify(chartConfig.data)) });
+}
 
   } catch(e) { console.error('Error cargando datos:', e); }
 }

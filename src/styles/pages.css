@@ -1229,6 +1229,11 @@
   .fresque-lightbox-prev { left: 0.4rem; }
   .fresque-lightbox-next { right: 0.4rem; }
 }
+@media (max-width: 1080px) {
+  .fresque-item-overlay {
+    opacity: 1;
+  }
+}
 
 /* ================= DONATE FLOAT ================= */
 
