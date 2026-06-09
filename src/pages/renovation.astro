@@ -271,16 +271,17 @@ import Footer from "../components/Footer.astro";
         </div>
         <div class="media-categoria-content" style="display:none;">
           <div class="fresque-grid">
-  <div class="fresque-item" data-grupo="4" data-index="0">
-    <img src="/images/planos/plano1.jpg" alt="Deuxième sous-sol : stockage" loading="lazy" />
-    <div class="fresque-item-overlay"><span class="fresque-item-caption">Deuxième sous-sol : stockage</span></div>
-    <span class="fresque-zoom-icon">⤢</span>
-  </div>
-  <div class="fresque-item" data-grupo="4" data-index="1">
+            <div class="fresque-item" data-grupo="4" data-index="0">
     <img src="/images/planos/plano2.jpg" alt="Premier sous-sol : salles paroissiales" loading="lazy" />
     <div class="fresque-item-overlay"><span class="fresque-item-caption">Premier sous-sol : salles paroissiales</span></div>
     <span class="fresque-zoom-icon">⤢</span>
   </div>
+  <div class="fresque-item" data-grupo="4" data-index="1">
+    <img src="/images/planos/plano1.jpg" alt="Deuxième sous-sol : stockage" loading="lazy" />
+    <div class="fresque-item-overlay"><span class="fresque-item-caption">Deuxième sous-sol : stockage</span></div>
+    <span class="fresque-zoom-icon">⤢</span>
+  </div>
+  
   <div class="fresque-item" data-grupo="4" data-index="2">
     <img src="/images/planos/plano3.jpg" alt="Rez-de-chaussée : église et Salle Saureulx" loading="lazy" />
     <div class="fresque-item-overlay"><span class="fresque-item-caption">Rez-de-chaussée : église et Salle Saureulx</span></div>
@@ -776,16 +777,17 @@ import Footer from "../components/Footer.astro";
         </div>
         <div class="media-categoria-content" style="display:none;">
          <div class="fresque-grid">
-  <div class="fresque-item" data-grupo="4" data-index="0">
-    <img src="/images/planos/plano1.jpg" alt="Sótano segundo: almacenamiento" loading="lazy" />
-    <div class="fresque-item-overlay"><span class="fresque-item-caption">Sótano segundo: almacenamiento</span></div>
-    <span class="fresque-zoom-icon">⤢</span>
-  </div>
-  <div class="fresque-item" data-grupo="4" data-index="1">
+           <div class="fresque-item" data-grupo="4" data-index="0">
     <img src="/images/planos/plano2.jpg" alt="Sótano primero: salas parroquiales" loading="lazy" />
     <div class="fresque-item-overlay"><span class="fresque-item-caption">Sótano primero: salas parroquiales</span></div>
     <span class="fresque-zoom-icon">⤢</span>
   </div>
+  <div class="fresque-item" data-grupo="4" data-index="1">
+    <img src="/images/planos/plano1.jpg" alt="Sótano segundo: almacenamiento" loading="lazy" />
+    <div class="fresque-item-overlay"><span class="fresque-item-caption">Sótano segundo: almacenamiento</span></div>
+    <span class="fresque-zoom-icon">⤢</span>
+  </div>
+ 
   <div class="fresque-item" data-grupo="4" data-index="2">
     <img src="/images/planos/plano3.jpg" alt="Planta baja: iglesia y sala Saureulx" loading="lazy" />
     <div class="fresque-item-overlay"><span class="fresque-item-caption">Planta baja: iglesia y sala Saureulx</span></div>
@@ -1423,11 +1425,11 @@ document.head.appendChild(script);
       { src: '/images/pasarela/secciones.jpg', captionFR: 'Sections', captionES: 'Secciones' },
     ],
     4: [
-  { src: '/images/planos/plano1.jpg', captionFR: 'Deuxième sous-sol : stockage', captionES: 'Sótano segundo: almacenamiento' },
-  { src: '/images/planos/plano2.jpg', captionFR: 'Premier sous-sol : salles paroissiales', captionES: 'Sótano primero: salas parroquiales' },
-  { src: '/images/planos/plano3.jpg', captionFR: 'Rez-de-chaussée : église et Salle Saureulx', captionES: 'Planta baja: iglesia y sala Saureulx' },
-  { src: '/images/planos/plano4.jpg', captionFR: "Tribune de l'église et columbarium", captionES: 'Tribuna de la iglesia y columbario' },
-],
+      { src: '/images/planos/plano2.jpg', captionFR: 'Premier sous-sol : salles paroissiales', captionES: 'Sótano primero: salas parroquiales' },
+        { src: '/images/planos/plano1.jpg', captionFR: 'Deuxième sous-sol : stockage', captionES: 'Sótano segundo: almacenamiento' },
+        { src: '/images/planos/plano3.jpg', captionFR: 'Rez-de-chaussée : église et Salle Saureulx', captionES: 'Planta baja: iglesia y sala Saureulx' },
+        { src: '/images/planos/plano4.jpg', captionFR: "Tribune de l'église et columbarium", captionES: 'Tribuna de la iglesia y columbario' },
+      ],
     5: [
       { src: '/images/salasparroquiales/salas.jpg', captionFR: 'Salles paroissiales', captionES: 'Salas parroquiales' },
       { src: '/images/salasparroquiales/exteriorsalas.jpg', captionFR: 'Extérieur des salles', captionES: 'Exterior de las salas' },
