@@ -38,8 +38,14 @@ import Footer from "../components/Footer.astro";
     <!-- SELECTOR DE IDIOMA -->
     <div class="lang-selector-bar">
       <div class="container">
-        <button class="lang-selector-btn active" id="btnFR" onclick="setLang('fr')">🇫🇷 Français</button>
-        <button class="lang-selector-btn" id="btnES" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-selector-btn active" id="btnFR" onclick="setLang('fr')"><svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;">
+    <rect width="7" height="14" fill="#002395"/>
+    <rect x="7" width="6" height="14" fill="#fff"/>
+    <rect x="13" width="7" height="14" fill="#ED2939"/>
+  </svg> Français</button>
+        <button class="lang-selector-btn" id="btnES" onclick="setLang('es')">
+          <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;"> <rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/><rect y="10.5" width="20" height="3.5" fill="#c60b1e"/></svg>
+      Español</button>
       </div>
     </div>
 
@@ -108,9 +114,9 @@ import Footer from "../components/Footer.astro";
       <!-- 1. Le fresque -->
       <div class="media-categoria">
         <div class="media-categoria-header" onclick="toggleCategoria(this)">
-          <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="Le fresque" />
+          <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="La fresque" />
           <div class="media-categoria-info">
-            <h3>🎨 Le fresque</h3>
+            <h3>🎨 La fresque</h3>
             <p>Renders, miniatures et présentation de l'artiste</p>
           </div>
           <span class="media-categoria-arrow">▾</span>
@@ -149,7 +155,7 @@ import Footer from "../components/Footer.astro";
           </div>
           <div class="fresque-item" data-grupo="0" data-index="6">
             <img src="/images/fresque/fresque-jean.jpg" alt="Jean-Baptiste" loading="lazy" />
-            <div class="fresque-item-overlay"><span class="fresque-item-caption">Jean-Baptiste</span></div>
+            <div class="fresque-item-overlay"><span class="fresque-item-caption">Les prophètes de l’Ancien Testament et Jean-Baptiste</span></div>
             <span class="fresque-zoom-icon">⤢</span>
           </div>
         </div>
@@ -228,37 +234,48 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
 
-      <!-- 4. La passerelle -->
-      <div class="media-categoria">
-        <div class="media-categoria-header" onclick="toggleCategoria(this)">
-          <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La passerelle" />
-          <div class="media-categoria-info">
-            <h3>♿ La passerelle</h3>
-            <p>Plans, élévations et vidéo de présentation</p>
-          </div>
-          <span class="media-categoria-arrow">▾</span>
-        </div>
-        <div class="media-categoria-content" style="display:none;">
-          <div class="fresque-grid">
-            <div class="fresque-item" data-grupo="3" data-index="0">
-              <img src="/images/pasarela/alzado.jpg" alt="Élévation" loading="lazy" />
-              <div class="fresque-item-overlay"><span class="fresque-item-caption">Élévation</span></div>
-              <span class="fresque-zoom-icon">⤢</span>
-            </div>
-            <div class="fresque-item" data-grupo="3" data-index="1">
-              <img src="/images/pasarela/planos.jpg" alt="Plans" loading="lazy" />
-              <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
-              <span class="fresque-zoom-icon">⤢</span>
-            </div>
-            <div class="fresque-item" data-grupo="3" data-index="2">
-              <img src="/images/pasarela/secciones.jpg" alt="Sections" loading="lazy" />
-              <div class="fresque-item-overlay"><span class="fresque-item-caption">Sections</span></div>
-              <span class="fresque-zoom-icon">⤢</span>
-            </div>
-          </div>
-        </div>
+    <!-- 4. La passerelle -->
+<div class="media-categoria">
+  <div class="media-categoria-header" onclick="toggleCategoria(this)">
+    <img class="media-categoria-thumb" src="/images/pasarela.jpg" alt="La passerelle" />
+    <div class="media-categoria-info">
+      <h3>♿ La passerelle</h3>
+      <p>Plans, élévations et vidéo de présentation</p>
+    </div>
+    <span class="media-categoria-arrow">▾</span>
+  </div>
+  
+  <div class="media-categoria-content" style="display:none;">
+    <div style="margin-bottom:1.5rem;">
+      <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Présentation de la passerelle</h4>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px;">
+        <iframe 
+          src="https://www.youtube.com/embed/aZTbqxVveKY" 
+          style="position:absolute; top:0; left:0; width:100%; height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
       </div>
-
+    </div>
+    <div class="fresque-grid">
+      <div class="fresque-item" data-grupo="3" data-index="0">
+        <img src="/images/pasarela/alzado.jpg" alt="Élévation" loading="lazy" />
+        <div class="fresque-item-overlay"><span class="fresque-item-caption">Élévation</span></div>
+        <span class="fresque-zoom-icon">⤢</span>
+      </div>
+      <div class="fresque-item" data-grupo="3" data-index="1">
+        <img src="/images/pasarela/planos.jpg" alt="Plans" loading="lazy" />
+        <div class="fresque-item-overlay"><span class="fresque-item-caption">Plans</span></div>
+        <span class="fresque-zoom-icon">⤢</span>
+      </div>
+      <div class="fresque-item" data-grupo="3" data-index="2">
+        <img src="/images/pasarela/secciones.jpg" alt="Sections" loading="lazy" />
+        <div class="fresque-item-overlay"><span class="fresque-item-caption">Sections</span></div>
+        <span class="fresque-zoom-icon">⤢</span>
+      </div>
+    </div>
+  </div>
+</div>
       <!-- 5. Plans d'architecte -->
       <div class="media-categoria">
         <div class="media-categoria-header" onclick="toggleCategoria(this)">
@@ -659,7 +676,7 @@ import Footer from "../components/Footer.astro";
   </div>
   <div class="fresque-item" data-grupo="0" data-index="6">
     <img src="/images/fresque/fresque-jean.jpg" alt="Juan Bautista" loading="lazy" />
-    <div class="fresque-item-overlay"><span class="fresque-item-caption">Juan Bautista</span></div>
+    <div class="fresque-item-overlay"><span class="fresque-item-caption">Los profetas del Antiguo Testamento y Juan Bautista</span></div>
     <span class="fresque-zoom-icon">⤢</span>
   </div>
 </div>
@@ -746,6 +763,17 @@ import Footer from "../components/Footer.astro";
           <span class="media-categoria-arrow">▾</span>
         </div>
         <div class="media-categoria-content" style="display:none;">
+          <div style="margin-bottom:1.5rem;">
+  <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">🎬 Presentación de la pasarela</h4>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px;">
+    <iframe 
+      src="https://www.youtube.com/embed/aZTbqxVveKY" 
+      style="position:absolute; top:0; left:0; width:100%; height:100%;"
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
           <div class="fresque-grid">
             <div class="fresque-item" data-grupo="3" data-index="0">
               <img src="/images/pasarela/alzado.jpg" alt="Alzado" loading="lazy" />
@@ -1406,7 +1434,7 @@ document.head.appendChild(script);
   { src: '/images/fresque/fresque-abraham.jpg', captionFR: "Abraham et Isaac", captionES: 'Abraham e Isaac' },
    { src: '/images/fresque/fresque-moises.jpg', captionFR: "Moïse et la Mer Rouge", captionES: 'Moisés y el Mar Rojo' },
   { src: '/images/fresque/fresque-david.jpg', captionFR: "David danse devant l'Arche de l'Alliance", captionES: 'David danza ante el Arca de la Alianza' },
-  { src: '/images/fresque/fresque-jean.jpg', captionFR: 'Jean-Baptiste', captionES: 'Juan Bautista' },
+  { src: '/images/fresque/fresque-jean.jpg', captionFR: 'Les prophètes de l’Ancien Testament et Jean-Baptiste', captionES: 'Los profetas del Antiguo Testamento y Juan Bautista' },
 ],
     1: [
       { src: '/images/sanluis/Aspecto final estatua.jpg', captionFR: 'Aspect final de la statue', captionES: 'Aspecto final estatua' },

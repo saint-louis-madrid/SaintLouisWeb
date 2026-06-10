@@ -21,8 +21,15 @@ import Footer from "../components/Footer.astro";
     <!-- SELECTOR DE IDIOMA -->
     <div class="lang-selector-bar">
       <div class="container">
-        <button class="lang-selector-btn active" id="btnFR-orgue">FR Français</button>
-        <button class="lang-selector-btn" id="btnES-orgue">ES Español</button>
+        <button class="lang-selector-btn active" id="btnFR-orgue"> <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;">
+    <rect width="7" height="14" fill="#002395"/>
+    <rect x="7" width="6" height="14" fill="#fff"/>
+    <rect x="13" width="7" height="14" fill="#ED2939"/>
+  </svg>
+          Français</button>
+        <button class="lang-selector-btn" id="btnES-orgue"> 
+          <svg width="20" height="14" viewBox="0 0 20 14" style="margin-right:4px; vertical-align:middle;"> <rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/><rect y="10.5" width="20" height="3.5" fill="#c60b1e"/></svg>
+          Español</button>
       </div>
     </div>
 
@@ -262,6 +269,11 @@ import Footer from "../components/Footer.astro";
             Saint-Louis des Français souhaite réunir un cercle de <strong>10 entreprises mécènes</strong>
             engagées à hauteur d'un dixième du budget, soit <strong>37 000 €</strong>.
           </p>
+          <p>
+            La contribution de <strong>37 000 €</strong> peut être versée en une seule fois ou, si nécessaire, 
+            être échelonnée sur trois exercices comptables (automne 2026, printemps 2027 et janvier 2028), 
+            selon les préférences du mécène.
+          </p>
           <p>En devenant mécène fondateur, votre entreprise associe durablement son image :</p>
           <div class="renovation-lista">
             <span>À la sauvegarde d'un patrimoine musical européen unique</span>
@@ -304,32 +316,56 @@ import Footer from "../components/Footer.astro";
       </section>
 
       <section class="section" id="fr-8">
-        <div class="container reveal">
-          <span class="eyebrow">8. DOCUMENTS</span>
-          <h2 class="section-title">Documents de référence</h2>
-          <div class="orgue-docs">
-            <div class="orgue-doc-card">
-              <span class="orgue-doc-icon">📄</span>
-              <div>
-                <span class="orgue-doc-title">Lettre de soutien de l'Ambassadrice de France en Espagne</span>
-                <span class="orgue-doc-desc">Soutien officiel au projet de restauration</span>
-              </div>
-              <button class="lang-selector-btn" id="btnModalFR">Voir →</button>
-            </div>
-            <div class="orgue-doc-card">
-              <span class="orgue-doc-icon">📋</span>
-              <div>
-                <span class="orgue-doc-title">Devis complet — Facteurs d'Orgues</span>
-                <span class="orgue-doc-desc">Budget détaillé de la restauration</span>
-              </div>
-              <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
-                 target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
-                Ouvrir →
-              </a>
-            </div>
-          </div>
+  <div class="container reveal">
+    <span class="eyebrow">8. DOCUMENTS</span>
+    <h2 class="section-title">Documents de référence</h2>
+    <div class="orgue-docs">
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Lettre de soutien de l'Ambassadrice de France en Espagne</span>
+          <span class="orgue-doc-desc">Soutien officiel au projet de restauration</span>
         </div>
-      </section>
+        <button class="lang-selector-btn" id="btnModalFR">Voir →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Lettre de soutien — Pascal Marsault, maître d'orgue</span>
+          <span class="orgue-doc-desc">Soutien d'un expert de renommée internationale</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalMarsaultFR">Voir →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Lettre de soutien — Thomas Ospital, organiste</span>
+          <span class="orgue-doc-desc">Soutien d'un artiste de référence</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalOspitalFR">Voir →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📋</span>
+        <div>
+          <span class="orgue-doc-title">Résumé de thèse — Rodrigo Hernández</span>
+          <span class="orgue-doc-desc">Étude académique sur l'orgue Cavaillé-Coll de Madrid</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalTheseFR">Voir →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📋</span>
+        <div>
+          <span class="orgue-doc-title">Devis complet — Facteurs d'Orgues</span>
+          <span class="orgue-doc-desc">Budget détaillé de la restauration</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
+           target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
+          Ouvrir →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="section" id="fr-9">
         <div class="container reveal">
@@ -560,6 +596,11 @@ import Footer from "../components/Footer.astro";
             San Luis de los Franceses desea reunir un círculo de <strong>10 empresas mecenas</strong>
             comprometidas con una aportación de una décima parte del presupuesto, es decir <strong>37 000 €</strong>.
           </p>
+          <p>
+            La contribución de <strong>37 000 €</strong> puede realizarse en un único pago o, si fuera necesario, 
+            fraccionarse en tres ejercicios contables (otoño 2026, primavera 2027 y enero 2028), 
+            según las preferencias del mecenas.
+          </p>
           <p>Al convertirse en mecenas fundador, su empresa asociará de forma duradera su imagen:</p>
           <div class="renovation-lista">
             <span>A la preservación de un patrimonio musical europeo único</span>
@@ -606,32 +647,56 @@ import Footer from "../components/Footer.astro";
       </section>
 
       <section class="section" id="es-8">
-        <div class="container reveal">
-          <span class="eyebrow">8. DOCUMENTOS</span>
-          <h2 class="section-title">Documentos de referencia</h2>
-          <div class="orgue-docs">
-            <div class="orgue-doc-card">
-              <span class="orgue-doc-icon">📄</span>
-              <div>
-                <span class="orgue-doc-title">Carta de apoyo de la Embajadora de Francia en España</span>
-                <span class="orgue-doc-desc">Apoyo oficial al proyecto de restauración</span>
-              </div>
-              <button class="lang-selector-btn" id="btnModalES">Ver →</button>
-            </div>
-            <div class="orgue-doc-card">
-              <span class="orgue-doc-icon">📋</span>
-              <div>
-                <span class="orgue-doc-title">Presupuesto completo — Restauración del órgano</span>
-                <span class="orgue-doc-desc">Presupuesto detallado de la restauración</span>
-              </div>
-              <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
-                 target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
-                Abrir →
-              </a>
-            </div>
-          </div>
+  <div class="container reveal">
+    <span class="eyebrow">8. DOCUMENTOS</span>
+    <h2 class="section-title">Documentos de referencia</h2>
+    <div class="orgue-docs">
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Carta de apoyo de la Embajadora de Francia en España</span>
+          <span class="orgue-doc-desc">Apoyo oficial al proyecto de restauración</span>
         </div>
-      </section>
+        <button class="lang-selector-btn" id="btnModalES">Ver →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Carta de apoyo — Pascal Marsault, maestro organista</span>
+          <span class="orgue-doc-desc">Apoyo de un experto de renombre internacional</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalMarsaultES">Ver →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📄</span>
+        <div>
+          <span class="orgue-doc-title">Carta de apoyo — Thomas Ospital, organista</span>
+          <span class="orgue-doc-desc">Apoyo de un artista de referencia</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalOspitalES">Ver →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📋</span>
+        <div>
+          <span class="orgue-doc-title">Resumen de tesis — Rodrigo Hernández</span>
+          <span class="orgue-doc-desc">Estudio académico sobre el órgano Cavaillé-Coll de Madrid</span>
+        </div>
+        <button class="lang-selector-btn" id="btnModalTheseES">Ver →</button>
+      </div>
+      <div class="orgue-doc-card">
+        <span class="orgue-doc-icon">📋</span>
+        <div>
+          <span class="orgue-doc-title">Presupuesto completo — Restauración del órgano</span>
+          <span class="orgue-doc-desc">Presupuesto detallado de la restauración</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1HydW0lQB40mFYuMvS-oW3DPCr5abp2XP/view"
+           target="_blank" rel="noopener noreferrer" class="lang-selector-btn">
+          Abrir →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="section" id="es-9">
         <div class="container reveal">
@@ -702,29 +767,38 @@ import Footer from "../components/Footer.astro";
     }
 
     // Modal PDF
-    var modal = document.getElementById('pdfModal');
-    var frame = document.getElementById('pdfFrame');
-    var closeBtn = document.getElementById('btnCloseModal');
-    var btnMFR = document.getElementById('btnModalFR');
-    var btnMES = document.getElementById('btnModalES');
-    var PDF_URL = 'https://drive.google.com/file/d/1nETWqQZTGXH7FXtAHdnpLwF1KHXSX50a/preview';
+var modal = document.getElementById('pdfModal');
+var frame = document.getElementById('pdfFrame');
+var closeBtn = document.getElementById('btnCloseModal');
 
-    function openModal() {
-      if (frame) frame.src = PDF_URL;
-      if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    }
+var docs = {
+  btnModalFR:       'https://drive.google.com/file/d/1nETWqQZTGXH7FXtAHdnpLwF1KHXSX50a/preview',
+  btnModalES:       'https://drive.google.com/file/d/1nETWqQZTGXH7FXtAHdnpLwF1KHXSX50a/preview',
+  btnModalMarsaultFR: 'https://drive.google.com/file/d/1VuBNnAH7lAjbdkht2V97jHhpZbzZs2a3/preview',
+  btnModalMarsaultES: 'https://drive.google.com/file/d/1VuBNnAH7lAjbdkht2V97jHhpZbzZs2a3/preview',
+  btnModalOspitalFR:  'https://drive.google.com/file/d/14jHiR3cF-MkzXWPJ9GKOQqnCImnFTJ0d/preview',
+  btnModalOspitalES:  'https://drive.google.com/file/d/14jHiR3cF-MkzXWPJ9GKOQqnCImnFTJ0d/preview',
+  btnModalTheseFR:    'https://drive.google.com/file/d/15evLJE5wl5BPnJ62eF_wid-iiZUun5cL/preview',
+  btnModalTheseES:    'https://drive.google.com/file/d/15evLJE5wl5BPnJ62eF_wid-iiZUun5cL/preview',
+};
 
-    function closeModal() {
-      if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
-      if (frame) frame.src = '';
-    }
+Object.keys(docs).forEach(function(id) {
+  var btn = document.getElementById(id);
+  if (btn) btn.addEventListener('click', function() {
+    if (frame) frame.src = docs[id];
+    if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  });
+});
 
-    if (btnMFR) btnMFR.addEventListener('click', openModal);
-    if (btnMES) btnMES.addEventListener('click', openModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (modal) modal.addEventListener('click', function(e) {
-      if (e.target === modal) closeModal();
-    });
+function closeModal() {
+  if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+  if (frame) frame.src = '';
+}
+
+if (closeBtn) closeBtn.addEventListener('click', closeModal);
+if (modal) modal.addEventListener('click', function(e) {
+  if (e.target === modal) closeModal();
+});
 
     // Back to top
     var backToTop = document.getElementById('backToTop');
