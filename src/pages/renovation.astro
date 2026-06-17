@@ -1407,7 +1407,11 @@ const cumuslFilled = cumuslMapped.map(v => {
       plugins: { legend: { position: 'top' } },
       scales: {
         x: { ticks: { minRotation: 45, maxRotation: 45, font: { size: 10 }, autoSkip: true, maxTicksLimit: totalLabels } },
-        y: { beginAtZero: true, max: 500000, ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } }
+        y: { 
+  beginAtZero: false,
+  type: 'logarithmic',
+  ticks: { callback: v => v.toLocaleString('fr-FR') + ' €' } 
+}
       }
     }
   };
