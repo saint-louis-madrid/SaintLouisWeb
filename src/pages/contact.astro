@@ -126,11 +126,29 @@ import Footer from "../components/Footer.astro";
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(form);
-    
+
+    // DÉSACTIVÉ temporairement — domaine Resend non vérifié (voir api/contact.ts).
+    // Supprimer ce bloc et décommenter le code ci-dessous quand le domaine sera vérifié.
+    if (notice) {
+      notice.innerHTML =
+        "L'envoi direct n'est pas disponible pour l'instant. " +
+        "Contactez-nous par <a href='https://wa.me/34689053259' target='_blank' rel='noopener'>WhatsApp (+34 689 05 32 59)</a> " +
+        "ou par email : <a href='mailto:paroissesaintlouismadrid@gmail.com'>paroissesaintlouismadrid@gmail.com</a>.";
+    }
+
+    /* À RÉACTIVER quand RESEND_ENABLED = true dans api/contact.ts :
+    const fd = new FormData(form);
+    const payload = {
+      name:    fd.get('name'),
+      email:   fd.get('email'),
+      subject: fd.get('subject'),
+      message: fd.get('message'),
+    };
+
     const res = await fetch('/api/contact', {
       method: 'POST',
-      body: data
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     });
 
     if (res.ok) {
@@ -139,6 +157,7 @@ import Footer from "../components/Footer.astro";
     } else {
       if (notice) notice.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
     }
+    */
   });
 </script>
 
