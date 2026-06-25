@@ -63,9 +63,6 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
 
-    <!-- BOTÓN VOLVER ARRIBA -->
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
     <!-- ===== CONTENIDO FR ===== -->
     <div id="content-fr-orgue">
 
@@ -369,7 +366,7 @@ import Footer from "../components/Footer.astro";
 
       <section class="section" id="fr-9">
         <div class="container reveal">
-          <span class="eyebrow">10. DEVENEZ PARTENAIRE</span>
+          <span class="eyebrow">9. DEVENEZ PARTENAIRE</span>
           <h2 class="section-title">Construisons ensemble votre engagement</h2>
           <p>
             Restaurer cet orgue, c'est transmettre aux générations futures un patrimoine musical
@@ -700,7 +697,7 @@ import Footer from "../components/Footer.astro";
 
       <section class="section" id="es-9">
         <div class="container reveal">
-          <span class="eyebrow">10. CONVIÉRTASE EN SOCIO</span>
+          <span class="eyebrow">9. CONVIÉRTASE EN SOCIO</span>
           <h2 class="section-title">Construyamos juntos su compromiso</h2>
           <p>
             Restaurar este órgano significa transmitir a las futuras generaciones un patrimonio musical
@@ -799,14 +796,6 @@ if (closeBtn) closeBtn.addEventListener('click', closeModal);
 if (modal) modal.addEventListener('click', function(e) {
   if (e.target === modal) closeModal();
 });
-
-    // Back to top
-    var backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-      window.addEventListener('scroll', function() {
-        backToTop.classList.toggle('visible', window.scrollY > 400);
-      });
-    }
 
   });
 </script>

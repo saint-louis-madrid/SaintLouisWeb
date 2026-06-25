@@ -35,7 +35,7 @@ import Footer from "../components/Footer.astro";
             </div>
             <div class="form-group">
               <label for="subject">Sujet</label>
-              <select id="subject" name="subject">
+              <select id="subject" name="subject" required>
                 <option value="">Choisir un sujet</option>
                 <option value="information">Renseignement général</option>
                 <option value="bapteme">Baptême</option>
@@ -55,7 +55,7 @@ import Footer from "../components/Footer.astro";
     <span>
       J'accepte que mes données soient utilisées pour répondre à ma demande, 
       conformément à la 
-      <a href="/privacy" target="_blank">politique de confidentialité</a>.
+      <a href="/privacy" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>.
     </span>
   </label>
 </div>
