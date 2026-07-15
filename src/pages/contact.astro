@@ -35,7 +35,7 @@ import Footer from "../components/Footer.astro";
             </div>
             <div class="form-group">
               <label for="subject">Sujet</label>
-              <select id="subject" name="subject">
+              <select id="subject" name="subject" required>
                 <option value="">Choisir un sujet</option>
                 <option value="information">Renseignement général</option>
                 <option value="bapteme">Baptême</option>
@@ -55,7 +55,7 @@ import Footer from "../components/Footer.astro";
     <span>
       J'accepte que mes données soient utilisées pour répondre à ma demande, 
       conformément à la 
-      <a href="/privacy" target="_blank">politique de confidentialité</a>.
+      <a href="/privacy" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>.
     </span>
   </label>
 </div>
@@ -126,11 +126,29 @@ import Footer from "../components/Footer.astro";
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(form);
-    
+
+    // DÉSACTIVÉ temporairement — domaine Resend non vérifié (voir api/contact.ts).
+    // Supprimer ce bloc et décommenter le code ci-dessous quand le domaine sera vérifié.
+    if (notice) {
+      notice.innerHTML =
+        "L'envoi direct n'est pas disponible pour l'instant. " +
+        "Contactez-nous par <a href='https://wa.me/34689053259' target='_blank' rel='noopener'>WhatsApp (+34 689 05 32 59)</a> " +
+        "ou par email : <a href='mailto:paroissesaintlouismadrid@gmail.com'>paroissesaintlouismadrid@gmail.com</a>.";
+    }
+
+    /* À RÉACTIVER quand RESEND_ENABLED = true dans api/contact.ts :
+    const fd = new FormData(form);
+    const payload = {
+      name:    fd.get('name'),
+      email:   fd.get('email'),
+      subject: fd.get('subject'),
+      message: fd.get('message'),
+    };
+
     const res = await fetch('/api/contact', {
       method: 'POST',
-      body: data
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     });
 
     if (res.ok) {
@@ -139,6 +157,7 @@ import Footer from "../components/Footer.astro";
     } else {
       if (notice) notice.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
     }
+    */
   });
 </script>
 
