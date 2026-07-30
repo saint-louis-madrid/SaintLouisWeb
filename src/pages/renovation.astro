@@ -111,7 +111,7 @@ import Footer from "../components/Footer.astro";
 
     <div class="media-categorias">
 
-      <!-- 1. Le fresque -->
+   <!-- 1. Le fresque -->
       <div class="media-categoria">
         <div class="media-categoria-header" onclick="toggleCategoria(this)">
           <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="La fresque" />
@@ -122,6 +122,9 @@ import Footer from "../components/Footer.astro";
           <span class="media-categoria-arrow">▾</span>
         </div>
         <div class="media-categoria-content" style="display:none;">
+          <div class="video-embed" style="margin-bottom:1.5rem;">
+            <iframe src="https://www.youtube.com/embed/xux4E_Yd5ts" frameborder="0" allowfullscreen></iframe>
+          </div>
          <div class="fresque-grid">
           <div class="fresque-item" data-grupo="0" data-index="0">
             <img src="/images/fresque/fresque-completo.jpg" alt="Vue d'ensemble de la fresque" loading="lazy" />
@@ -414,7 +417,7 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
 
-     <!-- 9. Journal du chantier -->
+    <!-- 9. Journal du chantier -->
       <div class="media-categoria">
         <div class="media-categoria-header" onclick="toggleCategoria(this)">
           <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨</div>
@@ -425,11 +428,94 @@ import Footer from "../components/Footer.astro";
           <span class="media-categoria-arrow">▾</span>
         </div>
         <div class="media-categoria-content" style="display:none;">
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/xux4E_Yd5ts" frameborder="0" allowfullscreen></iframe>
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">Église</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="6" data-index="0">
+              <img src="/images/chantier/iglesia1.jpg" alt="Église — vue 1" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 1</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="1">
+              <img src="/images/chantier/iglesia2.jpg" alt="Église — vue 2" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 2</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="2">
+              <img src="/images/chantier/iglesia3.jpg" alt="Église — vue 3" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 3</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="3">
+              <img src="/images/chantier/iglesia4.jpg" alt="Église — vue 4" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 4</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="4">
+              <img src="/images/chantier/iglesia5.jpg" alt="Église — vue 5" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 5</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="5">
+              <img src="/images/chantier/iglesia6.jpg" alt="Église — vue 6" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 6</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="6">
+              <img src="/images/chantier/iglesia7.jpg" alt="Église — vue 7" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 7</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="7">
+              <img src="/images/chantier/iglesia8.jpg" alt="Église — vue 8" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 8</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="8">
+              <img src="/images/chantier/iglesia9.jpg" alt="Église — vue 9" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Église — vue 9</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+
+          <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">Semi-sous-sol</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="6" data-index="9">
+              <img src="/images/chantier/sotano1.jpg" alt="Semi-sous-sol — vue 1" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 1</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="10">
+              <img src="/images/chantier/sotano2.jpg" alt="Semi-sous-sol — vue 2" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 2</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="11">
+              <img src="/images/chantier/sotano3.jpg" alt="Semi-sous-sol — vue 3" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 3</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="12">
+              <img src="/images/chantier/sotano4.jpg" alt="Semi-sous-sol — vue 4" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 4</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="13">
+              <img src="/images/chantier/sotano5.jpg" alt="Semi-sous-sol — vue 5" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 5</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="14">
+              <img src="/images/chantier/sotano6.jpg" alt="Semi-sous-sol — vue 6" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semi-sous-sol — vue 6</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
           </div>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
 
     </div>
   </div>
@@ -678,7 +764,7 @@ import Footer from "../components/Footer.astro";
 
     <div class="media-categorias">
 
-      <div class="media-categoria">
+    <div class="media-categoria">
         <div class="media-categoria-header" onclick="toggleCategoria(this)">
           <img class="media-categoria-thumb" src="/images/fresque/fresque-1.jpg" alt="El fresco" />
           <div class="media-categoria-info">
@@ -688,6 +774,9 @@ import Footer from "../components/Footer.astro";
           <span class="media-categoria-arrow">▾</span>
         </div>
         <div class="media-categoria-content" style="display:none;">
+          <div class="video-embed" style="margin-bottom:1.5rem;">
+            <iframe src="https://www.youtube.com/embed/xux4E_Yd5ts" frameborder="0" allowfullscreen></iframe>
+          </div>
          <div class="fresque-grid">
   <div class="fresque-item" data-grupo="0" data-index="0">
     <img src="/images/fresque/fresque-completo.jpg" alt="Visión conjunta del fresco" loading="lazy" />
@@ -724,6 +813,7 @@ import Footer from "../components/Footer.astro";
     <div class="fresque-item-overlay"><span class="fresque-item-caption">Los profetas del Antiguo Testamento y Juan Bautista</span></div>
     <span class="fresque-zoom-icon">⤢</span>
   </div>
+  
 </div>
         </div>
       </div>
@@ -975,21 +1065,100 @@ import Footer from "../components/Footer.astro";
       </div>
 
       
-     <div class="media-categoria">
-  <div class="media-categoria-header" onclick="toggleCategoria(this)">
-    <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨</div>
-    <div class="media-categoria-info">
-      <h3>El diario de la obra</h3>
-      <p>Avance de las obras a lo largo del tiempo</p>
-    </div>
-    <span class="media-categoria-arrow">▾</span>
-  </div>
-  <div class="media-categoria-content" style="display:none;">
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/xux4E_Yd5ts" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
+   <div class="media-categoria">
+        <div class="media-categoria-header" onclick="toggleCategoria(this)">
+          <div class="media-categoria-thumb" style="background:#f5f1ea; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🔨</div>
+          <div class="media-categoria-info">
+            <h3>El diario de la obra</h3>
+            <p>Avance de las obras a lo largo del tiempo</p>
+          </div>
+          <span class="media-categoria-arrow">▾</span>
+        </div>
+        <div class="media-categoria-content" style="display:none;">
+          <h4 style="margin:0 0 0.75rem; font-size:0.95rem;">Iglesia</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="6" data-index="0">
+              <img src="/images/chantier/iglesia1.jpg" alt="Iglesia — vista 1" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 1</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="1">
+              <img src="/images/chantier/iglesia2.jpg" alt="Iglesia — vista 2" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 2</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="2">
+              <img src="/images/chantier/iglesia3.jpg" alt="Iglesia — vista 3" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 3</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="3">
+              <img src="/images/chantier/iglesia4.jpg" alt="Iglesia — vista 4" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 4</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="4">
+              <img src="/images/chantier/iglesia5.jpg" alt="Iglesia — vista 5" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 5</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="5">
+              <img src="/images/chantier/iglesia6.jpg" alt="Iglesia — vista 6" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 6</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="6">
+              <img src="/images/chantier/iglesia7.jpg" alt="Iglesia — vista 7" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 7</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="7">
+              <img src="/images/chantier/iglesia8.jpg" alt="Iglesia — vista 8" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 8</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="8">
+              <img src="/images/chantier/iglesia9.jpg" alt="Iglesia — vista 9" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Iglesia — vista 9</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+
+          <h4 style="margin:1.5rem 0 0.75rem; font-size:0.95rem;">Semisótano</h4>
+          <div class="fresque-grid">
+            <div class="fresque-item" data-grupo="6" data-index="9">
+              <img src="/images/chantier/sotano1.jpg" alt="Semisótano — vista 1" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 1</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="10">
+              <img src="/images/chantier/sotano2.jpg" alt="Semisótano — vista 2" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 2</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="11">
+              <img src="/images/chantier/sotano3.jpg" alt="Semisótano — vista 3" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 3</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="12">
+              <img src="/images/chantier/sotano4.jpg" alt="Semisótano — vista 4" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 4</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="13">
+              <img src="/images/chantier/sotano5.jpg" alt="Semisótano — vista 5" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 5</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+            <div class="fresque-item" data-grupo="6" data-index="14">
+              <img src="/images/chantier/sotano6.jpg" alt="Semisótano — vista 6" loading="lazy" />
+              <div class="fresque-item-overlay"><span class="fresque-item-caption">Semisótano — vista 6</span></div>
+              <span class="fresque-zoom-icon">⤢</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -1576,6 +1745,23 @@ document.head.appendChild(script);
     5: [
       { src: '/images/salasparroquiales/salas.jpg', captionFR: 'Salles paroissiales', captionES: 'Salas parroquiales' },
       { src: '/images/salasparroquiales/exteriorsalas.jpg', captionFR: 'Extérieur des salles', captionES: 'Exterior de las salas' },
+    ],
+    6: [
+      { src: '/images/chantier/iglesia1.jpg', captionFR: 'Église — vue 1', captionES: 'Iglesia — vista 1' },
+      { src: '/images/chantier/iglesia2.jpg', captionFR: 'Église — vue 2', captionES: 'Iglesia — vista 2' },
+      { src: '/images/chantier/iglesia3.jpg', captionFR: 'Église — vue 3', captionES: 'Iglesia — vista 3' },
+      { src: '/images/chantier/iglesia4.jpg', captionFR: 'Église — vue 4', captionES: 'Iglesia — vista 4' },
+      { src: '/images/chantier/iglesia5.jpg', captionFR: 'Église — vue 5', captionES: 'Iglesia — vista 5' },
+      { src: '/images/chantier/iglesia6.jpg', captionFR: 'Église — vue 6', captionES: 'Iglesia — vista 6' },
+      { src: '/images/chantier/iglesia7.jpg', captionFR: 'Église — vue 7', captionES: 'Iglesia — vista 7' },
+      { src: '/images/chantier/iglesia8.jpg', captionFR: 'Église — vue 8', captionES: 'Iglesia — vista 8' },
+      { src: '/images/chantier/iglesia9.jpg', captionFR: 'Église — vue 9', captionES: 'Iglesia — vista 9' },
+      { src: '/images/chantier/sotano1.jpg', captionFR: 'Semi-sous-sol — vue 1', captionES: 'Semisótano — vista 1' },
+      { src: '/images/chantier/sotano2.jpg', captionFR: 'Semi-sous-sol — vue 2', captionES: 'Semisótano — vista 2' },
+      { src: '/images/chantier/sotano3.jpg', captionFR: 'Semi-sous-sol — vue 3', captionES: 'Semisótano — vista 3' },
+      { src: '/images/chantier/sotano4.jpg', captionFR: 'Semi-sous-sol — vue 4', captionES: 'Semisótano — vista 4' },
+      { src: '/images/chantier/sotano5.jpg', captionFR: 'Semi-sous-sol — vue 5', captionES: 'Semisótano — vista 5' },
+      { src: '/images/chantier/sotano6.jpg', captionFR: 'Semi-sous-sol — vue 6', captionES: 'Semisótano — vista 6' },
     ],
   };
 
