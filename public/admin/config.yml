@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/admin-uploads"
+public_folder: "/images/admin-uploads"
+
+collections:
+  - name: "prueba"
+    label: "Prueba de conexión"
+    files:
+      - name: "prueba"
+        label: "Campo de prueba"
+        file: "src/data/prueba.json"
+        fields:
+          - { label: "Mensaje", name: "mensaje", widget: "string" }
