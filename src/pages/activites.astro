@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import aumonerie from "../data/aumonerie.json";
+
 ---
 
 <BaseLayout title="Activités — Saint Louis des Français">
@@ -85,17 +87,17 @@ import Footer from "../components/Footer.astro";
              
             </div>
           </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Aumônerie de collège et lycée</span>
-              <span class="activite-age">6ème – Terminale</span>
-            </div>
-            <div>
-              <p><strong>6è-5è</strong> — Le père Rodrigo avec trois jeunes étudiants de la paroisse : Victoire Julien, Victor Luis et Louise Audan-Martin, et quelques jeunes confirmés accompagneront ce groupe vers la profession de foi. <a href="https://forms.gle/ALufS55q9jpEfxeM8" target="_blank" rel="noopener noreferrer" class="activite-link">Inscriptions →</a></p>
-              <p><strong>4è-3è-2nde</strong> — Un parcours Lifeteen animé par des étudiants du foyer accompagnés par le père Rodrigo est proposé à ce groupe le dimanche à 17h30, jusqu'à la messe de 19h. Au cours de ces années nous proposons aux jeunes le sacrement de la confirmation (l'archidiocèse de Madrid demande au moins 2 ans de préparation). Inscriptions auprès de Clara de Biennassis : +34 6 15 57 78 08</p>
-              <p><strong>1ère et terminale</strong> — Approfondissement de la foi : ce groupe permet aux jeunes confirmés de continuer à approfondir leur foi et à se mettre au service des autres. Responsables Hugues Crapez et Jean-Michel Béranger : +34 699 419 975</p>
-            </div>
+         <div class="activite-item reveal">
+        <div class="activite-meta">
+          <span class="activite-titre">{aumonerie.titre}</span>
+          <span class="activite-age">{aumonerie.age}</span>
+        </div>
+          <div>
+            <p><strong>6è-5è</strong> — {aumonerie.groupe_6e_5e.texto} <a href={aumonerie.groupe_6e_5e.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link">{aumonerie.groupe_6e_5e.enlace_texto}</a></p>
+            <p><strong>4è-3è-2nde</strong> — {aumonerie.groupe_4e_3e_2nde.texto} Inscriptions auprès de {aumonerie.groupe_4e_3e_2nde.contacto_nombre} : {aumonerie.groupe_4e_3e_2nde.contacto_telefono}</p>
+            <p><strong>1ère-Terminale</strong> — {aumonerie.groupe_1ere_terminale.texto} Responsables {aumonerie.groupe_1ere_terminale.responsables_nombre} : {aumonerie.groupe_1ere_terminale.responsables_telefono}</p>
           </div>
+        </div>
          <div class="activite-item reveal">
           <div class="activite-meta">
             <span class="activite-titre">Étudiants & Jeunes professionnels</span>

@@ -1,16 +1,34 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "public/images/admin-uploads"
-public_folder: "/images/admin-uploads"
-
 collections:
-  - name: "prueba"
-    label: "Prueba de conexión"
+  - name: "aumonerie"
+    label: "Aumônerie (collège-lycée)"
     files:
-      - name: "prueba"
-        label: "Campo de prueba"
-        file: "src/data/prueba.json"
+      - name: "aumonerie"
+        label: "Contenu Aumônerie"
+        file: "src/data/aumonerie.json"
         fields:
-          - { label: "Mensaje", name: "mensaje", widget: "string" }
+          - { label: "Titre", name: "titre", widget: "string" }
+          - { label: "Tranche d'âge (affichage)", name: "age", widget: "string" }
+
+          - label: "6è-5è"
+            name: "groupe_6e_5e"
+            widget: "object"
+            fields:
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Texte du lien", name: "enlace_texto", widget: "string" }
+              - { label: "URL du lien (formulaire)", name: "enlace_url", widget: "string" }
+
+          - label: "4è-3è-2nde"
+            name: "groupe_4e_3e_2nde"
+            widget: "object"
+            fields:
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Nom du contact", name: "contacto_nombre", widget: "string" }
+              - { label: "Téléphone du contact", name: "contacto_telefono", widget: "string" }
+
+          - label: "1ère-Terminale"
+            name: "groupe_1ere_terminale"
+            widget: "object"
+            fields:
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Nom des responsables", name: "responsables_nombre", widget: "string" }
+              - { label: "Téléphone", name: "responsables_telefono", widget: "string" }
