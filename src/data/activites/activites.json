@@ -22,49 +22,54 @@
     }
   ],
   "jeunes": [
-    {
-      "titre": "Scouts francophones",
-      "age": "8 – 17 ans",
-      "texto": "La Paroisse Saint Louis des Français accueille le Groupe Saint Louis – 1ère Madrid, groupe scout francophone rattaché à notre Paroisse. Il s'agit d'un Groupe conventionné SUF qui applique la pédagogie des Scouts Unitaires de France. Pour tout renseignement ou demande d'inscription, écrire à Ronan et Margault de Hercé – Chefs de Groupe :",
-      "contacto_email": "groupescoutsaintlouismadrid@gmail.com"
-    },
-    {
-      "titre": "Aumônerie de collège et lycée",
-      "age": "6ème – Terminale",
-      "grupos": [
-        {
-          "nombre": "6è-5è",
-          "texto": "Le père Rodrigo avec trois jeunes étudiants de la paroisse : Victoire Julien, Victor Luis et Louise Audan-Martin, et quelques jeunes confirmés accompagneront ce groupe vers la profession de foi.",
-          "enlace_texto": "Inscriptions →",
-          "enlace_url": "https://forms.gle/ALufS55q9jpEfxeM8"
-        },
-        {
-          "nombre": "4è-3è-2nde",
-          "texto": "Un parcours Lifeteen animé par des étudiants du foyer accompagnés par le père Rodrigo est proposé à ce groupe le dimanche à 17h30, jusqu'à la messe de 19h. Au cours de ces années nous proposons aux jeunes le sacrement de la confirmation (l'archidiocèse de Madrid demande au moins 2 ans de préparation). Inscriptions auprès de Clara de Biennassis : +34 6 15 57 78 08"
-        },
-        {
-          "nombre": "1ère-Terminale",
-          "texto": "Approfondissement de la foi : ce groupe permet aux jeunes confirmés de continuer à approfondir leur foi et à se mettre au service des autres. Responsables Hugues Crapez et Jean-Michel Béranger : +34 699 419 975"
-        }
-      ]
-    },
-    {
-      "titre": "Étudiants & Jeunes professionnels",
-      "texto": "Aumônerie étudiante — RDV le mercredi soir à 20h pour la messe suivie de soirées d'échanges et de prières autour d'un bon apéro. Cette année dans la salle paroissiale située sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88.",
-      "texto_final": "Jeunes professionnels — Réunions le jeudi soir une semaine sur deux vers 19h45. Au programme, un débat et un dîner sur une thématique alliant foi et actualité."
-    },
-    {
-      "titre": "Initiation chrétienne pour les adultes",
-      "texto": "Les adultes désirant recevoir le baptême, la confirmation ou la première communion peuvent s'adresser au père Rodrigo pour leur demande à la sortie d'une messe. Un groupe est mis en place avec Arthur et Pilar Michaut et Marie Crapez ; ce groupe d'initiation chrétienne s'adresse aussi aux non-baptisés."
-    },
-    {
-      "titre": "Foyer des jeunes",
-      "age": "Étudiants & jeunes pros",
-      "texto": "Espace de vie et de mission pour les étudiants catholiques à Madrid. Logement à prix réduit et engagement pastoral.",
-      "enlace_texto": "En savoir plus →",
-      "enlace_url": "/foyer"
-    }
-  ],
+  {
+    "type": "simple",
+    "titre": "Scouts francophones",
+    "age": "8 – 17 ans",
+    "texto": "La Paroisse Saint Louis des Français accueille le Groupe Saint Louis – 1ère Madrid, groupe scout francophone rattaché à notre Paroisse. Il s'agit d'un Groupe conventionné SUF qui applique la pédagogie des Scouts Unitaires de France. Pour tout renseignement ou demande d'inscription, écrire à Ronan et Margault de Hercé – Chefs de Groupe :",
+    "contacto_email": "groupescoutsaintlouismadrid@gmail.com"
+  },
+  {
+    "type": "aumonerie",
+    "titre": "Aumônerie de collège et lycée",
+    "age": "6ème – Terminale",
+    "grupos": [
+      {
+        "nombre": "6è-5è",
+        "texto": "Le père Rodrigo avec trois jeunes étudiants de la paroisse : Victoire Julien, Victor Luis et Louise Audan-Martin, et quelques jeunes confirmés accompagneront ce groupe vers la profession de foi.",
+        "enlace_texto": "Inscriptions →",
+        "enlace_url": "https://forms.gle/ALufS55q9jpEfxeM8"
+      },
+      {
+        "nombre": "4è-3è-2nde",
+        "texto": "Un parcours Lifeteen animé par des étudiants du foyer accompagnés par le père Rodrigo est proposé à ce groupe le dimanche à 17h30, jusqu'à la messe de 19h. Au cours de ces années nous proposons aux jeunes le sacrement de la confirmation (l'archidiocèse de Madrid demande au moins 2 ans de préparation). Inscriptions auprès de Clara de Biennassis : +34 6 15 57 78 08"
+      },
+      {
+        "nombre": "1ère-Terminale",
+        "texto": "Approfondissement de la foi : ce groupe permet aux jeunes confirmés de continuer à approfondir leur foi et à se mettre au service des autres. Responsables Hugues Crapez et Jean-Michel Béranger : +34 699 419 975"
+      }
+    ]
+  },
+  {
+    "type": "simple",
+    "titre": "Étudiants & Jeunes professionnels",
+    "texto": "Aumônerie étudiante — RDV le mercredi soir à 20h pour la messe suivie de soirées d'échanges et de prières autour d'un bon apéro. Cette année dans la salle paroissiale située sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88.",
+    "texto_final": "Jeunes professionnels — Réunions le jeudi soir une semaine sur deux vers 19h45. Au programme, un débat et un dîner sur une thématique alliant foi et actualité."
+  },
+  {
+    "type": "simple",
+    "titre": "Initiation chrétienne pour les adultes",
+    "texto": "Les adultes désirant recevoir le baptême, la confirmation ou la première communion peuvent s'adresser au père Rodrigo pour leur demande à la sortie d'une messe. Un groupe est mis en place avec Arthur et Pilar Michaut et Marie Crapez ; ce groupe d'initiation chrétienne s'adresse aussi aux non-baptisés."
+  },
+  {
+    "type": "simple",
+    "titre": "Foyer des jeunes",
+    "age": "Étudiants & jeunes pros",
+    "texto": "Espace de vie et de mission pour les étudiants catholiques à Madrid. Logement à prix réduit et engagement pastoral.",
+    "enlace_texto": "En savoir plus →",
+    "enlace_url": "/foyer"
+  }
+],
   "adultes": [
     {
       "titre": "Équipes Notre-Dame",
