@@ -1,0 +1,19 @@
+{
+  "titre": "Aumônerie de collège et lycée",
+  "age": "6ème – Terminale",
+  "groupe_6e_5e": {
+    "texto": "Le père Rodrigo avec trois jeunes étudiants de la paroisse : Victoire Julien, Victor Luis et Louise Audan-Martin, et quelques jeunes confirmés accompagneront ce groupe vers la profession de foi.",
+    "enlace_texto": "Inscriptions ",
+    "enlace_url": "https://forms.gle/ALufS55q9jpEfxeM8"
+  },
+  "groupe_4e_3e_2nde": {
+    "texto": "Un parcours Lifeteen animé par des étudiants du foyer accompagnés par le père Rodrigo est proposé à ce groupe le dimanche à 17h30, jusqu'à la messe de 19h. Au cours de ces années nous proposons aux jeunes le sacrement de la confirmation (l'archidiocèse de Madrid demande au moins 2 ans de préparation).",
+    "contacto_nombre": "Clara de Biennassis",
+    "contacto_telefono": "+34 6 15 57 78 08"
+  },
+  "groupe_1ere_terminale": {
+    "texto": "Approfondissement de la foi : ce groupe permet aux jeunes confirmés de continuer à approfondir leur foi et à se mettre au service des autres.",
+    "responsables_nombre": "Hugues Crapez et Jean-Michel Béranger",
+    "responsables_telefono": "+34 699 419 975"
+  }
+}
