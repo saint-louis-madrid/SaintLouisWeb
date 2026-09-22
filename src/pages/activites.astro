@@ -2,8 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import aumonerie from "../data/aumonerie.json";
+import activitesDataRaw from "../data/activites/activites.json";
 
+const activitesData = activitesDataRaw as {
+  enfants: { titre: string; age?: string; texto: string; contacto_nombre?: string; contacto_telefono?: string; texto_final?: string; enlace_texto?: string; enlace_url?: string }[];
+  jeunes: any[];
+  adultes: { titre: string; age?: string; texto: string; contacto_nombre?: string; contacto_telefono?: string; texto_final?: string; enlace_texto?: string; enlace_url?: string }[];
+  liturgie_service: { titre: string; texto: string; contacto_nombre?: string; contacto_telefono?: string; contacto_email?: string; texto_final?: string }[];
+  calendrier: { titre: string; texto: string; pdf_url: string; boton_texto: string };
+};
 ---
 
 <BaseLayout title="Activités — Saint Louis des Français">
@@ -28,38 +35,32 @@ import aumonerie from "../data/aumonerie.json";
           <h2 class="section-title">Pour les plus jeunes</h2>
         </div>
         <div class="activites-list">
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Éveil à la foi</span>
-              <span class="activite-age">6 – 8 ans</span>
+          {activitesData.enfants.map((act) => (
+            <div class="activite-item reveal">
+              <div class="activite-meta">
+                <span class="activite-titre">{act.titre}</span>
+                {act.age && <span class="activite-age">{act.age}</span>}
+              </div>
+              <div>
+                <p>{act.texto}
+                  {act.contacto_nombre && (
+                    <>
+                      <br />
+                      <a class="activite-link">Contact pour s'inscrire : {act.contacto_nombre} {act.contacto_telefono}</a>
+                    </>
+                  )}
+                  {act.texto_final && (
+                    <>
+                      <br /> {act.texto_final}
+                    </>
+                  )}
+                </p>
+                {act.enlace_url && (
+                  <a href={act.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link">{act.enlace_texto}</a>
+                )}
+              </div>
             </div>
-            <p>Première découverte de la foi chrétienne dans un cadre ludique et bienveillant.</p>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Catéchisme</span>
-              <span class="activite-age">8 – 11 ans</span>
-            </div>
-            <div>
-              <p>Le catéchisme de la paroisse est dispensé autant dans les installations de la paroisse qu’au LFM.
-                  Une super équipe de catéchistes se déploie pour cette merveilleuse mission, avec la coordination de
-
-                  Inmaculada Paredes, Yolanda Ella, et Marie Dargelos.
-                  <br>
-                 <a  class="activite-link">Contact pour s’inscrire : Inmaculada Paredes +34 6 86 10 56 03</a> 
-                 <br> Il y a 4 années de catéchisme, KT1, KT2, KT3 et KT Mission. L’archidiocèse de Madrid nous
-                  demande que les enfants fassent les trois premieres avant de faire leur première communion, à la fin
-                  de l’année KT3.</p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdt6RUrVRzWSVuogVac9iefMdj_962oAF5tJua24vsILzEl1g/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">S'inscrire →</a>
-            </div>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Enfants de chœur</span>
-              <span class="activite-age">Tous âges</span>
-            </div>
-            <p>Participation active à la liturgie comme enfant de chœur ou servante d'assemblée.</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -72,58 +73,44 @@ import aumonerie from "../data/aumonerie.json";
           <h2 class="section-title">Pour les adolescents et jeunes adultes</h2>
         </div>
         <div class="activites-list">
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Scouts francophones</span>
-              <span class="activite-age">8 – 17 ans</span>
-            </div>
-            <div>
-              <p>La Paroisse Saint Louis des Français accueille le Groupe Saint Louis – 1ère Madrid, groupe scout
-              francophone rattaché à notre Paroisse. Il s’agit d’un Groupe conventionné SUF qui applique la
-              pédagogie des Scouts Unitaires de France.
-              Pour tout renseignement ou demande d’inscription, écrire à Ronan et Margault de Hercé – Chefs de
-              Groupe : <a href="mailto:groupescoutsaintlouismadrid@gmail.com" class="activite-link">groupescoutsaintlouismadrid@gmail.com</a></p>
-              
-             
-            </div>
-          </div>
-         <div class="activite-item reveal">
-        <div class="activite-meta">
-          <span class="activite-titre">{aumonerie.titre}</span>
-          <span class="activite-age">{aumonerie.age}</span>
-        </div>
-          <div>
-            <p><strong>6è-5è</strong> — {aumonerie.groupe_6e_5e.texto} <a href={aumonerie.groupe_6e_5e.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link">{aumonerie.groupe_6e_5e.enlace_texto}</a></p>
-            <p><strong>4è-3è-2nde</strong> — {aumonerie.groupe_4e_3e_2nde.texto} Inscriptions auprès de {aumonerie.groupe_4e_3e_2nde.contacto_nombre} : {aumonerie.groupe_4e_3e_2nde.contacto_telefono}</p>
-            <p><strong>1ère-Terminale</strong> — {aumonerie.groupe_1ere_terminale.texto} Responsables {aumonerie.groupe_1ere_terminale.responsables_nombre} : {aumonerie.groupe_1ere_terminale.responsables_telefono}</p>
-          </div>
-        </div>
-         <div class="activite-item reveal">
-          <div class="activite-meta">
-            <span class="activite-titre">Étudiants & Jeunes professionnels</span>
-          </div>
-          <div>
-            <p><strong>Aumônerie étudiante</strong> — RDV le mercredi soir à 20h pour la messe suivie de soirées d'échanges et de prières autour d'un bon apéro. Cette année dans la salle paroissiale située sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88.</p>
-            <p><strong>Jeunes professionnels</strong> — Réunions le jeudi soir une semaine sur deux vers 19h45. Au programme, un débat et un dîner sur une thématique alliant foi et actualité.</p>
-            
-          </div>
-        </div>
-        <div class="activite-item reveal">
-  <div class="activite-meta">
-    <span class="activite-titre">Initiation chrétienne pour les adultes</span>
-  </div>
-  <p>Les adultes désirant recevoir le baptême, la confirmation ou la première communion peuvent s'adresser au père Rodrigo pour leur demande à la sortie d'une messe. Un groupe est mis en place avec Arthur et Pilar Michaut et Marie Crapez ; ce groupe d'initiation chrétienne s'adresse aussi aux non-baptisés.</p>
-</div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Foyer des jeunes</span>
-              <span class="activite-age">Étudiants & jeunes pros</span>
-            </div>
-            <div>
-              <p>Espace de vie et de mission pour les étudiants catholiques à Madrid. Logement à prix réduit et engagement pastoral.</p>
-              <a href="/foyer" class="activite-link">En savoir plus →</a>
-            </div>
-          </div>
+          {activitesData.jeunes.map((act) => (
+            act.grupos ? (
+              <div class="activite-item reveal">
+                <div class="activite-meta">
+                  <span class="activite-titre">{act.titre}</span>
+                  <span class="activite-age">{act.age}</span>
+                </div>
+                <div>
+                  {act.grupos.map((grupo: any) => (
+                    <p>
+                      <strong>{grupo.nombre}</strong> — {grupo.texto}
+                      {grupo.enlace_url && (
+                        <a href={grupo.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link"> {grupo.enlace_texto}</a>
+                      )}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div class="activite-item reveal">
+                <div class="activite-meta">
+                  <span class="activite-titre">{act.titre}</span>
+                  {act.age && <span class="activite-age">{act.age}</span>}
+                </div>
+                <div>
+                  <p>{act.texto}
+                    {act.contacto_email && (
+                      <a href={`mailto:${act.contacto_email}`} class="activite-link"> {act.contacto_email}</a>
+                    )}
+                  </p>
+                  {act.texto_final && <p>{act.texto_final}</p>}
+                  {act.enlace_url && (
+                    <a href={act.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link">{act.enlace_texto}</a>
+                  )}
+                </div>
+              </div>
+            )
+          ))}
         </div>
       </div>
     </section>
@@ -136,38 +123,24 @@ import aumonerie from "../data/aumonerie.json";
           <h2 class="section-title">Pour les adultes et les couples</h2>
         </div>
         <div class="activites-list">
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Équipes Notre-Dame</span>
-              <span class="activite-age">Couples</span>
+          {activitesData.adultes.map((act) => (
+            <div class="activite-item reveal">
+              <div class="activite-meta">
+                <span class="activite-titre">{act.titre}</span>
+                {act.age && <span class="activite-age">{act.age}</span>}
+              </div>
+              <div>
+                <p>{act.texto}</p>
+                {act.contacto_nombre && (
+                  <p>Responsables : {act.contacto_nombre} : {act.contacto_telefono}</p>
+                )}
+                {act.texto_final && <p>{act.texto_final}</p>}
+                {act.enlace_url && (
+                  <a href={act.enlace_url} target="_blank" rel="noopener noreferrer" class="activite-link">{act.enlace_texto}</a>
+                )}
+              </div>
             </div>
-            <div>
-              <p>Les Equipes Notre Dame proposent un cheminement en équipes de 4 à 5 couples unis par le
-                sacrement de mariage.
-                Chaque mois, à l’occasion d’un repas convivial, les équipes se réunissent avec un prêtre pour prier,
-                partager leurs expériences et s’entraider à mieux vivre et approfondir leur foi en couple.
-                </p>
-              <p>Responsables : Claire et Jacquelin Becheau : +33 6 64 43 69 53</p>
-              <a href="https://www.equipes-notre-dame.fr" target="_blank" rel="noopener noreferrer" class="activite-link">www.equipes-notre-dame.fr →</a>
-            </div>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Préparation au mariage</span>
-              <span class="activite-age">Futurs époux</span>
-            </div>
-            <div>
-              <p>Les couples s'adressent au père Rodrigo à la sortie de la messe dominicale de 11h30 ou 19h. Un chemin de préparation sera proposé avec l'accompagnement de Benoît et Viviane Mahé.</p>
-              <p>Anne Gras, au secrétariat, accompagnera les futurs époux pour la constitution du dossier canonique.</p>
-            </div>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Préparation au baptême</span>
-              <span class="activite-age">Familles</span>
-            </div>
-            <p>Se présenter au père Rodrigo à la sortie de la messe dominicale pour toute demande de baptême d'enfant ou d'adulte.</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -180,35 +153,21 @@ import aumonerie from "../data/aumonerie.json";
           <h2 class="section-title">Participer à la vie liturgique</h2>
         </div>
         <div class="activites-list">
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Animation liturgique</span>
+          {activitesData.liturgie_service.map((act) => (
+            <div class="activite-item reveal">
+              <div class="activite-meta">
+                <span class="activite-titre">{act.titre}</span>
+              </div>
+              <p>{act.texto}
+                {act.contacto_nombre && ` ${act.contacto_nombre}`}
+                {act.contacto_email && (
+                  <> · <a href={`mailto:${act.contacto_email}`}>{act.contacto_email}</a></>
+                )}
+                {act.contacto_telefono && ` ou ${act.contacto_telefono}`}
+              </p><br>
+              {act.texto_final && <p>{act.texto_final}</p>}
             </div>
-            <p>Chants et instruments pour accompagner les célébrations. Ouvert à tous les musiciens et chanteurs.</p>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Lectures et prière universelle</span>
-            </div>
-            <p>Participation active à la liturgie comme lecteur ou pour la prière universelle.</p>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Bibliothèque française</span>
-            </div>
-            <p>À partir de la fin des travaux: Une bibliothèque de plus de 7.000 livres tous en français: romans, BD, policiers, biographies, histoire,littérature ...
-              C/ Padilla n’ 9 ( au fond du jardin, dans les locaux de la paroisse). Jeudis et dimanches de 11h à
-              13h. Ouvert pendant les vacances scolaires.
-            </p> <br><p>Contact : Béatrice Mohedano · +34 6 00 55 55 76</p>
-          </div>
-          <div class="activite-item reveal">
-            <div class="activite-meta">
-              <span class="activite-titre">Equipe administrative</span>
-            </div>
-            <p>Secrétariat : Registres, certificats, réservation d’une salle paroissiale : <br> Anne Gras :
-            paroissesaintlouismadrid@gmail.com ou +34 689 053 259 <br>
-            Conseil économique : obraluis@gmail.com</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -217,14 +176,11 @@ import aumonerie from "../data/aumonerie.json";
     <section class="section">
       <div class="container reveal">
         <span class="eyebrow">CALENDRIER</span>
-        <h2 class="section-title">Calendrier 2025-2026</h2>
-        <p class="liturgie-intro">
-          Retrouvez le calendrier complet des activités du catéchisme,
-          de l'aumônerie et des jeunes professionnels pour l'année scolaire 2025-2026.
-        </p>
-        <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2025/10/Calendrier-Annuel-Paroisse-St-Louis-des-francais.pdf"
+        <h2 class="section-title">{activitesData.calendrier.titre}</h2>
+        <p class="liturgie-intro">{activitesData.calendrier.texto}</p>
+        <a href={activitesData.calendrier.pdf_url}
            target="_blank" rel="noopener noreferrer" class="cta-button">
-          Télécharger le calendrier PDF
+          {activitesData.calendrier.boton_texto}
         </a>
       </div>
     </section>

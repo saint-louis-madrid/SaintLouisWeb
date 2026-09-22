@@ -1,0 +1,36 @@
+{
+  "bapteme": {
+    "titulo": "La porte d'entrée dans l'Église",
+    "texto1": "Les parents désirant demander le baptême pour leur enfant s'adressent en premier lieu au père Rodrigo. Le lieu privilégié pour un premier échange est la sortie de la messe du dimanche à 11h30 ou 19h.",
+    "texto2": "Les adultes souhaitant être baptisés peuvent également contacter le père Rodrigo pour définir un chemin de préparation avec un catéchiste accompagnateur."
+  },
+  "mariage": {
+    "titulo": "Un chemin de préparation accompagné",
+    "texto1": "Les couples désirant se préparer pour un mariage ou même voulant discerner un mariage peuvent s'adresser au père Rodrigo qui accueille les demandes. Le lieu privilégié pour un premier échange rapide et fixer un rendez-vous est la sortie de la messe du dimanche. Des rencontres de préparations seront animées par Benoît et Viviane Mahé.",
+    "texto2": "Anne Gras, au secrétariat, accompagnera les futurs époux pour la constitution du dossier canonique de mariage."
+  },
+  "adoration": {
+    "titulo": "Adoration du Saint Sacrement",
+    "texto": "Adoration silencieuse, chaque premier samedi du mois. Une occasion unique de passer un moment en tête-à-tête avec Jésus. Pour choisir une plage horaire pour assurer une présence continue devant le Saint-Sacrement, s'adresser à Pierre Lemarquier : +34 6 47 73 68 32"
+  },
+  "reconciliation": {
+    "texto_intro": "Le père Rodrigo est à la disposition des paroissiens tous les mercredis de 19h00 à 20h00 à l'église, avant la messe de 20h.",
+    "cards": [
+      {
+        "titre": "Chaque mercredi",
+        "horaire": "19h00 – 20h00",
+        "texto": "En français ou en espagnol · Église Saint Louis, Calle Lagasca 89"
+      },
+      {
+        "titre": "Veillée de Noël",
+        "horaire": "Avant le 24 décembre",
+        "texto": "Veillée de réconciliation proposée quelques jours avant Noël."
+      },
+      {
+        "titre": "Veillée pascale",
+        "horaire": "Avant Pâques",
+        "texto": "Veillée de réconciliation proposée quelques jours avant Pâques."
+      }
+    ]
+  }
+}

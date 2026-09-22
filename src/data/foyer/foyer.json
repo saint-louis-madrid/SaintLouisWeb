@@ -1,0 +1,27 @@
+{
+  "presentacion": {
+    "titulo": "Un foyer créé en 2023",
+    "texto1": "Le Foyer de jeunes Saint Louis a été créé en septembre 2023 par la paroisse Saint Louis des Français de Madrid. Il permet à de jeunes étudiants catholiques de s'investir dans l'œuvre éducative et pastorale de la paroisse, tout en bénéficiant d'un logement à prix réduit pour poursuivre leurs études.",
+    "texto2": "Ces étudiants ont soit une expérience préalable en animation et en éducation chrétienne, soit le désir de l'acquérir, ainsi que le souhait d'annoncer le Christ aux jeunes dont ils auront la charge."
+  },
+  "mission": [
+    {
+      "titre": "Logement à prix réduit",
+      "texto": "Les résidents bénéficient d'un cadre de qualité pour poursuivre leurs études universitaires à Madrid."
+    },
+    {
+      "titre": "Mission pastorale",
+      "texto": "Les jeunes s'impliquent dans l'animation et l'éducation chrétienne auprès des enfants et adolescents de la paroisse."
+    },
+    {
+      "titre": "Vie communautaire",
+      "texto": "Au Foyer, les résidents côtoient prêtres, animateurs, parents et autres personnes engagées dans la mission paroissiale."
+    }
+  ],
+  "cta": {
+    "titulo": "Vous êtes intéressé ?",
+    "texto": "Consultez le document d'information complet ou contactez-nous.",
+    "doc_url": "https://docs.google.com/document/d/1MT4z4S7utVSfH4CXQOIDSjSdRaitcRCfAWAJYYkCafc/edit",
+    "doc_texto": "Plus d'informations"
+  }
+}

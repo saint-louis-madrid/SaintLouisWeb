@@ -6,36 +6,363 @@ media_folder: "public/images/admin-uploads"
 public_folder: "/images/admin-uploads"
 
 collections:
-  - name: "aumonerie"
-    label: "Aumônerie (collège-lycée)"
-    files:
-      - name: "aumonerie"
-        label: "Contenu Aumônerie"
-        file: "src/data/aumonerie.json"
-        fields:
-          - { label: "Titre", name: "titre", widget: "string" }
-          - { label: "Tranche d'âge (affichage)", name: "age", widget: "string" }
 
-          - label: "6è-5è"
-            name: "groupe_6e_5e"
+############# ACTIVITES #####################
+  - name: "activites"
+    label: "Vie paroissiale — Activités"
+    files:
+      - name: "activites"
+        label: "Contenu page Activités"
+        file: "src/data/activites/activites.json"
+        fields:
+          - label: "Enfants"
+            name: "enfants"
+            widget: "list"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Tranche d'âge", name: "age", widget: "string", required: false }
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Nom du contact", name: "contacto_nombre", widget: "string", required: false }
+              - { label: "Téléphone du contact", name: "contacto_telefono", widget: "string", required: false }
+              - { label: "Texte complémentaire", name: "texto_final", widget: "text", required: false }
+              - { label: "Texte du lien", name: "enlace_texto", widget: "string", required: false }
+              - { label: "URL du lien", name: "enlace_url", widget: "string", required: false }
+
+          - label: "Jeunes"
+            name: "jeunes"
+            widget: "list"
+            types:
+              - label: "Activité simple"
+                name: "simple"
+                widget: "object"
+                fields:
+                  - { label: "Titre", name: "titre", widget: "string" }
+                  - { label: "Tranche d'âge", name: "age", widget: "string", required: false }
+                  - { label: "Texte", name: "texto", widget: "text", required: false }
+                  - { label: "Texte complémentaire", name: "texto_final", widget: "text", required: false }
+                  - { label: "Email de contact", name: "contacto_email", widget: "string", required: false }
+                  - { label: "Texte du lien", name: "enlace_texto", widget: "string", required: false }
+                  - { label: "URL du lien", name: "enlace_url", widget: "string", required: false }
+              - label: "Aumônerie (avec sous-groupes)"
+                name: "aumonerie"
+                widget: "object"
+                fields:
+                  - { label: "Titre", name: "titre", widget: "string" }
+                  - { label: "Tranche d'âge", name: "age", widget: "string" }
+                  - label: "Sous-groupes"
+                    name: "grupos"
+                    widget: "list"
+                    fields:
+                      - { label: "Nom du groupe", name: "nombre", widget: "string" }
+                      - { label: "Texte", name: "texto", widget: "text" }
+                      - { label: "Texte du lien", name: "enlace_texto", widget: "string", required: false }
+                      - { label: "URL du lien", name: "enlace_url", widget: "string", required: false }
+
+          - label: "Adultes"
+            name: "adultes"
+            widget: "list"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Tranche d'âge", name: "age", widget: "string", required: false }
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Nom du contact", name: "contacto_nombre", widget: "string", required: false }
+              - { label: "Téléphone du contact", name: "contacto_telefono", widget: "string", required: false }
+              - { label: "Texte complémentaire", name: "texto_final", widget: "text", required: false }
+              - { label: "Texte du lien", name: "enlace_texto", widget: "string", required: false }
+              - { label: "URL du lien", name: "enlace_url", widget: "string", required: false }
+
+          - label: "Liturgie et service"
+            name: "liturgie_service"
+            widget: "list"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Nom du contact", name: "contacto_nombre", widget: "string", required: false }
+              - { label: "Téléphone du contact", name: "contacto_telefono", widget: "string", required: false }
+              - { label: "Email du contact", name: "contacto_email", widget: "string", required: false }
+              - { label: "Texte complémentaire", name: "texto_final", widget: "text", required: false }
+
+          - label: "Calendrier"
+            name: "calendrier"
             widget: "object"
             fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "text" }
+              - { label: "Fichier PDF du calendrier", name: "pdf_url", widget: "file" }
+              - { label: "Texte du bouton", name: "boton_texto", widget: "string" }
+
+
+
+############# FOYER #####################
+
+  - name: "foyer"
+    label: "Vie paroissiale — Foyer des jeunes"
+    files:
+      - name: "foyer"
+        label: "Contenu page Foyer"
+        file: "src/data/foyer/foyer.json"
+        fields:
+          - label: "Présentation"
+            name: "presentacion"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+          - label: "Mission (3 cartes)"
+            name: "mission"
+            widget: "list"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "text" }
+          - label: "Appel à l'action (bas de page)"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "string" }
+              - { label: "URL du document Google Docs", name: "doc_url", widget: "string" }
+              - { label: "Texte du bouton", name: "doc_texto", widget: "string" }
+
+####### SACREMENTS ##################
+
+  - name: "sacrements"
+    label: "Vie paroissiale — Sacrements"
+    files:
+      - name: "sacrements"
+        label: "Contenu page Sacrements"
+        file: "src/data/sacrements/sacrements.json"
+        fields:
+          - label: "Baptême"
+            name: "bapteme"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+          - label: "Mariage"
+            name: "mariage"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+          - label: "Adoration"
+            name: "adoration"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "text" }
+          - label: "Réconciliation"
+            name: "reconciliation"
+            widget: "object"
+            fields:
+              - { label: "Texte d'introduction", name: "texto_intro", widget: "text" }
+              - label: "Cartes (mercredi, Noël, Pâques)"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Titre", name: "titre", widget: "string" }
+                  - { label: "Horaire", name: "horaire", widget: "string" }
+                  - { label: "Texte", name: "texto", widget: "text" }
+              
+
+############ ANNONCES ##################
+
+  - name: "annonces"
+    label: "Vie paroissiale — Feuille d'annonces"
+    files:
+      - name: "annonces"
+        label: "Contenu page Annonces"
+        file: "src/data/annonces/annonces.json"
+        fields:
+          - { label: "Année affichée", name: "año_actual", widget: "string" }
+          - label: "Annonces"
+            name: "annonces"
+            widget: "list"
+            summary: "{{fecha}}"
+            fields:
+              - { label: "Date / Titre", name: "fecha", widget: "string" }
+              - { label: "Image de la feuille", name: "imagen", widget: "image" }
+
+##### LITURGIE ###
+
+  - name: "liturgie"
+    label: "Liturgie — Horaires et équipes"
+    files:
+      - name: "liturgie"
+        label: "Contenu page Liturgie"
+        file: "src/data/liturgie/liturgie.json"
+        fields:
+          - label: "Avis travaux (horaires temporaires)"
+            name: "aviso_travaux"
+            widget: "object"
+            fields:
+              - { label: "Afficher l'avis ?", name: "activo", widget: "boolean" }
+              - { label: "Texte d'introduction", name: "texto_intro", widget: "text" }
+              - label: "Lieux temporaires"
+                name: "lugares"
+                widget: "list"
+                fields:
+                  - { label: "Horaire", name: "horario", widget: "string" }
+                  - { label: "Lieu", name: "texto", widget: "string" }
+
+          - label: "Horaires réguliers (chaque semaine)"
+            name: "horaires_reguliers"
+            widget: "list"
+            fields:
+              - { label: "Jour", name: "jour", widget: "string" }
+              - { label: "Heure", name: "heure", widget: "string" }
+              - { label: "Note", name: "note", widget: "string" }
+
+          - { label: "Fichier PDF du carnet de chants", name: "carnet_chants_url", widget: "file" }
+
+          - label: "Dates messe des familles"
+            name: "messe_familles"
+            widget: "list"
+            field: { label: "Date", name: "fecha", widget: "string" }
+
+          - label: "Équipes liturgiques"
+            name: "equipes_liturgiques"
+            widget: "list"
+            fields:
+              - { label: "Nom de l'équipe", name: "nombre", widget: "string" }
+              - label: "Personnes"
+                name: "personas"
+                widget: "list"
+                field: { label: "Nom et téléphone", name: "persona", widget: "string" }
+
+          - label: "Jours fériés et solennités"
+            name: "jours_feries"
+            widget: "list"
+            fields:
+              - { label: "Nom du jour", name: "nom", widget: "string" }
+              - label: "Dates/heures"
+                name: "fechas"
+                widget: "list"
+                field: { label: "Date", name: "fecha", widget: "string" }
+
+          - { label: "Note période estivale", name: "note_ete", widget: "text" }
+          - { label: "Texte Semaine Sainte", name: "semaine_sainte_texto", widget: "text" }
+          - { label: "Note Semaine Sainte", name: "semaine_sainte_note", widget: "text" }
+
+############ INDEX ###########################3
+  - name: "accueil"
+    label: "Accueil — Page d'accueil"
+    files:
+      - name: "accueil"
+        label: "Contenu page Accueil"
+        file: "src/data/index/index.json"
+        fields:
+          - label: "Banner Rénovation"
+            name: "banner_renovation"
+            widget: "object"
+            fields:
+              - { label: "Afficher le banner ?", name: "activo", widget: "boolean" }
               - { label: "Texte", name: "texto", widget: "text" }
               - { label: "Texte du lien", name: "enlace_texto", widget: "string" }
-              - { label: "URL du lien (formulaire)", name: "enlace_url", widget: "string" }
+              - { label: "URL du lien", name: "enlace_url", widget: "string" }
 
-          - label: "4è-3è-2nde"
-            name: "groupe_4e_3e_2nde"
+          - label: "Résumé horaires (page d'accueil)"
+            name: "horaires_resumen"
+            widget: "list"
+            fields:
+              - { label: "Jour", name: "jour", widget: "string" }
+              - { label: "Heure", name: "heure", widget: "string" }
+              - { label: "Note", name: "note", widget: "string" }
+
+          - { label: "Note horaires (messe espagnol)", name: "horaires_nota", widget: "text" }
+
+          - label: "Section — La Paroisse"
+            name: "section_paroisse"
             widget: "object"
             fields:
-              - { label: "Texte", name: "texto", widget: "text" }
-              - { label: "Nom du contact", name: "contacto_nombre", widget: "string" }
-              - { label: "Téléphone du contact", name: "contacto_telefono", widget: "string" }
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
 
-          - label: "1ère-Terminale"
-            name: "groupe_1ere_terminale"
+          - label: "Section — La Communauté"
+            name: "section_communaute"
             widget: "object"
             fields:
-              - { label: "Texte", name: "texto", widget: "text" }
-              - { label: "Nom des responsables", name: "responsables_nombre", widget: "string" }
-              - { label: "Téléphone", name: "responsables_telefono", widget: "string" }
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+
+######### PAROISSE################3
+  - name: "paroisse"
+    label: "La Paroisse — Qui sommes-nous"
+    files:
+      - name: "paroisse"
+        label: "Contenu page Paroisse"
+        file: "src/data/paroisse/paroisse.json"
+        fields:
+          - label: "Histoire"
+            name: "histoire"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+
+          - label: "L'Œuvre Saint Louis"
+            name: "oeuvre"
+            widget: "object"
+            fields:
+              - { label: "Texte d'introduction", name: "texto_intro", widget: "text" }
+              - label: "Établissements"
+                name: "etablissements"
+                widget: "list"
+                fields:
+                  - { label: "Titre", name: "titre", widget: "string" }
+                  - { label: "Ligne 1 (adresse)", name: "linea1", widget: "string" }
+                  - { label: "Ligne 2 (description/téléphone)", name: "linea2", widget: "string" }
+
+          - label: "Le Recteur"
+            name: "recteur"
+            widget: "object"
+            fields:
+              - { label: "Nom", name: "titulo", widget: "string" }
+              - { label: "Texte (paragraphe 1)", name: "texto1", widget: "text" }
+              - { label: "Texte (paragraphe 2)", name: "texto2", widget: "text" }
+
+
+#################3 CONTACT ########################
+  - name: "contact"
+    label: "Contact — Informations pratiques"
+    files:
+      - name: "contact"
+        label: "Contenu page Contact"
+        file: "src/data/contact/contact.json"
+        fields:
+          - label: "Informations pratiques"
+            name: "info_practica"
+            widget: "object"
+            fields:
+              - label: "Adresse"
+                name: "direccion"
+                widget: "list"
+                field: { label: "Ligne", name: "linea", widget: "string" }
+              - label: "Métro"
+                name: "metro"
+                widget: "list"
+                field: { label: "Ligne", name: "linea", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - label: "Messes en français"
+                name: "messes"
+                widget: "list"
+                field: { label: "Ligne", name: "linea", widget: "string" }
+              - label: "Disponibilité Père Rodrigo"
+                name: "pere_rodrigo"
+                widget: "list"
+                field: { label: "Ligne", name: "linea", widget: "string" }
+
+          - label: "WhatsApp"
+            name: "whatsapp"
+            widget: "object"
+            fields:
+              - { label: "Numéro (affichage)", name: "numero_display", widget: "string" }
+              - { label: "URL wa.me", name: "numero_url", widget: "string" }
+              - { label: "Texte", name: "texto", widget: "string" }
+
+          - { label: "URL Newsletter", name: "newsletter_url", widget: "string" }

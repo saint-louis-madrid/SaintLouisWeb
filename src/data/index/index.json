@@ -1,0 +1,24 @@
+{
+  "banner_renovation": {
+    "activo": true,
+    "texto": "Projet Rénovation 2026 — Objectif 500 000 € · Aidez-nous à préserver notre église pour les 400 prochaines années.",
+    "enlace_texto": "En savoir plus →",
+    "enlace_url": "/renovation"
+  },
+  "horaires_resumen": [
+    { "jour": "Dimanche", "heure": "11h30 · 19h00", "note": "Messes en français" },
+    { "jour": "Mercredi", "heure": "20h00", "note": "Confessions dès 19h" },
+    { "jour": "Jours fériés", "heure": "11h30", "note": "Noël, Toussaint, Épiphanie…" }
+  ],
+  "horaires_nota": "Messes en espagnol tous les jours à 12h00 — Hogar Residencia San Luis, Claudio Coello 94.",
+  "section_paroisse": {
+    "titulo": "Une communauté catholique francophone à Madrid",
+    "texto1": "Fondée en 1613 par Henri de Saureulx, la paroisse Saint Louis des Français est l'une des plus anciennes institutions francophones de Madrid. Rattachée au diocèse de Madrid, elle est installée Calle Lagasca, 89 depuis 1972 et accueille chaque semaine des fidèles de nombreuses nationalités.",
+    "texto2": "Au-delà de la paroisse, l'Œuvre Saint Louis rassemble également un foyer-résidence pour personnes âgées et le Colegio San Luis à Pozuelo. Elle vient en aide à plus de 200 000 € par an aux personnes dans le besoin, sans recevoir aucune subvention. Notre recteur, le père Rodrigo Alfaro Uriarte, accompagne la communauté depuis septembre 2020."
+  },
+  "section_communaute": {
+    "titulo": "Un lieu de foi, de rencontre et de partage",
+    "texto1": "Notre paroisse est composée de nombreuses familles avec enfants. Elle propose un accompagnement pour chaque tranche d'âge : éveil à la foi et catéchisme pour les enfants, scouts francophones de 8 à 17 ans, aumônerie collège-lycée, et foyer pour les étudiants et jeunes professionnels.",
+    "texto2": "Pour les adultes et les couples, les équipes Notre-Dame, la préparation aux sacrements et l'animation liturgique rythment la vie paroissiale tout au long de l'année. Une communauté vivante et ouverte à tous les francophones de Madrid."
+  }
+}

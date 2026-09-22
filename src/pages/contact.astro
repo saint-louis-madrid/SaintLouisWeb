@@ -2,6 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import contactDataRaw from "../data/contact/contact.json";
+
+const contactData = contactDataRaw as {
+  info_practica: {
+    direccion: string[];
+    metro: string[];
+    email: string;
+    messes: string[];
+    pere_rodrigo: string[];
+  };
+  whatsapp: { numero_display: string; numero_url: string; texto: string };
+  newsletter_url: string;
+};
 ---
 
 <BaseLayout title="Contact — Saint Louis des Français">
@@ -63,59 +76,53 @@ import Footer from "../components/Footer.astro";
            <p class="form-notice">Vos données sont traitées conformément à notre <a href="/privacy">politique de confidentialité</a>.</p>
           </form>
         </div>
+        
+<!-- INFO PRATIQUE -->
+<div class="contact-info reveal">
+  <h2 class="contact-title">Informations pratiques</h2>
 
-        <!-- INFO PRATIQUE -->
-        <div class="contact-info reveal">
-          <h2 class="contact-title">Informations pratiques</h2>
+  <div class="info-block">
+    <span class="info-label">Adresse</span>
+    {contactData.info_practica.direccion.map((linea) => <span>{linea}</span>)}
+  </div>
 
-          <div class="info-block">
-            <span class="info-label">Adresse</span>
-            <span>Calle Lagasca, 89</span>
-            <span>28006 Madrid</span>
-          </div>
+  <div class="info-block">
+    <span class="info-label">Métro</span>
+    {contactData.info_practica.metro.map((linea) => <span>{linea}</span>)}
+  </div>
 
-          <div class="info-block">
-            <span class="info-label">Métro</span>
-            <span>Nuñez de Balboa (L5 et L9)</span>
-            <span>Sortie Juan Bravo</span>
-          </div>
+  <div class="info-block">
+    <span class="info-label">Email</span>
+    <a href={`mailto:${contactData.info_practica.email}`}>
+      {contactData.info_practica.email}
+    </a>
+  </div>
 
-          <div class="info-block">
-            <span class="info-label">Email</span>
-            <a href="mailto:paroissesaintlouismadrid@gmail.com">
-              paroissesaintlouismadrid@gmail.com
-            </a>
-          </div>
+  <div class="info-block">
+    <span class="info-label">Messes en français</span>
+    {contactData.info_practica.messes.map((linea) => <span>{linea}</span>)}
+  </div>
 
-          <div class="info-block">
-            <span class="info-label">Messes en français</span>
-            <span>Dimanche 11h30 et 19h00</span>
-            <span>Mercredi 20h00</span>
-          </div>
+  <div class="info-block">
+    <span class="info-label">Père Rodrigo</span>
+    {contactData.info_practica.pere_rodrigo.map((linea) => <span>{linea}</span>)}
+  </div>
+</div>
 
-          <div class="info-block">
-            <span class="info-label">Père Rodrigo</span>
-            <span>Disponible à la sortie des messes</span>
-            <span>du dimanche (11h30 et 19h)</span>
-          </div>
-        </div>
+<div class="info-block">
+  <span class="info-label">WhatsApp</span>
+  <a href={contactData.whatsapp.numero_url} target="_blank" rel="noopener noreferrer">
+    {contactData.whatsapp.numero_display}
+  </a>
+  <span>{contactData.whatsapp.texto}</span>
+</div>
 
-        <div class="info-block">
-          <span class="info-label">WhatsApp</span>
-          <a href="https://wa.me/34689053259" target="_blank" rel="noopener noreferrer">
-            +34 689 05 32 59
-          </a>
-          <span>Inscrivez-vous à notre liste de diffusion</span>
-        </div>
-
-        <div class="info-block">
-          <span class="info-label">Newsletter</span>
-          <a href="http://eepurl.com/hcN1hn" target="_blank" rel="noopener noreferrer">
-            S'abonner à la newsletter
-          </a>
-        </div>
-
-      </div>
+<div class="info-block">
+  <span class="info-label">Newsletter</span>
+  <a href={contactData.newsletter_url} target="_blank" rel="noopener noreferrer">
+    S'abonner à la newsletter
+  </a>
+</div>
     </section>
 
   </main>

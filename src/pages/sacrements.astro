@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import sacrements from "../data/sacrements/sacrements.json";
 ---
 
 <BaseLayout title="Sacrements — Saint Louis des Français">
@@ -20,91 +21,58 @@ import Footer from "../components/Footer.astro";
 
     <!-- BAPTÊME -->
     <section class="section">
-      <div class="container">
-        <div class="text reveal">
-          <span class="eyebrow">BAPTÊME</span>
-          <h2>La porte d'entrée dans l'Église</h2>
-          <p>
-            Les parents désirant demander le baptême pour leur enfant s'adressent 
-            en premier lieu au père Rodrigo. Le lieu privilégié pour un premier 
-            échange est la sortie de la messe du dimanche à 11h30 ou 19h.
-          </p>
-          <p>
-            Les adultes souhaitant être baptisés peuvent également contacter 
-            le père Rodrigo pour définir un chemin de préparation avec 
-            un catéchiste accompagnateur.
-          </p>
-        </div>
-       
-      </div>
-    </section>
+  <div class="container">
+    <div class="text reveal">
+      <span class="eyebrow">BAPTÊME</span>
+      <h2>{sacrements.bapteme.titulo}</h2>
+      <p>{sacrements.bapteme.texto1}</p>
+      <p>{sacrements.bapteme.texto2}</p>
+    </div>
+  </div>
+</section>
 
     <!-- MARIAGE -->
     <section class="section">
-      <div class="container ">
-       
-        <div class="text reveal">
-          <span class="eyebrow">MARIAGE</span>
-          <h2>Un chemin de préparation accompagné</h2>
-          <p>
-           Les couples désirant se préparer pour un mariage ou même voulant discerner un mariage peuvent
-          s’adresser au père Rodrigo qui accueille les demandes. Le lieu privilégié pour un premier échange
-          rapide et fixer un rendez-vous est la sortie de la messe du dimanche. Des rencontres de préparations
-          seront animées par Benoît et Viviane Mahé.
-          </p>
-          <p>
-            Anne Gras, au secrétariat, accompagnera les futurs époux pour 
-            la constitution du dossier canonique de mariage.
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <div class="text reveal">
+      <span class="eyebrow">MARIAGE</span>
+      <h2>{sacrements.mariage.titulo}</h2>
+      <p>{sacrements.mariage.texto1}</p>
+      <p>{sacrements.mariage.texto2}</p>
+    </div>
+  </div>
+</section>
 
     <!-- ADORATION -->
     <section class="section">
-      <div class="container">
-        <div class="text reveal">
-          <span class="eyebrow">ADORATION</span>
-          <h2>Adoration du Saint Sacrement</h2>
-          <p>
-           Adoration silencieuse, chaque premier samedi du mois. Une occasion unique de passer un moment
-            en tête-à-tête avec Jésus. Pour choisir une plage horaire pour assurer une présence continue devant
-            le Saint-Sacrement, s’adresser à Pierre Lemarquier : +34 6 47 73 68 32
-          </p>
-         
-        </div>
-       
-      </div>
-    </section>
+  <div class="container">
+    <div class="text reveal">
+      <span class="eyebrow">ADORATION</span>
+      <h2>{sacrements.adoration.titulo}</h2>
+      <p>{sacrements.adoration.texto}</p>
+    </div>
+  </div>
+</section>
 
     <!-- RÉCONCILIATION -->
     <section class="section">
-      <div class="container reveal">
-        <span class="eyebrow">RÉCONCILIATION</span>
-        <h2 class="section-title">Sacrement de la réconciliation</h2>
-        <p class="liturgie-intro">
-          Le père Rodrigo est à la disposition des paroissiens tous les 
-          mercredis de 19h00 à 20h00 à l'église, avant la messe de 20h.
-        </p>
-        <div class="reconciliation-grid">
-          <div class="reconciliation-card">
-            <span class="reconciliation-titre">Chaque mercredi</span>
-            <span class="reconciliation-horaire">19h00 – 20h00</span>
-            <p>En français ou en espagnol · Église Saint Louis, Calle Lagasca 89</p>
-          </div>
-          <div class="reconciliation-card">
-            <span class="reconciliation-titre">Veillée de Noël</span>
-            <span class="reconciliation-horaire">Avant le 24 décembre</span>
-            <p>Veillée de réconciliation proposée quelques jours avant Noël.</p>
-          </div>
-          <div class="reconciliation-card">
-            <span class="reconciliation-titre">Veillée pascale</span>
-            <span class="reconciliation-horaire">Avant Pâques</span>
-            <p>Veillée de réconciliation proposée quelques jours avant Pâques.</p>
-          </div>
+  <div class="container reveal">
+    <span class="eyebrow">RÉCONCILIATION</span>
+    <h2 class="section-title">Sacrement de la réconciliation</h2>
+    <p class="liturgie-intro">{sacrements.reconciliation.texto_intro}</p>
+    <div class="reconciliation-grid">
+      {sacrements.reconciliation.cards.map((card) => (
+        <div class="reconciliation-card">
+          <span class="reconciliation-titre">{card.titre}</span>
+          <span class="reconciliation-horaire">{card.horaire}</span>
+          <p>{card.texto}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+  
+  
 
     <!-- CTA -->
     <section class="cta reveal">

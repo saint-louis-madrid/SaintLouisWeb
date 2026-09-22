@@ -2,6 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import liturgieDataRaw from "../data/liturgie/liturgie.json";
+const liturgieData = liturgieDataRaw as {
+  aviso_travaux: { activo: boolean; texto_intro: string; lugares: { horario: string; texto: string }[] };
+  horaires_reguliers: { jour: string; heure: string; note: string }[];
+  carnet_chants_url: string;
+  messe_familles: string[];
+  equipes_liturgiques: { nombre: string; personas: string[] }[];
+  jours_feries: { nom: string; fechas: string[] }[];
+  note_ete: string;
+  semaine_sainte_texto: string;
+  semaine_sainte_note: string;
+};
 ---
 
 <BaseLayout title="Liturgie — Saint Louis des Français">
@@ -17,23 +29,23 @@ import Footer from "../components/Footer.astro";
         <p>Toutes les célébrations de la paroisse en français.</p>
       </div>
     </div>
-    
-<!-- AVISO OBRAS - HORAIRES TEMPORAIRES -->
-<div class="banner-alerte reveal">
-  <div class="container banner-alerte-inner">
-    <span class="banner-alerte-icon">⚠️</span>
-    <div class="banner-alerte-text">
-      <p>
-        <strong>La paroisse étant en travaux cette année</strong>, les messes se célèbrent temporairement dans d'autres lieux :
-      </p>
-      <ul>
-        <li><strong>Dimanche 10h15</strong> — Paroisse Nuestra Señora del Pilar, Calle Juan Bravo 40</li>
-        <li><strong>Dimanche 19h</strong> — Crypte de la paroisse Inmaculado Corazón de María, Calle de Ferraz 74</li>
-        <li><strong>Mercredi 19h (confessions) et 20h (messe)</strong> — Salle paroissiale sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88</li>
-      </ul>
-    </div>
-  </div>
-</div>
+
+    <!-- AVISO OBRAS - HORAIRES TEMPORAIRES -->
+    {liturgieData.aviso_travaux.activo && (
+      <div class="banner-alerte reveal">
+        <div class="container banner-alerte-inner">
+          <span class="banner-alerte-icon">⚠️</span>
+          <div class="banner-alerte-text">
+            <p><strong>{liturgieData.aviso_travaux.texto_intro}</strong></p>
+            <ul>
+              {liturgieData.aviso_travaux.lugares.map((lugar) => (
+                <li><strong>{lugar.horario}</strong> — {lugar.texto}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    )}
 
     <!-- HORAIRES HABITUELS -->
     <section class="section">
@@ -41,24 +53,16 @@ import Footer from "../components/Footer.astro";
         <span class="eyebrow">CHAQUE SEMAINE</span>
         <h2 class="section-title">Messes régulières</h2>
         <div class="horaires-cols reveal">
-          <div class="horaire-col">
-            <span class="horaire-day">Dimanche</span>
-            <span class="horaire-hour">11h30 · 19h00</span>
-            <span class="horaire-note">Messes en français</span>
-          </div>
-          <div class="horaire-col">
-            <span class="horaire-day">Mercredi</span>
-            <span class="horaire-hour">20h00</span>
-            <span class="horaire-note">Précédée des confessions dès 19h</span>
-          </div>
-          <div class="horaire-col">
-            <span class="horaire-day">Tous les jours</span>
-            <span class="horaire-hour">12h00</span>
-            <span class="horaire-note">En espagnol · Hogar Residencia San Luis · Claudio Coello, 94</span>
-          </div>
+          {liturgieData.horaires_reguliers.map((h) => (
+            <div class="horaire-col">
+              <span class="horaire-day">{h.jour}</span>
+              <span class="horaire-hour">{h.heure}</span>
+              <span class="horaire-note">{h.note}</span>
+            </div>
+          ))}
         </div>
         <p class="horaires-extra reveal">
-          <a href="http://sanluisfranceses.archimadrid.com/wp-content/uploads/2020/09/carnet-de-chants-saint-louis.pdf"
+          <a href={liturgieData.carnet_chants_url}
             target="_blank" rel="noopener noreferrer">
             Télécharger le carnet de chants →
           </a>
@@ -76,53 +80,34 @@ import Footer from "../components/Footer.astro";
           lors d'un dimanche de catéchisme.
         </p>
         <div class="familles-grid">
-          <div class="famille-card">12 octobre 2025</div>
-          <div class="famille-card">30 novembre 2025</div>
-          <div class="famille-card">11 janvier 2026</div>
-          <div class="famille-card">1er mars 2026</div>
-          <div class="famille-card">31 mai 2026</div>
-          <div class="famille-card">21 juin 2026</div>
+          {liturgieData.messe_familles.map((fecha) => (
+            <div class="famille-card">{fecha}</div>
+          ))}
         </div>
       </div>
     </section>
-<!-- ÉQUIPES LITURGIQUES -->
-<section class="section">
-  <div class="container reveal">
-    <span class="eyebrow">SERVICE LITURGIQUE</span>
-    <h2 class="section-title">Équipes liturgiques</h2>
-    <p class="liturgie-intro">
-      La vie liturgique de la paroisse repose sur l'engagement de nombreux bénévoles.
-    </p>
-    <div class="jours-grid">
-      <div class="jour-card">
-        <span class="jour-nom">Servants d'autel et servantes d'assemblée</span>
-        <span class="jour-date">Eleonore et Jean-Gabriel Vernet · +34 689 74 92 54</span>
-        <span class="jour-date">Sixtine et Adrien Konareff</span>
+
+    <!-- ÉQUIPES LITURGIQUES -->
+    <section class="section">
+      <div class="container reveal">
+        <span class="eyebrow">SERVICE LITURGIQUE</span>
+        <h2 class="section-title">Équipes liturgiques</h2>
+        <p class="liturgie-intro">
+          La vie liturgique de la paroisse repose sur l'engagement de nombreux bénévoles.
+        </p>
+        <div class="jours-grid">
+          {liturgieData.equipes_liturgiques.map((equipe) => (
+            <div class="jour-card">
+              <span class="jour-nom">{equipe.nombre}</span>
+              {equipe.personas.map((persona) => (
+                <span class="jour-date">{persona}</span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-      <div class="jour-card">
-        <span class="jour-nom">Liturgie de la parole (5-6 ans)</span>
-        <span class="jour-date">Diane Gandillot · +34 682 106 811</span>
-      </div>
-      <div class="jour-card">
-        <span class="jour-nom">Animation chorale (dimanche matin)</span>
-        <span class="jour-date">Pierre Brague · +34 6 66 48 78 36</span>
-      </div>
-      <div class="jour-card">
-        <span class="jour-nom">Lecture et prière universelle</span>
-        <span class="jour-date">Arthur et Ombeline de Lencquesaing</span>
-        <span class="jour-date">Roxane et Xavier de la Porte du Theil</span>
-      </div>
-      <div class="jour-card">
-        <span class="jour-nom">Sacristie</span>
-        <span class="jour-date">Christine Aubian · Anne du Couëdic</span>
-      </div>
-      <div class="jour-card">
-        <span class="jour-nom">Fleurs</span>
-        <span class="jour-date">Christina Mohedano · Marie Dablin</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
     <!-- JOURS SPÉCIAUX -->
     <section class="section">
       <div class="container reveal">
@@ -132,39 +117,14 @@ import Footer from "../components/Footer.astro";
           Les jours de précepte qui ne tombent pas un dimanche sont également célébrés à 11h30.
         </p>
         <div class="jours-grid">
-          <div class="jour-card">
-            <span class="jour-nom">Noël</span>
-            <span class="jour-date">24 déc. · 20h00</span>
-            <span class="jour-date">25 déc. · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Toussaint</span>
-            <span class="jour-date">1er nov. · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Défunts</span>
-            <span class="jour-date">2 nov. · 20h00</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Immaculée Conception</span>
-            <span class="jour-date">8 déc. · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Jour de l'An</span>
-            <span class="jour-date">1er jan. · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Épiphanie</span>
-            <span class="jour-date">6 jan. · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Saint Joseph</span>
-            <span class="jour-date">19 mars · 11h30</span>
-          </div>
-          <div class="jour-card">
-            <span class="jour-nom">Ascension</span>
-            <span class="jour-date">Dimanche avant la Pentecôte</span>
-          </div>
+          {liturgieData.jours_feries.map((jour) => (
+            <div class="jour-card">
+              <span class="jour-nom">{jour.nom}</span>
+              {jour.fechas.map((fecha) => (
+                <span class="jour-date">{fecha}</span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -174,10 +134,7 @@ import Footer from "../components/Footer.astro";
       <div class="container reveal">
         <div class="note-ete">
           <span class="eyebrow">PÉRIODE ESTIVALE</span>
-          <p>
-            Pas de messes en français du <strong>21 juillet au 20 août</strong>. 
-            Les messes en espagnol continuent à 12h00 au Hogar Residencia.
-          </p>
+          <p>{liturgieData.note_ete}</p>
         </div>
       </div>
     </section>
@@ -187,14 +144,8 @@ import Footer from "../components/Footer.astro";
       <div class="container reveal">
         <span class="eyebrow">SEMAINE SAINTE</span>
         <h2 class="section-title">Célébrations pascales</h2>
-        <p class="liturgie-intro">
-          Les horaires de la Semaine Sainte sont publiés chaque année sur cette page 
-          et dans la feuille d'annonces paroissiale.
-        </p>
-        <p class="liturgie-note">
-          Pour être informé des horaires, inscrivez-vous à notre liste WhatsApp 
-          ou consultez régulièrement cette page à l'approche de Pâques.
-        </p>
+        <p class="liturgie-intro">{liturgieData.semaine_sainte_texto}</p>
+        <p class="liturgie-note">{liturgieData.semaine_sainte_note}</p>
       </div>
     </section>
 

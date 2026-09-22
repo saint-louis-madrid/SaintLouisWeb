@@ -2,6 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import paroisseDataRaw from "../data/paroisse/paroisse.json";
+
+const paroisseData = paroisseDataRaw as {
+  histoire: { titulo: string; texto1: string; texto2: string };
+  oeuvre: { texto_intro: string; etablissements: { titre: string; linea1: string; linea2: string }[] };
+  recteur: { titulo: string; texto1: string; texto2: string };
+};
 ---
 
 <BaseLayout title="Paroisse — Saint Louis des Français">
@@ -18,78 +25,49 @@ import Footer from "../components/Footer.astro";
     </div>
 
     <!-- HISTOIRE -->
-    <section class="section">
-      <div class="container">
-        <div class="text reveal">
-          <span class="eyebrow">DEPUIS 1613</span>
-          <h2>Plus de 400 ans de présence à Madrid</h2>
-          <p>
-            La paroisse Saint Louis des Français a été fondée en 1613 par 
-            Henri de Saureulx, un diplomate français établi à Madrid. 
-            Depuis plus de quatre siècles, elle accompagne les francophones 
-            de la capitale espagnole dans leur vie de foi.
-          </p>
-          <p>
-            Installée Calle Lagasca, 89 depuis 1972, elle est rattachée au 
-            diocèse de Madrid et rassemble des fidèles de nombreuses 
-            nationalités autour d'une pastorale en français.
-          </p>
-        </div>
-       
-      </div>
-    </section>
+    <section class="section" id="histoire">
+  <div class="container">
+    <div class="text reveal">
+      <span class="eyebrow">DEPUIS 1613</span>
+      <h2>{paroisseData.histoire.titulo}</h2>
+      <p>{paroisseData.histoire.texto1}</p>
+      <p>{paroisseData.histoire.texto2}</p>
+    </div>
+  </div>
+</section>
 
     <!-- L'ŒUVRE SAINT LOUIS -->
-    <section class="section">
-      <div class="container reveal">
-        <span class="eyebrow">L'ŒUVRE SAINT LOUIS</span>
-        <h2 class="section-title">Une institution au service de tous</h2>
-        <p class="liturgie-intro">
-          La paroisse constitue avec deux autres établissements l'Œuvre Saint Louis, 
-          fondée en 1613. Elle vient en aide à plus de 200 000 € par an aux personnes 
-          dans le besoin, sans recevoir aucune subvention.
-        </p>
-        <div class="oeuvre-grid">
-          <div class="oeuvre-card">
-            <span class="oeuvre-titre">La Paroisse</span>
-            <p>Calle Lagasca, 89 · Madrid</p>
-            <p>Célébrations, catéchèse, sacrements et vie communautaire.</p>
-          </div>
-          <div class="oeuvre-card">
-            <span class="oeuvre-titre">Foyer-Résidence</span>
-            <p>Claudio Coello, 94 · Madrid</p>
-            <p>Résidence pour personnes âgées · 91 431 28 00</p>
-          </div>
-          <div class="oeuvre-card">
-            <span class="oeuvre-titre">Colegio San Luis</span>
-            <p>Pozuelo de Alarcón · Madrid</p>
-            <p>École française · 91 352 05 17</p>
-          </div>
+  <section class="section">
+  <div class="container reveal">
+    <span class="eyebrow">L'ŒUVRE SAINT LOUIS</span>
+    <h2 class="section-title">Une institution au service de tous</h2>
+    <p class="liturgie-intro">{paroisseData.oeuvre.texto_intro}</p>
+    <div class="oeuvre-grid">
+      {paroisseData.oeuvre.etablissements.map((et) => (
+        <div class="oeuvre-card">
+          <span class="oeuvre-titre">{et.titre}</span>
+          <p>{et.linea1}</p>
+          <p>{et.linea2}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
 
     <!-- LE RECTEUR -->
-    <section class="section">
-      <div class="container section-grid reverse">
-        <div class="image reveal">
-          <img src="/parroquia.jpg" alt="Père Rodrigo" />
-        </div>
-        <div class="text reveal">
-          <span class="eyebrow">NOTRE RECTEUR</span>
-          <h2>Père Rodrigo Alfaro Uriarte</h2>
-          <p>
-            Le père Rodrigo Alfaro Uriarte est notre recteur depuis septembre 2020. 
-            Il est disponible à la sortie des messes dominicales de 11h30 et 19h 
-            pour toute demande de sacrements ou renseignement.
-          </p>
-          <p>
-            Pour toute préparation au mariage ou au baptême, la première étape 
-            est de venir se présenter au père Rodrigo à la sortie de la messe.
-          </p>
-        </div>
-      </div>
-    </section>
+   <section class="section">
+  <div class="container section-grid reverse">
+    <div class="image reveal">
+      <img src="/parroquia.jpg" alt="Père Rodrigo" />
+    </div>
+    <div class="text reveal">
+      <span class="eyebrow">NOTRE RECTEUR</span>
+      <h2>{paroisseData.recteur.titulo}</h2>
+      <p>{paroisseData.recteur.texto1}</p>
+      <p>{paroisseData.recteur.texto2}</p>
+    </div>
+  </div>
+</section>
 
     <!-- ACCÈS -->
     <section class="section">

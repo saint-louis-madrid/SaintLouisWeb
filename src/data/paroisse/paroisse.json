@@ -1,0 +1,32 @@
+{
+  "histoire": {
+    "titulo": "Plus de 400 ans de présence à Madrid",
+    "texto1": "La paroisse Saint Louis des Français a été fondée en 1613 par Henri de Saureulx, un diplomate français établi à Madrid. Depuis plus de quatre siècles, elle accompagne les francophones de la capitale espagnole dans leur vie de foi.",
+    "texto2": "Installée Calle Lagasca, 89 depuis 1972, elle est rattachée au diocèse de Madrid et rassemble des fidèles de nombreuses nationalités autour d'une pastorale en français."
+  },
+  "oeuvre": {
+    "texto_intro": "La paroisse constitue avec deux autres établissements l'Œuvre Saint Louis, fondée en 1613. Elle vient en aide à plus de 200 000 € par an aux personnes dans le besoin, sans recevoir aucune subvention.",
+    "etablissements": [
+      {
+        "titre": "La Paroisse",
+        "linea1": "Calle Lagasca, 89 · Madrid",
+        "linea2": "Célébrations, catéchèse, sacrements et vie communautaire."
+      },
+      {
+        "titre": "Foyer-Résidence",
+        "linea1": "Claudio Coello, 94 · Madrid",
+        "linea2": "Résidence pour personnes âgées · 91 431 28 00"
+      },
+      {
+        "titre": "Colegio San Luis",
+        "linea1": "Pozuelo de Alarcón · Madrid",
+        "linea2": "École française · 91 352 05 17"
+      }
+    ]
+  },
+  "recteur": {
+    "titulo": "Père Rodrigo Alfaro Uriarte",
+    "texto1": "Le père Rodrigo Alfaro Uriarte est notre recteur depuis septembre 2020. Il est disponible à la sortie des messes dominicales de 11h30 et 19h pour toute demande de sacrements ou renseignement.",
+    "texto2": "Pour toute préparation au mariage ou au baptême, la première étape est de venir se présenter au père Rodrigo à la sortie de la messe."
+  }
+}

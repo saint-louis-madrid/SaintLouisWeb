@@ -1,0 +1,15 @@
+{
+  "info_practica": {
+    "direccion": ["Calle Lagasca, 89", "28006 Madrid"],
+    "metro": ["Nuñez de Balboa (L5 et L9)", "Sortie Juan Bravo"],
+    "email": "paroissesaintlouismadrid@gmail.com",
+    "messes": ["Dimanche 11h30 et 19h00", "Mercredi 20h00"],
+    "pere_rodrigo": ["Disponible à la sortie des messes", "du dimanche (11h30 et 19h)"]
+  },
+  "whatsapp": {
+    "numero_display": "+34 689 05 32 59",
+    "numero_url": "https://wa.me/34689053259",
+    "texto": "Inscrivez-vous à notre liste de diffusion"
+  },
+  "newsletter_url": "http://eepurl.com/hcN1hn"
+}

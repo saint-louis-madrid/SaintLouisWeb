@@ -1,0 +1,120 @@
+{
+  "enfants": [
+    {
+      "titre": "Éveil à la foi",
+      "age": "6 – 8 ans",
+      "texto": "Première découverte de la foi chrétienne dans un cadre ludique et bienveillant."
+    },
+    {
+      "titre": "Catéchisme",
+      "age": "8 – 11 ans",
+      "texto": "Le catéchisme de la paroisse est dispensé autant dans les installations de la paroisse qu'au LFM. Une super équipe de catéchistes se déploie pour cette merveilleuse mission, avec la coordination de Inmaculada Paredes, Yolanda Ella, et Marie Dargelos.",
+      "contacto_nombre": "Inmaculada Paredes",
+      "contacto_telefono": "+34 6 86 10 56 03",
+      "texto_final": "Il y a 4 années de catéchisme, KT1, KT2, KT3 et KT Mission. L'archidiocèse de Madrid nous demande que les enfants fassent les trois premières avant de faire leur première communion, à la fin de l'année KT3.",
+      "enlace_texto": "S'inscrire →",
+      "enlace_url": "https://docs.google.com/forms/d/e/1FAIpQLSdt6RUrVRzWSVuogVac9iefMdj_962oAF5tJua24vsILzEl1g/viewform"
+    },
+    {
+      "titre": "Enfants de chœur",
+      "age": "Tous âges",
+      "texto": "Participation active à la liturgie comme enfant de chœur ou servante d'assemblée."
+    }
+  ],
+  "jeunes": [
+    {
+      "titre": "Scouts francophones",
+      "age": "8 – 17 ans",
+      "texto": "La Paroisse Saint Louis des Français accueille le Groupe Saint Louis – 1ère Madrid, groupe scout francophone rattaché à notre Paroisse. Il s'agit d'un Groupe conventionné SUF qui applique la pédagogie des Scouts Unitaires de France. Pour tout renseignement ou demande d'inscription, écrire à Ronan et Margault de Hercé – Chefs de Groupe :",
+      "contacto_email": "groupescoutsaintlouismadrid@gmail.com"
+    },
+    {
+      "titre": "Aumônerie de collège et lycée",
+      "age": "6ème – Terminale",
+      "grupos": [
+        {
+          "nombre": "6è-5è",
+          "texto": "Le père Rodrigo avec trois jeunes étudiants de la paroisse : Victoire Julien, Victor Luis et Louise Audan-Martin, et quelques jeunes confirmés accompagneront ce groupe vers la profession de foi.",
+          "enlace_texto": "Inscriptions →",
+          "enlace_url": "https://forms.gle/ALufS55q9jpEfxeM8"
+        },
+        {
+          "nombre": "4è-3è-2nde",
+          "texto": "Un parcours Lifeteen animé par des étudiants du foyer accompagnés par le père Rodrigo est proposé à ce groupe le dimanche à 17h30, jusqu'à la messe de 19h. Au cours de ces années nous proposons aux jeunes le sacrement de la confirmation (l'archidiocèse de Madrid demande au moins 2 ans de préparation). Inscriptions auprès de Clara de Biennassis : +34 6 15 57 78 08"
+        },
+        {
+          "nombre": "1ère-Terminale",
+          "texto": "Approfondissement de la foi : ce groupe permet aux jeunes confirmés de continuer à approfondir leur foi et à se mettre au service des autres. Responsables Hugues Crapez et Jean-Michel Béranger : +34 699 419 975"
+        }
+      ]
+    },
+    {
+      "titre": "Étudiants & Jeunes professionnels",
+      "texto": "Aumônerie étudiante — RDV le mercredi soir à 20h pour la messe suivie de soirées d'échanges et de prières autour d'un bon apéro. Cette année dans la salle paroissiale située sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88.",
+      "texto_final": "Jeunes professionnels — Réunions le jeudi soir une semaine sur deux vers 19h45. Au programme, un débat et un dîner sur une thématique alliant foi et actualité."
+    },
+    {
+      "titre": "Initiation chrétienne pour les adultes",
+      "texto": "Les adultes désirant recevoir le baptême, la confirmation ou la première communion peuvent s'adresser au père Rodrigo pour leur demande à la sortie d'une messe. Un groupe est mis en place avec Arthur et Pilar Michaut et Marie Crapez ; ce groupe d'initiation chrétienne s'adresse aussi aux non-baptisés."
+    },
+    {
+      "titre": "Foyer des jeunes",
+      "age": "Étudiants & jeunes pros",
+      "texto": "Espace de vie et de mission pour les étudiants catholiques à Madrid. Logement à prix réduit et engagement pastoral.",
+      "enlace_texto": "En savoir plus →",
+      "enlace_url": "/foyer"
+    }
+  ],
+  "adultes": [
+    {
+      "titre": "Équipes Notre-Dame",
+      "age": "Couples",
+      "texto": "Les Equipes Notre Dame proposent un cheminement en équipes de 4 à 5 couples unis par le sacrement de mariage. Chaque mois, à l'occasion d'un repas convivial, les équipes se réunissent avec un prêtre pour prier, partager leurs expériences et s'entraider à mieux vivre et approfondir leur foi en couple.",
+      "contacto_nombre": "Claire et Jacquelin Becheau",
+      "contacto_telefono": "+33 6 64 43 69 53",
+      "enlace_texto": "www.equipes-notre-dame.fr →",
+      "enlace_url": "https://www.equipes-notre-dame.fr"
+    },
+    {
+      "titre": "Préparation au mariage",
+      "age": "Futurs époux",
+      "texto": "Les couples s'adressent au père Rodrigo à la sortie de la messe dominicale de 11h30 ou 19h. Un chemin de préparation sera proposé avec l'accompagnement de Benoît et Viviane Mahé.",
+      "texto_final": "Anne Gras, au secrétariat, accompagnera les futurs époux pour la constitution du dossier canonique."
+    },
+    {
+      "titre": "Préparation au baptême",
+      "age": "Familles",
+      "texto": "Se présenter au père Rodrigo à la sortie de la messe dominicale pour toute demande de baptême d'enfant ou d'adulte."
+    }
+  ],
+  "liturgie_service": [
+    {
+      "titre": "Animation liturgique",
+      "texto": "Chants et instruments pour accompagner les célébrations. Ouvert à tous les musiciens et chanteurs."
+    },
+    {
+      "titre": "Lectures et prière universelle",
+      "texto": "Participation active à la liturgie comme lecteur ou pour la prière universelle."
+    },
+    {
+      "titre": "Bibliothèque française",
+      "texto": "À partir de la fin des travaux: Une bibliothèque de plus de 7.000 livres tous en français: romans, BD, policiers, biographies, histoire, littérature ... C/ Padilla n° 9 ( au fond du jardin, dans les locaux de la paroisse). Jeudis et dimanches de 11h à 13h. Ouvert pendant les vacances scolaires.",
+      "contacto_nombre": "Béatrice Mohedano",
+      "contacto_telefono": "+34 6 00 55 55 76"
+    },
+    {
+      "titre": "Equipe administrative",
+      "texto": "Secrétariat : Registres, certificats, réservation d'une salle paroissiale :",
+      "contacto_nombre": "Anne Gras",
+      "contacto_email": "paroissesaintlouismadrid@gmail.com",
+      "contacto_telefono": "+34 689 053 259",
+      "texto_final": "Conseil économique : obraluis@gmail.com"
+    }
+  ],
+  "calendrier": {
+    "titre": "Calendrier 2025-2026",
+    "texto": "Retrouvez le calendrier complet des activités du catéchisme, de l'aumônerie et des jeunes professionnels pour l'année scolaire 2025-2026.",
+    "pdf_url": "http://sanluisfranceses.archimadrid.com/wp-content/uploads/2025/10/Calendrier-Annuel-Paroisse-St-Louis-des-francais.pdf",
+    "boton_texto": "Télécharger le calendrier PDF"
+  }
+}
