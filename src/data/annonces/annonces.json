@@ -1,8 +1,8 @@
 {
   "annonces": [
     {
-      "fecha": "15 mars 2026",
-      "imagen": "http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/26-03-15.png"
+      "fecha": "20 septembre 2026",
+      "imagen": "/images/admin-uploads/26-09-20.png"
     },
     {
       "fecha": "22 mars 2026",
@@ -16,5 +16,6 @@
       "fecha": "Célébrations de la Semaine Sainte",
       "imagen": "http://sanluisfranceses.archimadrid.com/wp-content/uploads/2026/03/Celebrations-de-la-Semaine-Sainte.png"
     }
-  ]
+  ],
+  "año_actual": "2026"
 }
