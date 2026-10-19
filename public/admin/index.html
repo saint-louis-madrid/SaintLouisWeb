@@ -23,7 +23,7 @@
     }
   </script>
 
-  <!-- Botón "Publicar todo lo pendiente" (Sincronizado) -->
+  <!-- Botón "Publicar todo lo pendiente" (Control de DOM real) -->
   <script>
     function gestionarBotonPublicarTodo() {
       const esWorkflow = window.location.hash.includes('workflow');
@@ -61,19 +61,22 @@
         };
 
         btn.onclick = async () => {
-          const obtenerBotonesPublicar = () => {
+          // Obtener únicamente botones de publicación activos en pantalla
+          const obtenerBotonesDisponibles = () => {
             return Array.from(document.querySelectorAll('button')).filter(b => 
-              /publish|publicar/i.test(b.textContent || '') && b.id !== 'btn-publicar-todo-cms'
+              /publish|publicar/i.test(b.textContent || '') && 
+              b.id !== 'btn-publicar-todo-cms' &&
+              document.body.contains(b)
             );
           };
 
-          let botonesIniciales = obtenerBotonesPublicar();
+          let botonesIniciales = obtenerBotonesDisponibles();
           if (botonesIniciales.length === 0) {
             alert('No hay tarjetas pendientes de publicar en la columna Ready.');
             return;
           }
 
-          if (!confirm(`¿Confirmas la publicación secuencial de los cambios acumulados?`)) {
+          if (!confirm(`¿Confirmas la publicación de los cambios acumulados?`)) {
             return;
           }
 
@@ -82,30 +85,32 @@
           let contador = 0;
 
           while (true) {
-            const botonesActuales = obtenerBotonesPublicar();
+            const botonesActuales = obtenerBotonesDisponibles();
+            
+            // Si ya no quedan botones o la columna está en 0 ENTRIES, finaliza
             if (botonesActuales.length === 0) break;
 
+            const botonAProcesar = botonesActuales[0];
             contador++;
             btn.innerHTML = `⏳ Publicando cambio ${contador}...`;
 
-            // Ejecuta el clic en la tarjeta disponible
-            botonesActuales[0].click();
+            // Ejecutar el clic en el elemento
+            botonAProcesar.click();
 
-            // Esperar a la confirmación de éxito ("Entry published") y sincronización con Git Gateway
+            // Esperar activamente a que la tarjeta desaparezca del DOM
             await new Promise(resolve => {
               let tiempoTranscurrido = 0;
               const intervalo = setInterval(() => {
-                tiempoTranscurrido += 400;
-                const hayExito = document.body.innerText.includes('Entry published') || 
-                                document.body.innerText.includes('Entrada publicada');
+                tiempoTranscurrido += 300;
+                const botonSigueEnPantalla = document.body.contains(botonAProcesar);
 
-                // Al confirmarse la publicación o tras 5 segundos de margen, se da paso al siguiente
-                if (hayExito || tiempoTranscurrido >= 5000) {
+                // Si el botón ya fue eliminado del DOM o pasaron 6 segundos
+                if (!botonSigueEnPantalla || tiempoTranscurrido >= 6000) {
                   clearInterval(intervalo);
-                  // Pausa de 2.5 segundos para refrescar el estado de Redux en Decap
-                  setTimeout(resolve, 2500);
+                  // Pausa de 3 segundos para que Decap termine de estabilizar su estado de Redux
+                  setTimeout(resolve, 3000);
                 }
-              }, 400);
+              }, 300);
             });
           }
 
