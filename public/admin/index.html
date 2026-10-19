@@ -6,11 +6,8 @@
   <title>Administration — Saint Louis des Français</title>
 </head>
 <body>
-  <!-- Scripts de Netlify Identity y Decap CMS -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <!-- Autenticación Netlify Identity -->
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
@@ -21,113 +18,6 @@
         }
       });
     }
-  </script>
-
-  <!-- Botón "Publicar todo lo pendiente" (Control de DOM real) -->
-  <script>
-    function gestionarBotonPublicarTodo() {
-      const esWorkflow = window.location.hash.includes('workflow');
-      const botonExistente = document.getElementById('btn-publicar-todo-cms');
-
-      if (esWorkflow && !botonExistente) {
-        const btn = document.createElement('button');
-        btn.id = 'btn-publicar-todo-cms';
-        btn.innerHTML = '🚀 Publicar todo lo pendiente';
-        
-        btn.style.cssText = `
-          position: fixed;
-          bottom: 28px;
-          right: 28px;
-          z-index: 99999;
-          background-color: #2563eb;
-          color: #ffffff;
-          border: none;
-          padding: 12px 22px;
-          border-radius: 8px;
-          font-weight: 600;
-          font-size: 15px;
-          cursor: pointer;
-          box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-          transition: transform 0.2s, background-color 0.2s;
-        `;
-
-        btn.onmouseover = () => {
-          btn.style.backgroundColor = '#1d4ed8';
-          btn.style.transform = 'scale(1.03)';
-        };
-        btn.onmouseout = () => {
-          btn.style.backgroundColor = '#2563eb';
-          btn.style.transform = 'scale(1)';
-        };
-
-        btn.onclick = async () => {
-          // Obtener únicamente botones de publicación activos en pantalla
-          const obtenerBotonesDisponibles = () => {
-            return Array.from(document.querySelectorAll('button')).filter(b => 
-              /publish|publicar/i.test(b.textContent || '') && 
-              b.id !== 'btn-publicar-todo-cms' &&
-              document.body.contains(b)
-            );
-          };
-
-          let botonesIniciales = obtenerBotonesDisponibles();
-          if (botonesIniciales.length === 0) {
-            alert('No hay tarjetas pendientes de publicar en la columna Ready.');
-            return;
-          }
-
-          if (!confirm(`¿Confirmas la publicación de los cambios acumulados?`)) {
-            return;
-          }
-
-          btn.disabled = true;
-          btn.style.opacity = '0.6';
-          let contador = 0;
-
-          while (true) {
-            const botonesActuales = obtenerBotonesDisponibles();
-            
-            // Si ya no quedan botones o la columna está en 0 ENTRIES, finaliza
-            if (botonesActuales.length === 0) break;
-
-            const botonAProcesar = botonesActuales[0];
-            contador++;
-            btn.innerHTML = `⏳ Publicando cambio ${contador}...`;
-
-            // Ejecutar el clic en el elemento
-            botonAProcesar.click();
-
-            // Esperar activamente a que la tarjeta desaparezca del DOM
-            await new Promise(resolve => {
-              let tiempoTranscurrido = 0;
-              const intervalo = setInterval(() => {
-                tiempoTranscurrido += 300;
-                const botonSigueEnPantalla = document.body.contains(botonAProcesar);
-
-                // Si el botón ya fue eliminado del DOM o pasaron 6 segundos
-                if (!botonSigueEnPantalla || tiempoTranscurrido >= 6000) {
-                  clearInterval(intervalo);
-                  // Pausa de 3 segundos para que Decap termine de estabilizar su estado de Redux
-                  setTimeout(resolve, 3000);
-                }
-              }, 300);
-            });
-          }
-
-          btn.innerHTML = '🚀 Publicar todo lo pendiente';
-          btn.disabled = false;
-          btn.style.opacity = '1';
-        };
-
-        document.body.appendChild(btn);
-      } else if (!esWorkflow && botonExistente) {
-        botonExistente.remove();
-      }
-    }
-
-    window.addEventListener('hashchange', gestionarBotonPublicarTodo);
-    const observadorDOM = new MutationObserver(gestionarBotonPublicarTodo);
-    observadorDOM.observe(document.body, { childList: true, subtree: true });
   </script>
 </body>
 </html>
