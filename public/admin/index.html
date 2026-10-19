@@ -23,7 +23,7 @@
     }
   </script>
 
-  <!-- Botón "Publicar todo lo pendiente" (Secuencial Inteligente) -->
+  <!-- Botón "Publicar todo lo pendiente" (Sincronizado) -->
   <script>
     function gestionarBotonPublicarTodo() {
       const esWorkflow = window.location.hash.includes('workflow');
@@ -61,38 +61,52 @@
         };
 
         btn.onclick = async () => {
-          // Obtener los botones de publicación presentes en el DOM
-          let botones = Array.from(document.querySelectorAll('button')).filter(b => 
-            /publish|publicar/i.test(b.textContent || '') && b.id !== 'btn-publicar-todo-cms'
-          );
+          const obtenerBotonesPublicar = () => {
+            return Array.from(document.querySelectorAll('button')).filter(b => 
+              /publish|publicar/i.test(b.textContent || '') && b.id !== 'btn-publicar-todo-cms'
+            );
+          };
 
-          if (botones.length === 0) {
+          let botonesIniciales = obtenerBotonesPublicar();
+          if (botonesIniciales.length === 0) {
             alert('No hay tarjetas pendientes de publicar en la columna Ready.');
             return;
           }
 
-          const total = botones.length;
-          if (!confirm(`¿Confirmas la publicación de los ${total} cambios acumulados?`)) {
+          if (!confirm(`¿Confirmas la publicación secuencial de los cambios acumulados?`)) {
             return;
           }
 
-          // Deshabilitar temporalmente el botón mientras se procesa
           btn.disabled = true;
           btn.style.opacity = '0.6';
+          let contador = 0;
 
-          for (let i = 0; i < total; i++) {
-            // Re-escaneamos el DOM en cada iteración para obtener el botón actualizado
-            const botonesActuales = Array.from(document.querySelectorAll('button')).filter(b => 
-              /publish|publicar/i.test(b.textContent || '') && b.id !== 'btn-publicar-todo-cms'
-            );
+          while (true) {
+            const botonesActuales = obtenerBotonesPublicar();
+            if (botonesActuales.length === 0) break;
 
-            if (botonesActuales.length > 0) {
-              btn.innerHTML = `⏳ Publicando ${i + 1} de ${total}...`;
-              botonesActuales[0].click(); // Publica el primero de la lista actual
-              
-              // Esperar 3 segundos para dar tiempo a la red y al renderizado de Decap CMS
-              await new Promise(resolve => setTimeout(resolve, 3000));
-            }
+            contador++;
+            btn.innerHTML = `⏳ Publicando cambio ${contador}...`;
+
+            // Ejecuta el clic en la tarjeta disponible
+            botonesActuales[0].click();
+
+            // Esperar a la confirmación de éxito ("Entry published") y sincronización con Git Gateway
+            await new Promise(resolve => {
+              let tiempoTranscurrido = 0;
+              const intervalo = setInterval(() => {
+                tiempoTranscurrido += 400;
+                const hayExito = document.body.innerText.includes('Entry published') || 
+                                document.body.innerText.includes('Entrada publicada');
+
+                // Al confirmarse la publicación o tras 5 segundos de margen, se da paso al siguiente
+                if (hayExito || tiempoTranscurrido >= 5000) {
+                  clearInterval(intervalo);
+                  // Pausa de 2.5 segundos para refrescar el estado de Redux en Decap
+                  setTimeout(resolve, 2500);
+                }
+              }, 400);
+            });
           }
 
           btn.innerHTML = '🚀 Publicar todo lo pendiente';
@@ -111,4 +125,4 @@
     observadorDOM.observe(document.body, { childList: true, subtree: true });
   </script>
 </body>
-</html> 
+</html>
