@@ -90,7 +90,7 @@
               btn.innerHTML = `⏳ Publicando ${i + 1} de ${total}...`;
               botonesActuales[0].click(); // Publica el primero de la lista actual
               
-              // Esperar 3 segundos para dar tiempo a la red y al renderizado de Decap
+              // Esperar 3 segundos para dar tiempo a la red y al renderizado de Decap CMS
               await new Promise(resolve => setTimeout(resolve, 3000));
             }
           }
@@ -111,4 +111,4 @@
     observadorDOM.observe(document.body, { childList: true, subtree: true });
   </script>
 </body>
-</html>
+</html> 
