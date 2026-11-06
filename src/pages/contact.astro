@@ -21,14 +21,13 @@ const contactData = contactDataRaw as {
   <Header />
 
   <main>
-
     <div class="page-header">
-  <div class="container">
-    <span class="eyebrow">CONTACT</span>
-    <h1>Nous contacter</h1>
-    <p>Une question, une demande de sacrement ou simplement nous rejoindre ?</p>
-  </div>
-</div>
+      <div class="container">
+        <span class="eyebrow">CONTACT</span>
+        <h1>Nous contacter</h1>
+        <p>Une question, une demande de sacrement ou simplement nous rejoindre ?</p>
+      </div>
+    </div>
 
     <!-- CONTENU -->
     <section class="section">
@@ -38,136 +37,165 @@ const contactData = contactDataRaw as {
         <div class="reveal">
           <h2 class="contact-title">Envoyer un message</h2>
           <form class="contact-form" id="contact-form">
+            
+            <!-- Campo Honeypot para anti-spam (oculto a usuarios reales) -->
+            <div style="display: none !important;" aria-hidden="true">
+              <label for="honeypot">Ne pas remplir ce champ</label>
+              <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-group">
               <label for="name">Nom complet</label>
-              <input type="text" id="name" name="name" placeholder="Marie Dupont" required />
+              <input type="text" id="name" name="name" placeholder="Marie Dupont" required minlength="2" maxlength="80" />
             </div>
+
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="marie@exemple.com" required />
             </div>
+
             <div class="form-group">
               <label for="subject">Sujet</label>
               <select id="subject" name="subject" required>
                 <option value="">Choisir un sujet</option>
-                <option value="information">Renseignement général</option>
-                <option value="bapteme">Baptême</option>
-                <option value="mariage">Mariage</option>
-                <option value="catechisme">Catéchisme</option>
-                <option value="renovation">Projet Rénovation</option>
-                <option value="autre">Autre</option>
+                <option value="Renseignement général">Renseignement général</option>
+                <option value="Baptême">Baptême</option>
+                <option value="Mariage">Mariage</option>
+                <option value="Catéchisme">Catéchisme</option>
+                <option value="Projet Rénovation">Projet Rénovation</option>
+                <option value="Autre">Autre</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message..." required minlength="10" maxlength="2000"></textarea>
             </div>
+
             <div class="form-group">
-  <label class="form-checkbox">
-    <input type="checkbox" name="consent" required />
-    <span>
-      J'accepte que mes données soient utilisées pour répondre à ma demande, 
-      conformément à la 
-      <a href="/privacy" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>.
-    </span>
-  </label>
-</div>
-            <button type="submit" class="form-submit">Envoyer le message</button>
-           <p class="form-notice">Vos données sont traitées conformément à notre <a href="/privacy">politique de confidentialité</a>.</p>
+              <label class="form-checkbox">
+                <input type="checkbox" name="consent" required />
+                <span>
+                  J'accepte que mes données soient utilisées pour répondre à ma demande, 
+                  conformément à la 
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" id="btn-submit" class="form-submit">Envoyer le message</button>
+            <p class="form-notice" id="form-notice">Vos données sont traitées conformément à notre <a href="/privacy">politique de confidentialité</a>.</p>
           </form>
         </div>
 
-<!-- INFO PRATIQUE -->
-<div class="contact-info reveal">
-  <h2 class="contact-title">Informations pratiques</h2>
+        <!-- INFO PRATIQUE -->
+        <div class="contact-info reveal">
+          <h2 class="contact-title">Informations pratiques</h2>
 
-  <div class="info-block">
-    <span class="info-label">Adresse</span>
-    {contactData.info_practica.direccion.map((linea) => <span>{linea}</span>)}
-  </div>
+          <div class="info-block">
+            <span class="info-label">Adresse</span>
+            {contactData.info_practica.direccion.map((linea) => <span>{linea}</span>)}
+          </div>
 
-  <div class="info-block">
-    <span class="info-label">Métro</span>
-    {contactData.info_practica.metro.map((linea) => <span>{linea}</span>)}
-  </div>
+          <div class="info-block">
+            <span class="info-label">Métro</span>
+            {contactData.info_practica.metro.map((linea) => <span>{linea}</span>)}
+          </div>
 
-  <div class="info-block">
-    <span class="info-label">Email</span>
-    <a href={`mailto:${contactData.info_practica.email}`}>
-      {contactData.info_practica.email}
-    </a>
-  </div>
+          <div class="info-block">
+            <span class="info-label">Email</span>
+            <a href={`mailto:${contactData.info_practica.email}`}>
+              {contactData.info_practica.email}
+            </a>
+          </div>
 
-  <div class="info-block">
-    <span class="info-label">Messes en français</span>
-    {contactData.info_practica.messes.map((linea) => <span>{linea}</span>)}
-  </div>
+          <div class="info-block">
+            <span class="info-label">Messes en français</span>
+            {contactData.info_practica.messes.map((linea) => <span>{linea}</span>)}
+          </div>
 
-  <div class="info-block">
-    <span class="info-label">Père Rodrigo</span>
-    {contactData.info_practica.pere_rodrigo.map((linea) => <span>{linea}</span>)}
-  </div>
-</div>
+          <div class="info-block">
+            <span class="info-label">Père Rodrigo</span>
+            {contactData.info_practica.pere_rodrigo.map((linea) => <span>{linea}</span>)}
+          </div>
 
-<div class="info-block">
-  <span class="info-label">WhatsApp</span>
-  <a href={contactData.whatsapp.numero_url} target="_blank" rel="noopener noreferrer">
-    {contactData.whatsapp.numero_display}
-  </a>
-  <span>{contactData.whatsapp.texto}</span>
-</div>
+          <div class="info-block">
+            <span class="info-label">WhatsApp</span>
+            <a href={contactData.whatsapp.numero_url} target="_blank" rel="noopener noreferrer">
+              {contactData.whatsapp.numero_display}
+            </a>
+            <span>{contactData.whatsapp.texto}</span>
+          </div>
 
-<div class="info-block">
-  <span class="info-label">Newsletter</span>
-  <a href={contactData.newsletter_url} target="_blank" rel="noopener noreferrer">
-    S'abonner à la newsletter
-  </a>
-</div>
-</div>
+          <div class="info-block">
+            <span class="info-label">Newsletter</span>
+            <a href={contactData.newsletter_url} target="_blank" rel="noopener noreferrer">
+              S'abonner à la newsletter
+            </a>
+          </div>
+        </div>
+
+      </div>
     </section>
-
   </main>
 
   <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const notice = document.querySelector('.form-notice');
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const btnSubmit = document.getElementById('btn-submit') as HTMLButtonElement;
+    const notice = document.getElementById('form-notice') as HTMLParagraphElement;
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    const API_URL = 'http://127.0.0.1:8000/api/contacto';
 
-    // DÉSACTIVÉ temporairement — domaine Resend non vérifié (voir api/contact.ts).
-    // Supprimer ce bloc et décommenter le code ci-dessous quand le domaine sera vérifié.
-    if (notice) {
-      notice.innerHTML =
-        "L'envoi direct n'est pas disponible pour l'instant. " +
-        "Contactez-nous par <a href='https://wa.me/34689053259' target='_blank' rel='noopener'>WhatsApp (+34 689 05 32 59)</a> " +
-        "ou par email : <a href='mailto:paroissesaintlouismadrid@gmail.com'>paroissesaintlouismadrid@gmail.com</a>.";
-    }
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    /* À RÉACTIVER quand RESEND_ENABLED = true dans api/contact.ts :
-    const fd = new FormData(form);
-    const payload = {
-      name:    fd.get('name'),
-      email:   fd.get('email'),
-      subject: fd.get('subject'),
-      message: fd.get('message'),
-    };
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'Envoi en cours...';
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      const fd = new FormData(form);
+      const payload = {
+        nombre:   fd.get('name')?.toString().trim(),
+        email:    fd.get('email')?.toString().trim(),
+        asunto:   fd.get('subject')?.toString().trim(),
+        mensaje:  fd.get('message')?.toString().trim(),
+        honeypot: fd.get('honeypot')?.toString() || null,
+      };
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.status === 201) {
+          form.reset();
+          if (notice) {
+            notice.style.color = '#155724';
+            notice.textContent = 'Message envoyé avec succès. Merci !';
+          }
+        } else if (res.status === 429) {
+          if (notice) {
+            notice.style.color = '#721c24';
+            notice.textContent = 'Trop de tentatives. Veuillez patienter 5 minutes.';
+          }
+        } else {
+          if (notice) {
+            notice.style.color = '#721c24';
+            notice.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
+          }
+        }
+      } catch (err) {
+        if (notice) {
+          notice.style.color = '#721c24';
+          notice.textContent = 'Impossible de contacter le serveur. Vérifiez votre connexion.';
+        }
+      } finally {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'Envoyer le message';
+      }
     });
-
-    if (res.ok) {
-      form.reset();
-      if (notice) notice.textContent = 'Message envoyé avec succès. Merci !';
-    } else {
-      if (notice) notice.textContent = 'Erreur lors de l\'envoi. Veuillez réessayer.';
-    }
-    */
-  });
-</script>
+  </script>
 
   <Footer />
 </BaseLayout>
