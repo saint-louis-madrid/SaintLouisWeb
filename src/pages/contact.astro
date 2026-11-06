@@ -144,8 +144,7 @@ const contactData = contactDataRaw as {
     const btnSubmit = document.getElementById('btn-submit') as HTMLButtonElement;
     const notice = document.getElementById('form-notice') as HTMLParagraphElement;
 
-    const API_URL = 'http://127.0.0.1:8000/api/contacto';
-
+    const API_URL = import.meta.env.PUBLIC_API_URL
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
 
