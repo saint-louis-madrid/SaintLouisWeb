@@ -438,10 +438,11 @@
 /* ================= FOYER ================= */
 
 .foyer-grid {
-  display: grid;
+  display: block;
   grid-template-columns: 300px 1fr;
   gap: 3rem;
   align-items: start;
+  
 }
 
 .foyer-imagen img {
