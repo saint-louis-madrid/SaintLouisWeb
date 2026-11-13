@@ -15,6 +15,14 @@ const contactData = contactDataRaw as {
   whatsapp: { numero_display: string; numero_url: string; texto: string };
   newsletter_url: string;
 };
+
+const waBase = contactData.whatsapp.numero_url;
+const waSubscribeUrl =
+  waBase +
+  (waBase.includes("?") ? "&" : "?") +
+  "text=" +
+  encodeURIComponent("Bonjour, je souhaite recevoir les informations paroissiales. Mon nom : ");
+
 ---
 
 <BaseLayout title="Contact — Saint Louis des Français">
@@ -119,18 +127,47 @@ const contactData = contactDataRaw as {
             {contactData.info_practica.pere_rodrigo.map((linea) => <span>{linea}</span>)}
           </div>
 
-          <div class="info-block">
+         
+            <div class="info-block">
             <span class="info-label">WhatsApp</span>
             <a href={contactData.whatsapp.numero_url} target="_blank" rel="noopener noreferrer">
               {contactData.whatsapp.numero_display}
             </a>
             <span>{contactData.whatsapp.texto}</span>
+            <button type="button" class="wa-open-btn" id="wa-open">
+              📲 Recevoir les actualités par WhatsApp
+            </button>
           </div>
+          
 
         </div>
 
       </div>
     </section>
+<dialog class="wa-dialog" id="wa-dialog" aria-labelledby="wa-title">
+  <button type="button" class="wa-close" id="wa-close" aria-label="Fermer">✕</button>
+
+  <h2 id="wa-title">Recevoir les actualités de la paroisse par WhatsApp</h2>
+  <p><strong>Vous souhaitez être informé des actualités, événements et annonces de la paroisse ?</strong></p>
+  <p>Nous vous proposons de vous inscrire à notre liste de diffusion WhatsApp afin de recevoir directement sur votre téléphone les informations paroissiales.</p>
+
+  <h3>Comment s'inscrire ?</h3>
+  <ol>
+    <li>Cliquez sur le bouton WhatsApp ci-dessous pour ouvrir une conversation avec la paroisse.</li>
+    <li>Envoyez-nous un petit message en indiquant votre nom et que vous souhaitez recevoir les informations paroissiales.</li>
+    <li>Nous vous ajouterons à notre liste de diffusion.</li>
+  </ol>
+
+  <a href={waSubscribeUrl} target="_blank" rel="noopener noreferrer" class="cta-button wa-btn">
+    S'inscrire par WhatsApp
+  </a>
+
+  <div class="wa-note">
+    <strong>Important :</strong> pour recevoir nos messages, pensez à enregistrer le numéro de téléphone de la paroisse dans vos contacts. Sans cela, WhatsApp ne vous transmettra pas les messages de diffusion.
+  </div>
+
+  <p class="wa-small">Il ne s'agit pas d'un groupe WhatsApp : vous recevrez les informations directement dans votre conversation avec la paroisse, sans être ajouté à un groupe ni recevoir les réponses des autres abonnés.</p>
+</dialog>
   </main>
 
   <script>
@@ -188,6 +225,30 @@ const contactData = contactDataRaw as {
         btnSubmit.textContent = 'Envoyer le message';
       }
     });
+
+    const waDialog = document.getElementById('wa-dialog') as HTMLDialogElement | null;
+
+function openWa() {
+  if (!waDialog || waDialog.open) return;
+  waDialog.showModal();
+  document.body.style.overflow = 'hidden';
+}
+
+document.getElementById('wa-open')?.addEventListener('click', openWa);
+document.getElementById('wa-close')?.addEventListener('click', () => waDialog?.close());
+
+// Cerrar al hacer clic fuera del cuadro
+waDialog?.addEventListener('click', (e) => {
+  if (e.target === waDialog) waDialog.close();
+});
+
+// Restaurar el scroll al cerrar (botón, Esc o clic fuera)
+waDialog?.addEventListener('close', () => {
+  document.body.style.overflow = '';
+});
+
+// Permite abrirlo directamente con /contact#whatsapp
+if (location.hash === '#whatsapp') openWa();
   </script>
 
   <Footer />

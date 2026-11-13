@@ -571,19 +571,18 @@ import Footer from "../components/Footer.astro";
             <div class="recurso-card"><span class="don-label">Coût total</span><span class="don-amount">3 500 000 €</span></div>
             <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
             <div class="recurso-card">
-              <span class="don-label">À lever fin 2026</span>
-              <span class="don-label" style="font-size:0.65rem;">Campagne paroissiale</span>
+              <span class="don-label">À LEVER VIA CAMPAGNE PAROISSIALE</span>
               <span class="don-amount recurso-needed">500 000 €</span>
             </div>
             <div class="recurso-card">
-              <span class="don-label">Via grands donateurs</span>
+              <span class="don-label">VIA GRANDS DONATEURS ET PROJET D’EXPLOTATION STABLE DES SALLES</span>
               <span class="don-amount recurso-needed">500 000 €</span>
             </div>
           </div>
           <div class="voir-plus-content">
             <p>Grâce à la bonne gestion de l'Œuvre Saint Louis et de la trésorerie de la paroisse, nous disposons déjà de <strong>2.020.000€</strong>. Un grand donateur a déjà donné <strong>200.000€</strong> pour nous aider à financer le projet. Grâce à une personne généreuse, nous disposons aussi d'un <strong>emprunt sans intérêts de 250.000€</strong> à rendre sur deux ans. Le total de la disponibilité au moment de lancer notre campagne est donc de <strong>2.470.000€</strong>. C'est une excellente nouvelle !</p>
-            <p><strong>Coût du projet :</strong> Concernant le projet, les négociations sont encore en cours avec les constructeurs mais nous pouvons déjà prévoir que le coût va s'élever à un total de <strong>3.500.000€</strong> (tout compris, aussi le mobilier, les taxes, honoraires des architectes, etc.)</p>
-            <p>Il nous faut lever <strong>1.000.000€</strong> d'ici la fin 2026. <strong>500.000€</strong> par une levée de fonds en ouvrant le plus possible nos cercles d'action. <strong>500.000€</strong> par les grands donateurs (ou éventuellement des legs).</p>
+            <p><strong>Coût du projet :</strong> Concernant le projet, le coût prévu s'élève à un total de <strong>3.500.000€</strong> (tout compris, aussi le mobilier, les taxes, honoraires des architectes, etc.)</p>
+            <p>Il nous faut lever <strong>1.000.000€</strong> dans les prochaines 3-4 années. <strong>500.000€</strong> par une levée de fonds en ouvrant le plus possible nos cercles d'action. <strong>500.000€</strong> par les grands donateurs (ou éventuellement des legs) et via l’exploitation stable des salles</p>
           </div>
           <button class="voir-plus-btn" data-more="Voir plus →" data-less="Voir moins ↑">Voir plus →</button>
         </div>
@@ -615,35 +614,59 @@ import Footer from "../components/Footer.astro";
       </section>
 
       <section class="section" id="fr-7">
-        <div class="container reveal">
-          <span class="eyebrow">7. JE DONNE</span>
-          <h2 class="section-title">Je donne</h2>
-          <p class="liturgie-intro">Vous pouvez soutenir le projet de la paroisse de plusieurs manières.<br/>⚠️ Attention : prenez connaissance des avantages fiscaux au point 6, pour mieux nous aider.</p>
-          <div class="renovation-bizum">
-            <span class="don-label">Bizum solidaire – code : 13902</span>
-            <span class="bizum-code">13902</span>
-            <p>Dans l'app Bizum, choisissez « Donner à une ONG », « Bizum solidaire » ou « Donación », puis entrez le code <strong>13902</strong>. Disponible seulement depuis l'Espagne.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
-          </div>
-          <div class="don-grid">
-            <div class="don-card">
-              <span class="don-label">Virement bancaire</span>
-              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
-              <span class="don-note">BIC : BSCHESMM</span>
-              <span class="don-beneficiary">Bénéficiaire :  Paroisse Saint Louis des Francais</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
-            </div>
-            <div class="don-card">
-              <span class="don-label">Carte bancaire</span>
-              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Payer par carte</a>
-              <span class="don-note">⚠️ Une commission est appliquée sur les dons par carte. Pour les dons importants, privilégiez le virement ou le Bizum.</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
-            </div>
-          </div>
-          <p class="don-contact">Contact : <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
-        </div>
-      </section>
+  <div class="container reveal">
+    <span class="eyebrow">7. JE DONNE</span>
+    <h2 class="section-title">Je donne</h2>
+    <p class="liturgie-intro">Vous pouvez soutenir le projet de la paroisse de plusieurs manières.<br/>⚠️ Attention : prenez connaissance des avantages fiscaux au point 6, pour mieux nous aider.</p>
 
+    <!-- SOUSCRIPTION -->
+    <div class="don-subscription">
+      <span class="don-label">Souscription (en 2 pas)</span>
+      <ol class="don-steps">
+        <li>Via l'application de votre banque, programmez un virement périodique ou virement permanent vers ce compte :
+          <div class="don-inline">
+            <span class="don-inline-item"><small>IBAN:</small><span class="don-iban">ES98 0049 6791 7629 1601 6891</span></span>
+            <span class="don-inline-item"><small>BIC:</small><span>BSCHESMM</span></span>
+            <span class="don-inline-item"><small>Bénéficiaire:</small><span>Paroisse Saint Louis des Francais</span></span>
+          </div>
+        </li>
+        <li><strong class="warn">IMPORTANT !!!</strong> Remplissez tout de suite&nbsp;
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXbJmENVsOqBLCUhm0WeHgGVRK4DanxBmxWuDkG8aMrivDaQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="activite-link"> le formulaire de ce lien → &nbsp;</a>
+          afin que nous sachions que nous pouvons compter sur cette aide et que nous puissions vous établir le reçu fiscal.
+        </li>
+      </ol>
+      <span class="don-note">Note : en cas de difficulté pour maintenir l'aide dans la durée, vous pouvez interrompre vous-même ce virement programmé.</span>
+    </div>
+
+    <div class="renovation-bizum">
+      <div class="bizum-head">
+        <span class="don-label">Bizum solidaire – code :</span>
+        <span class="bizum-code">13902</span>
+      </div>
+      <p>Dans l'app Bizum, choisissez « Donner à une ONG », « Bizum solidaire » ou « Donación », puis entrez ce code. Disponible seulement depuis l'Espagne.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+    </div>
+
+    <div class="don-grid">
+      <div class="don-card">
+        <span class="don-label">Virement bancaire</span>
+        <div class="don-inline">
+          <span class="don-inline-item"><small>IBAN:</small><span class="don-iban">ES98 0049 6791 7629 1601 6891</span></span>
+          <span class="don-inline-item"><small>BIC:</small><span>BSCHESMM</span></span>
+          <span class="don-inline-item"><small>Bénéficiaire:</small><span>Paroisse Saint Louis des Francais</span></span>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+      </div>
+      <div class="don-card">
+        <span class="don-label">Carte bancaire</span>
+        <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Payer par carte</a>
+        <span class="don-note">⚠️ Une commission est appliquée sur les dons par carte. Pour les dons importants, privilégiez le virement ou le Bizum.</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Demander un reçu fiscal →</a>
+      </div>
+    </div>
+    <p class="don-contact">Contact : <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
+  </div>
+</section>
       <section class="section" id="fr-8">
         <div class="container reveal">
           <span class="eyebrow">8. FAIRE CONNAÎTRE</span>
@@ -1220,19 +1243,18 @@ import Footer from "../components/Footer.astro";
             <div class="recurso-card"><span class="don-label">Coste total</span><span class="don-amount">3 500 000 €</span></div>
             <div class="recurso-card"><span class="don-label">Disponible</span><span class="don-amount recurso-ok">2 470 000 €</span></div>
            <div class="recurso-card">
-            <span class="don-label">A recaudar fin 2026</span>
-            <span class="don-label" style="font-size:0.65rem;">Campaña parroquial</span>
+            <span class="don-label">A RECAUDAR VÍA CAMPAÑA PARROQUIAL</span>
             <span class="don-amount recurso-needed">500 000 €</span>
           </div>
           <div class="recurso-card">
-            <span class="don-label">Grandes donantes</span>
+            <span class="don-label">VIA GRANDES DONANTES Y PROYECTO DE EXPLOTACIÓN ESTABLE DE LAS SALAS</span>
             <span class="don-amount recurso-needed">500 000 €</span>
           </div>
           </div>
           <div class="voir-plus-content">
             <p>Gracias a la buena gestión de la Obra San Luis y de la parroquia disponemos ya de <strong>2.020.000€</strong>. Además, un gran donante ya ha dado <strong>200.000€</strong> para ayudarnos a financiar el proyecto. Gracias a una persona generosa también disponemos de un <strong>préstamo sin intereses de 250.000€</strong> a devolver en dos años. El total de la disponibilidad en el momento de lanzar nuestra campaña es por tanto de <strong>2.470.000€</strong>. ¡Es una excelente noticia!</p>
             <p><strong>Coste del proyecto:</strong> En cuanto al proyecto, las negociaciones siguen en curso con los constructores pero ya podemos prever que el coste ascenderá a un total de <strong>3.500.000€</strong> (todo incluido, también el mobiliario, los impuestos, las tasas, los honorarios de los arquitectos, etc.)</p>
-            <p>Es necesario recaudar <strong>1.000.000€</strong> antes de finales de 2026. <strong>500.000€</strong> mediante una campaña de recaudación de fondos abriendo al máximo nuestros círculos de acción. <strong>500.000€</strong> mediante grandes donantes (o eventualmente legados testamentarios).</p>
+            <p>Es necesario recaudar <strong>1.000.000€</strong> en los próximos 3-4 años. <strong>500.000€</strong> mediante una campaña de recaudación de fondos abriendo al máximo nuestros círculos de acción. <strong>500.000€</strong> mediante grandes donantes (o eventualmente legados testamentarios).</p>
           </div>
           <button class="voir-plus-btn" data-more="Ver más →" data-less="Ver menos ↑">Ver más →</button>
         </div>
@@ -1263,35 +1285,60 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
 
-      <section class="section" id="es-7">
-        <div class="container reveal">
-          <span class="eyebrow">7. QUIERO DONAR</span>
-          <h2 class="section-title">Quiero donar</h2>
-          <p class="liturgie-intro">Apoya el proyecto de la parroquia de cualquiera de estas maneras.<br/>⚠️ Consulta las ventajas fiscales en el punto 6 para ayudarnos mejor.</p>
-          <div class="renovation-bizum">
-            <span class="don-label">Bizum solidario – código : 13902</span>
-            <span class="bizum-code">13902</span>
-            <p>En la app de Bizum, elige «Donar a una ONG» e introduce el código <strong>13902</strong>.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+     <section class="section" id="es-7">
+  <div class="container reveal">
+    <span class="eyebrow">7. QUIERO DONAR</span>
+    <h2 class="section-title">Quiero donar</h2>
+    <p class="liturgie-intro">Apoya el proyecto de la parroquia de cualquiera de estas maneras.<br/>⚠️ Consulta las ventajas fiscales en el punto 6 para ayudarnos mejor.</p>
+
+    <!-- SUSCRIPCIÓN -->
+    <div class="don-subscription">
+      <span class="don-label">Suscripción (en 2 pasos)</span>
+      <ol class="don-steps">
+        <li>Mediante la aplicación de tu banco programa una transferencia periódica o transferencia permanente a esta cuenta:
+          <div class="don-inline">
+            <span class="don-inline-item"><small>IBAN:</small><span class="don-iban">ES98 0049 6791 7629 1601 6891</span></span>
+            <span class="don-inline-item"><small>BIC:</small><span>BSCHESMM</span></span>
+            <span class="don-inline-item"><small>Beneficiario:</small><span>Paroisse Saint Louis des Francais</span></span>
           </div>
-          <div class="don-grid">
-            <div class="don-card">
-              <span class="don-label">Transferencia bancaria</span>
-              <span class="don-iban">ES98 0049 6791 7629 1601 6891</span>
-              <span class="don-note">BIC : BSCHESMM</span>
-              <span class="don-beneficiary">Beneficiario : Paroisse Saint Louis des Francais</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
-            </div>
-            <div class="don-card">
-              <span class="don-label">Tarjeta bancaria</span>
-              <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Pagar con tarjeta</a>
-              <span class="don-note">⚠️ Se aplica una comisión a los donativos con tarjeta. Para donaciones importantes se recomienda transferencia o Bizum.</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
-            </div>
-          </div>
-          <p class="don-contact">Contacto: <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
+        </li>
+        <li><strong class="warn">¡¡¡IMPORTANTE!!!</strong> Rellena enseguida &nbsp;
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXbJmENVsOqBLCUhm0WeHgGVRK4DanxBmxWuDkG8aMrivDaQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="activite-link">el formulario de este enlace → &nbsp;</a>
+          para que sepamos que contamos con esa ayuda y podamos hacerte el recibo fiscal.
+        </li>
+      </ol>
+      <span class="don-note">Nota: en caso de dificultad para mantener la ayuda puedes interrumpirla directamente desde tu cuenta.</span>
+    </div>
+
+    <div class="renovation-bizum">
+      <div class="bizum-head">
+        <span class="don-label">Bizum solidario – código :</span>
+        <span class="bizum-code">13902</span>
+      </div>
+      <p>En la app de Bizum, elige «Donar a una ONG» e introduce este código.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+    </div>
+
+    <div class="don-grid">
+      <div class="don-card">
+        <span class="don-label">Transferencia bancaria</span>
+        <div class="don-inline">
+          <span class="don-inline-item"><small>IBAN:</small><span class="don-iban">ES98 0049 6791 7629 1601 6891</span></span>
+          <span class="don-inline-item"><small>BIC:</small><span>BSCHESMM</span></span>
+          <span class="don-inline-item"><small>Beneficiario:</small><span>Paroisse Saint Louis des Francais</span></span>
         </div>
-      </section>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+      </div>
+      <div class="don-card">
+        <span class="don-label">Tarjeta bancaria</span>
+        <a href="https://donate.stripe.com/8x28wQ4S8caj7qc0Wa6Na02" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:0.75rem; display:inline-block; font-size:0.9rem; align-self:flex-start;">💳 Pagar con tarjeta</a>
+        <span class="don-note">⚠️ Se aplica una comisión a los donativos con tarjeta. Para donaciones importantes se recomienda transferencia o Bizum.</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVujyiI70lY-bDW0_hKLD2l8YpIVcXMQSoYviziw1Zm3FL5w/viewform" target="_blank" rel="noopener noreferrer" class="activite-link">Solicitar recibo fiscal →</a>
+      </div>
+    </div>
+    <p class="don-contact">Contacto: <a href="mailto:paroissesaintlouismadrid@gmail.com">paroissesaintlouismadrid@gmail.com</a></p>
+  </div>
+</section>
 
       <section class="section" id="es-8">
         <div class="container reveal">
