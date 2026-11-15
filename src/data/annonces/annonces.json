@@ -1,19 +1,11 @@
 {
   "annonces": [
     {
-      "fecha": "20 septembre 2026",
-      "imagen": "/images/admin-uploads/26-09-20.png"
-    },
-    {
-      "fecha": "11 octobre 2026",
-      "imagen": "/images/admin-uploads/26-10-11.png"
-    },
-    {
-      "fecha": "18 octobre 2026",
-      "imagen": "/images/admin-uploads/26-10-18.png"
-    },
-    {
       "fecha": "8 novembre 2026",
+      "imagen": "/images/admin-uploads/_26-11-08.png"
+    },
+    {
+      "fecha": "15 novembre 2026",
       "imagen": "/images/admin-uploads/_26-11-08.png"
     }
   ],
