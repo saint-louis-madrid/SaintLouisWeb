@@ -1698,3 +1698,5 @@
   line-height: 1.5;
 }
 .wa-small { font-size: .85rem; opacity: .8; line-height: 1.5; }
+
+.don-subscription p { margin: 0 0 1rem; font-size: 0.95rem; line-height: 1.5; }
