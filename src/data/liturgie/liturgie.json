@@ -14,9 +14,111 @@
       {
         "horario": "Mercredi 19h (confessions) et 20h (messe)",
         "texto": "Salle paroissiale sous la paroisse de los Doce Apóstoles, Calle de Velázquez 88"
+      },
+      {
+        "horario": "Jeudi 24 décembre à 20h00 - Messe de la veillée de Noël",
+        "texto": "Paroisse Nuestra Señora del Pilar, Calle Juan Bravo 40"
+      },
+      {
+        "horario": "Vendredi 25 décembre à 10h15 - Messe du jour de Noël",
+        "texto": "Paroisse Nuestra Señora del Pilar, Calle Juan Bravo 40"
       }
     ]
   },
+  "equipes_liturgiques": [
+    {
+      "nombre": "Servants d'autel et servantes d'assemblée",
+      "personas": [
+        "Eleonore et Jean-Gabriel Vernet · +34 689 74 92 54",
+        "Sixtine et Adrien Konareff"
+      ]
+    },
+    {
+      "nombre": "Liturgie de la parole (5-6 ans)",
+      "personas": [
+        "Diane Gandillot · +34 682 106 811"
+      ]
+    },
+    {
+      "nombre": "Animation chorale (dimanche matin)",
+      "personas": [
+        "Pierre Brague · +34 6 66 48 78 36"
+      ]
+    },
+    {
+      "nombre": "Lecture et prière universelle",
+      "personas": [
+        "Arthur et Ombeline de Lencquesaing",
+        "Roxane et Xavier de la Porte du Theil"
+      ]
+    },
+    {
+      "nombre": "Sacristie",
+      "personas": [
+        "Christine Aubian · Anne du Couëdic"
+      ]
+    },
+    {
+      "nombre": "Fleurs",
+      "personas": [
+        "Christina Mohedano · Marie Dablin"
+      ]
+    }
+  ],
+  "semaine_sainte_note": "Pour être informé des horaires, inscrivez-vous à notre liste WhatsApp ou consultez régulièrement cette page à l'approche de Pâques.",
+  "note_ete": "Pas de messes en français du 21 juillet au 20 août. Les messes en espagnol continuent à 12h00 au Hogar Residencia.",
+  "semaine_sainte_texto": "Les horaires de la Semaine Sainte sont publiés chaque année sur cette page et dans la feuille d'annonces paroissiale.",
+  "jours_feries": [
+    {
+      "nom": "Noël",
+      "fechas": [
+        "24 déc. · 20h00 ",
+        "25 déc. · 10h15"
+      ]
+    },
+    {
+      "nom": "Toussaint",
+      "fechas": [
+        "1er nov. · 11h30"
+      ]
+    },
+    {
+      "nom": "Défunts",
+      "fechas": [
+        "2 nov. · 20h00"
+      ]
+    },
+    {
+      "nom": "Immaculée Conception",
+      "fechas": [
+        "8 déc. · 11h30"
+      ]
+    },
+    {
+      "nom": "Jour de l'An",
+      "fechas": [
+        "1er jan. · 11h30"
+      ]
+    },
+    {
+      "nom": "Épiphanie",
+      "fechas": [
+        "6 jan. · 11h30"
+      ]
+    },
+    {
+      "nom": "Saint Joseph",
+      "fechas": [
+        "19 mars · 11h30"
+      ]
+    },
+    {
+      "nom": "Ascension",
+      "fechas": [
+        "Dimanche avant la Pentecôte"
+      ]
+    }
+  ],
   "horaires_reguliers": [
     {
       "jour": "Dimanche",
@@ -34,7 +136,6 @@
       "note": "En espagnol · Hogar Residencia San Luis · Claudio Coello, 94"
     }
   ],
-  "carnet_chants_url": "http://sanluisfranceses.archimadrid.com/wp-content/uploads/2020/09/carnet-de-chants-saint-louis.pdf",
   "messe_familles": [
     "12 octobre 2025",
     "30 novembre 2025",
@@ -43,43 +144,5 @@
     "31 mai 2026",
     "21 juin 2026"
   ],
-  "equipes_liturgiques": [
-    {
-      "nombre": "Servants d'autel et servantes d'assemblée",
-      "personas": ["Eleonore et Jean-Gabriel Vernet · +34 689 74 92 54", "Sixtine et Adrien Konareff"]
-    },
-    {
-      "nombre": "Liturgie de la parole (5-6 ans)",
-      "personas": ["Diane Gandillot · +34 682 106 811"]
-    },
-    {
-      "nombre": "Animation chorale (dimanche matin)",
-      "personas": ["Pierre Brague · +34 6 66 48 78 36"]
-    },
-    {
-      "nombre": "Lecture et prière universelle",
-      "personas": ["Arthur et Ombeline de Lencquesaing", "Roxane et Xavier de la Porte du Theil"]
-    },
-    {
-      "nombre": "Sacristie",
-      "personas": ["Christine Aubian · Anne du Couëdic"]
-    },
-    {
-      "nombre": "Fleurs",
-      "personas": ["Christina Mohedano · Marie Dablin"]
-    }
-  ],
-  "jours_feries": [
-    { "nom": "Noël", "fechas": ["24 déc. · 20h00", "25 déc. · 11h30"] },
-    { "nom": "Toussaint", "fechas": ["1er nov. · 11h30"] },
-    { "nom": "Défunts", "fechas": ["2 nov. · 20h00"] },
-    { "nom": "Immaculée Conception", "fechas": ["8 déc. · 11h30"] },
-    { "nom": "Jour de l'An", "fechas": ["1er jan. · 11h30"] },
-    { "nom": "Épiphanie", "fechas": ["6 jan. · 11h30"] },
-    { "nom": "Saint Joseph", "fechas": ["19 mars · 11h30"] },
-    { "nom": "Ascension", "fechas": ["Dimanche avant la Pentecôte"] }
-  ],
-  "note_ete": "Pas de messes en français du 21 juillet au 20 août. Les messes en espagnol continuent à 12h00 au Hogar Residencia.",
-  "semaine_sainte_texto": "Les horaires de la Semaine Sainte sont publiés chaque année sur cette page et dans la feuille d'annonces paroissiale.",
-  "semaine_sainte_note": "Pour être informé des horaires, inscrivez-vous à notre liste WhatsApp ou consultez régulièrement cette page à l'approche de Pâques."
+  "carnet_chants_url": "http://sanluisfranceses.archimadrid.com/wp-content/uploads/2020/09/carnet-de-chants-saint-louis.pdf"
 }
