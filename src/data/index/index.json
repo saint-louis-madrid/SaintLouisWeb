@@ -8,13 +8,13 @@
   "horaires_resumen": [
     {
       "jour": "Dimanche",
-      "heure": "10h15 et 19h",
-      "note": "."
+      "heure": "10h15 et 19h00",
+      "note": "Messes en français"
     },
     {
       "jour": "Mercredi",
-      "heure": "20h",
-      "note": "."
+      "heure": "20h00",
+      "note": "Confessions dès 19h "
     }
   ],
   "horaires_nota": "Messes en espagnol tous les jours à 12h00 — Hogar Residencia San Luis, Claudio Coello 94.",
