@@ -5,7 +5,18 @@
     "enlace_texto": "En savoir plus →",
     "enlace_url": "/renovation"
   },
-  "horaires_resumen": [],
+  "horaires_resumen": [
+    {
+      "jour": "Dimanche",
+      "heure": "10h15 et 19h",
+      "note": "."
+    },
+    {
+      "jour": "Mercredi",
+      "heure": "20h",
+      "note": "."
+    }
+  ],
   "horaires_nota": "Messes en espagnol tous les jours à 12h00 — Hogar Residencia San Luis, Claudio Coello 94.",
   "section_paroisse": {
     "titulo": "Une communauté catholique francophone à Madrid",
